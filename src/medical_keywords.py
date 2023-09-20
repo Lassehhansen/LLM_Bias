@@ -277,7 +277,7 @@ medical_keywords = [word.lower() for word in [
 
 #Hepatitis B 
 
-"Hepatitis B 
+"Hepatitis B"
 
   
 ]]
