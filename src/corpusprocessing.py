@@ -133,6 +133,47 @@ def process_and_filter_json_files(input_folder_path, output_folder_path, medical
     print(f"Total data loaded and filtered: {len(combined_data)}")
     return combined_data
 
+def process_chunk(chunk, medical_keyword_pattern, racial_keyword_pattern, gender_keyword_pattern, remove_latex=True):
+    combined_data = []
+    for line in chunk:
+        try:
+            entry_data = json.loads(line)
+            text_data = entry_data['text']
+            if remove_latex:
+                text_data = remove_latex_commands(text_data)
+            lowered_text = text_data.lower()
+            if keyword_present(lowered_text, medical_keyword_pattern, racial_keyword_pattern, gender_keyword_pattern):
+                combined_data.append({
+                    'text': lowered_text,
+                    'meta_data': entry_data.get('meta', {})
+                })
+        except json.JSONDecodeError as e:
+            print(f"Error loading line: {line}. Error: {e}")
+    return combined_data
+
+def process_large_file_in_parallel(file_path, medical_keyword_pattern, racial_keyword_pattern, gender_keyword_pattern, remove_latex=True, chunk_size=10000):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    # Split the lines into chunks
+    chunks = [lines[i:i + chunk_size] for i in range(0, len(lines), chunk_size)]
+
+    combined_data = []
+
+    # Use multiprocessing Pool to process chunks in parallel
+    with Pool(cpu_count()) as p:
+        results = p.map(partial(process_chunk, 
+                                medical_keyword_pattern=medical_keyword_pattern, 
+                                racial_keyword_pattern=racial_keyword_pattern, 
+                                gender_keyword_pattern=gender_keyword_pattern,
+                                remove_latex=remove_latex), 
+                        chunks)
+        
+    for result in results:
+        combined_data.extend(result)
+
+    return combined_data
+
 def modify_text_for_ambiguous_keywords(text, medical_pattern, racial_pattern, window_size=10):
     replacements = {}
     words = text.split()
