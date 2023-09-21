@@ -28,6 +28,7 @@ Note the datasets analyzed are all English datasets.
 
 - Arxiv (88 GB)
     - Total data loaded and filtered: 77788
+    - Filtered Size: 4.6 GB
 - GitHub (
 - Stackexchange (20 GB)
 - Wikipedia (112 GB) -> When filtered for English only (20GB)
@@ -54,3 +55,15 @@ while read line; do
     wget "$line" -O "$dload_loc"
 done < arxiv_urls.txt
 # ... [repeat for other datasets]
+
+
+# for Wikipedia, select only english articles:
+jq -c 'select(.meta.language == "en")' wiki.jsonl | sponge wiki.jsonl
+
+# if you dont have jq:
+
+## on Ubuntu:
+sudo apt-get install jq
+
+## on macOS with Homebrew:
+brew install jq
