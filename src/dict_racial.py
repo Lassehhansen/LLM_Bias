@@ -35,3 +35,6 @@ racial_keywords_dict = {
 "Hawaiians", "Pacific-Islanders"
 ]
 }
+
+racial_keywords_dict = {key.lower(): [word.lower() for word in value] 
+for key, value in racial_keywords_dict.items()}
