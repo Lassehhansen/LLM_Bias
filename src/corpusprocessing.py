@@ -2,7 +2,7 @@ import re
 import json
 import os 
 from multiprocessing import Pool, cpu_count
-#from keywords import medical_keywords, racial_keywords, gender_keywords
+from keywords import medical_keywords, racial_keywords, gender_keywords
 from functools import partial
 from transformers import pipeline, AutoTokenizer, AutoModelForTokenClassification
 
@@ -103,7 +103,7 @@ def process_file(file_path, medical_keyword_pattern, racial_keyword_pattern, gen
                 print(f"Error loading line in {file_path}: {line}. Error: {e}")
     return combined_data
 
-def process_and_filter_json_files(input_folder_path, output_folder_path, medical_keywords, racial_keywords, gender_keywords, remove_latex=True, save_file=True):
+def process_and_filter_json_files(input_folder_path, output_folder_path, medical_keywords, racial_keywords, gender_keywords, remove_latex=True, save_file=True, filename="filtered_data.json"):
     """Process, filter, and optionally save data from .jsonl files."""
 
     medical_keyword_pattern = create_keyword_pattern(medical_keywords)
@@ -128,12 +128,17 @@ def process_and_filter_json_files(input_folder_path, output_folder_path, medical
         combined_data.extend(result)
 
     if save_file:
-        save_to_json(combined_data, output_folder_path)
+        save_to_json(combined_data, output_folder_path, filename)
 
     print(f"Total data loaded and filtered: {len(combined_data)}")
     return combined_data
 
-def process_chunk(chunk, medical_keyword_pattern, racial_keyword_pattern, gender_keyword_pattern, remove_latex=True):
+def process_chunk(chunk, medical_keywords, racial_keywords, gender_keywords, remove_latex=True):
+    # Compile the regex patterns within the function
+    medical_keyword_pattern = create_keyword_pattern(medical_keywords)
+    racial_keyword_pattern = create_keyword_pattern(racial_keywords)
+    gender_keyword_pattern = create_keyword_pattern(gender_keywords)
+    
     combined_data = []
     for line in chunk:
         try:
@@ -151,9 +156,19 @@ def process_chunk(chunk, medical_keyword_pattern, racial_keyword_pattern, gender
             print(f"Error loading line: {line}. Error: {e}")
     return combined_data
 
-def process_large_file_in_parallel(file_path, medical_keyword_pattern, racial_keyword_pattern, gender_keyword_pattern, remove_latex=True, chunk_size=10000):
+def process_large_file_in_parallel(file_path, medical_keywords, racial_keywords, gender_keywords, output_folder_path, remove_latex=True, save_file=True, filename="filtered_data.json"):
     with open(file_path, 'r') as file:
         lines = file.readlines()
+
+    # Determine the number of available CPU cores
+    num_cores = cpu_count()
+
+    # Calculate the chunk size based on the number of lines and cores
+    chunk_size = len(lines) // num_cores
+
+    # If there's a remainder, add an extra chunk for the remaining lines
+    if len(lines) % num_cores != 0:
+        num_cores += 1
 
     # Split the lines into chunks
     chunks = [lines[i:i + chunk_size] for i in range(0, len(lines), chunk_size)]
@@ -161,17 +176,22 @@ def process_large_file_in_parallel(file_path, medical_keyword_pattern, racial_ke
     combined_data = []
 
     # Use multiprocessing Pool to process chunks in parallel
-    with Pool(cpu_count()) as p:
+    with Pool(num_cores) as p:
         results = p.map(partial(process_chunk, 
-                                medical_keyword_pattern=medical_keyword_pattern, 
-                                racial_keyword_pattern=racial_keyword_pattern, 
-                                gender_keyword_pattern=gender_keyword_pattern,
+                                medical_keywords=medical_keywords, 
+                                racial_keywords=racial_keywords, 
+                                gender_keywords=gender_keywords,
                                 remove_latex=remove_latex), 
                         chunks)
         
     for result in results:
         combined_data.extend(result)
 
+    # Save the combined data if the save_file flag is True
+    if save_file:
+        save_to_json(combined_data, output_folder_path, filename)
+
+    print(f"Total data loaded and filtered: {len(combined_data)}")
     return combined_data
 
 def modify_text_for_ambiguous_keywords(text, medical_pattern, racial_pattern, window_size=10):
