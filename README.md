@@ -27,9 +27,10 @@ Deal with ambiguous keywords, e.g., ensuring all mentions of ‘white’ and ‘
 Note the datasets analyzed are all English datasets. 
 
 - Arxiv (88 GB)
+    - Total data loaded and filtered: 77788
 - GitHub (
 - Stackexchange (20 GB)
-- Wikipedia (112 GB)
+- Wikipedia (112 GB) -> When filtered for English only (20GB)
 - Commoncrawl
 - C4 (807 GB)
 - Books
