@@ -27,22 +27,22 @@ Deal with ambiguous keywords, e.g., ensuring all mentions of ‘white’ and ‘
 Note the datasets analyzed are all English datasets. 
 
 - Arxiv (88 GB)
-    - Total data loaded and filtered: 77788
-    - Filtered Size: 4.6 GB
+    - Total data loaded and filtered (Keyword Present - Medical AND Racial OR Gender): 77788
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 4.6 GB
 - GitHub (213 GB)
-    - Filtered Size: XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 - Stackexchange (20 GB)
-    - Filtered Size: XX GB
-- Wikipedia (112 GB) -> When filtered for English only (20GB)
-    - Filtered Size: XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
+- Wikipedia (112 GB) -> When filtered for English only (20.3GB)
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 - Commoncrawl
     - 2022-05 Folder: (251 GB)
     - 2023-06 Folder: (289 GB)
-    - Filtered Size: XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 - C4 (807 GB)
-    - Filtered Size: XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 - Books (100.4 GB)
-    - Filtered Size: XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 
 ## Downloading the Training Data:
 
