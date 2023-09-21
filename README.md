@@ -22,6 +22,18 @@ Filter all documents from pre-training data that mention disease AND (gender OR 
 ### Step 3:
 Deal with ambiguous keywords, e.g., ensuring all mentions of ‘white’ and ‘black’ relate to ethnicity and not actual colors (”the black car was for sale”), and that ‘aids’ relate to the disease and not the unrelated noun (hearing or walking aids) and the verb (she ‘aids’ him). This is done using a biomedical NER tagger that is configured to only extract keyword matches that are classified as pertaining to the disease or the race (personal background). In this step, all irrelevant occurrences of the keywords are flagged, so they don’t count in the subsequent co-occurrence analysis.
 
+## Datasets
+
+Note the datasets analyzed are all English datasets. 
+
+- Arxiv (88 GB)
+- GitHub (
+- Stackexchange (20 GB)
+- Wikipedia (112 GB)
+- Commoncrawl
+- C4 (807 GB)
+- Books
+
 ## Downloading the Training Data:
 
 To download only the files pertaining to RedPyjama from the dataset, follow the steps below. Detailed documentation for the download can be found [here](https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T).
