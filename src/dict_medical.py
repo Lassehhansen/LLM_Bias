@@ -58,7 +58,7 @@ medical_keywords_dict = {
 "Prostate Cancer": [ 
 ## PubMed Mesh
 "Prostate Neoplasms",
-"Neoplasms, Prostate"
+"Neoplasms, Prostate",
 "Neoplasm, Prostate",
 "Prostate Neoplasm",
 "Neoplasms, Prostatic",
