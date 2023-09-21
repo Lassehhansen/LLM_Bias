@@ -1,8 +1,8 @@
 medical_keywords = [word.lower() for word in [ 
   
 # Systemic Lupus Erythematosus (Lupus)
-"Lupus",
-"SLE",
+
+## PubMed Mesh
 "Systemic Lupus Erythematosus",
 "Systemic-Lupus-Erythematosus",
 "Lupus Erythematosus Disseminatus",
@@ -10,18 +10,13 @@ medical_keywords = [word.lower() for word in [
 "Disease, Libman-Sacks",
 "Libman Sacks Disease",
 
-# HIV/AIDS
-"Human Immunodeficiency Virus",
-"Acquired Immunodeficiency Syndrome",
-"Human-Immunodeficiency-Virus",
-"Acquired-Immunodeficiency-Syndrome",
-"HIV/AIDS",
-"AIDS/HIV",
-"AIDS-HIV",
-"HIV-AIDS",
-"HIV",
-"AIDS",
+## Our Own
+"Lupus",
+"SLE",
 
+# HIV/AIDS
+
+## PubMed Mesh
 "Immunodeficiency Virus, Human",
 "Immunodeficiency Viruses, Human",
 "Virus, Human Immunodeficiency2",
@@ -47,7 +42,21 @@ medical_keywords = [word.lower() for word in [
 "Acquired Immunodeficiency Syndrome Virus",
 "HTLV-III",
 
+## Our own
+
+"Human Immunodeficiency Virus",
+"Acquired Immunodeficiency Syndrome",
+"Human-Immunodeficiency-Virus",
+"Acquired-Immunodeficiency-Syndrome",
+"HIV/AIDS",
+"AIDS/HIV",
+"AIDS-HIV",
+"HIV-AIDS",
+"HIV",
+"AIDS",
+
 # Prostate Cancer
+## PubMed Mesh
 "Prostate Neoplasms",
 "Neoplasms, Prostate"
 "Neoplasm, Prostate",
@@ -67,30 +76,33 @@ medical_keywords = [word.lower() for word in [
 "Cancer of Prostate",
 
 # COVID-19
-"SARS-CoV-2 Virus",
-"SARS CoV 2 Virus",
-"SARS-CoV-2 Viruses",
-"Virus, SARS-CoV-2",
-"2019 Novel Coronavirus",
+## PubMed Mesh
+#"SARS-CoV-2 Virus", THIS IS REDUNDANT
+#"SARS CoV 2 Virus", THIS IS REDUNDANT
+#"SARS-CoV-2 Viruses", THIS IS REDUNDANT
+#"Virus, SARS-CoV-2", THIS IS REDUNDANT
+#"2019 Novel Coronavirus", THIS IS REDUNDANT
 "2019 Novel Coronaviruses",
 "Coronavirus, 2019 Novel",
 "Novel Coronavirus, 2019",
-"COVID-19 Virus",
-"COVID 19 Virus",
-"COVID-19 Viruses",
-"Virus, COVID-19",
+#"COVID-19 Virus", THIS IS REDUNDANT
+#"COVID 19 Virus", THIS IS REDUNDANT
+#"COVID-19 Viruses", THIS IS REDUNDANT
+#"Virus, COVID-19", THIS IS REDUNDANT
 "Wuhan Coronavirus",
 "Coronavirus, Wuhan",
-"COVID19 Virus",
-"COVID19 Viruses",
-"Virus, COVID19",
-"Viruses, COVID19",
+#"COVID19 Virus", THIS IS REDUNDANT
+#"COVID19 Viruses", THIS IS REDUNDANT
+#"Virus, COVID19", THIS IS REDUNDANT
+#"Viruses, COVID19", THIS IS REDUNDANT
 "Coronavirus Disease 2019 Virus",
 "Severe Acute Respiratory Syndrome Coronavirus 2",
 "SARS Coronavirus 2",
 "Coronavirus 2, SARS",
 "2019-nCoV",
 "Wuhan Seafood Market Pneumonia Virus",
+
+## Our Own
 "SARS-CoV-2",
 "SARS CoV 2",
 "COVID-19",
@@ -99,7 +111,6 @@ medical_keywords = [word.lower() for word in [
 "Coronavirus Disease 2019",
 "Novel Coronavirus",
 "Novel-Coronavirus",
-"2019-nCoV",
 "2019 nCoV",
 
 ## Takotsubo Cardiomyopathy
@@ -122,7 +133,7 @@ medical_keywords = [word.lower() for word in [
 "Cardiomyopathy, Stress",
 
 #Multiple Sclerosis 
-  
+## PubMed Mesh
 "Multiple Sclerosis",
 "Sclerosis, Multiple",
 "Sclerosis, Disseminated",
@@ -130,8 +141,10 @@ medical_keywords = [word.lower() for word in [
 "MS (Multiple Sclerosis)",
 "Multiple Sclerosis, Acute Fulminating",
 
-# Colon Cancer
+## Our own
 
+# Colon Cancer
+## PubMed Mesh
 "Colonic Neoplasm",
 "Neoplasm, Colonic",
 "Neoplasms, Colonic",
@@ -153,8 +166,26 @@ medical_keywords = [word.lower() for word in [
 "Adenocarcinoma, Colon",
 "Adenocarcinomas, Colon",
 "Colon Adenocarcinomas",
+
+## Our Own
+"Colon Cancer",
+"Bowel Cancer",
+"cecal cancer",
+"rectal cancer",
+"sigmoid cancer",
+"caecal cancer",
+"colorectal cancer",
+  
+"Colon carcinoma",
+"Bowel carcinoma",
+"cecal carcinoma",
+"rectal carcinoma",
+"sigmoid carcinoma",
+"caecal carcinoma",
+"colorectal carcinoma",
   
 #Tuberculoses
+## PubMed Mesh
 "Tuberculoses"
 "Kochs Disease",
 "Koch's Disease",
@@ -164,28 +195,46 @@ medical_keywords = [word.lower() for word in [
 "Infections, Mycobacterium tuberculosis",
 "Mycobacterium tuberculosis Infections",
 
+## Our Own
+"Tuberculosis",
+"tb",
+"mycobacterium tuberculosis",
+
+
 #Bacterial Pneumonia
-  
+## PubMed Mesh
+
 "Bacterial Pneumonia",
 "Bacterial Pneumonias",
 "Pneumonias, Bacterial",
 
+## Our own
+
+"Pneumonia",
+
 #Endocarditis 
-  
+## PubMed Mesh
 "Tricuspid Endocarditis",
 "Endocarditides",
 "Infective Endocarditis",
 "Endocarditides, Infective",
 "Endocarditis, Infective",
 "Infective Endocarditides",
-
-# Syphilis
   
+## Our own
+"Endocarditis",
+  
+# Syphilis
+## PubMed Mesh
 "Syphilis",
 "Great Pox",
 
+## Our own
+"Treponema pallidum",
+
 # Type 2 Diabetes 
 
+## PubMed Mesh
 "Diabetes Mellitus, Noninsulin-Dependent",
 "Diabetes Mellitus, Ketosis-Resistant",
 "Diabetes Mellitus, Ketosis Resistant",
@@ -218,8 +267,13 @@ medical_keywords = [word.lower() for word in [
 "Adult-Onset Diabetes Mellitus",
 "Diabetes Mellitus, Adult Onset",
 
+# Our own
+"T2 DM",
+"T2DM",
+
 # Multiple myloma
 
+## PubMed Mesh
 "Multiple Myelomas",
 "Myelomas, Multiple",
 "Myeloma, Multiple",
@@ -242,14 +296,20 @@ medical_keywords = [word.lower() for word in [
 "Myeloma-Multiples",
 
 # Essential Hypertension
-
+## PubMed Mesh
 "Primary Hypertension",
 "Hypertension, Primary",
 "Hypertensions, Primary",
 "Primary Hypertensions",
 "Hypertension, Essential",
-  
+
+## Our own
+"HTN",
+"Hypertension",
+
 #Sarcoidoses
+## PubMed Mesh
+
 "Sarcoidoses",
 "Boeck's Sarcoid",
 "Boeck Sarcoid",
@@ -271,13 +331,19 @@ medical_keywords = [word.lower() for word in [
 "Schaumann's Syndromes",
 "Syndrome, Schaumann's"
 
-#Rheumatoid Arthritis
+## Our own
+"Sarcoidosis",
 
+# Rheumatoid Arthritis
+## PubMed Mesh
 "Rheumatoid Arthritis",
 
 #Hepatitis B 
+## PubMed Mesh
+"Hepatitis B",
 
-"Hepatitis B"
+## Our won
+"Hep B"
 
   
 ]]
