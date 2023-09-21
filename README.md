@@ -66,7 +66,7 @@ done < arxiv_urls.txt
 
 
 # for Wikipedia, select only english articles:
-jq -c 'select(.meta.language == "en")' wiki.jsonl | sponge wiki.jsonl
+jq -c 'select(.meta.language == "en")' wiki.jsonl > wiki_en.jsonl
 
 # if you dont have jq:
 
