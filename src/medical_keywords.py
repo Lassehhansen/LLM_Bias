@@ -34,10 +34,10 @@ medical_keywords = [word.lower() for word in [
 "Viruses, Lymphadenopathy-Associated",
 "Human T Lymphotropic Virus Type III", 
 "Human T-Lymphotropic Virus Type III",
-"AIDS Virus",
-"AIDS Viruses",
-"Virus, AIDS",
-"Viruses, AIDS",
+#"AIDS Virus", THIS IS REDUNDANT
+#"AIDS Viruses", THIS IS REDUNDANT
+#"Virus, AIDS", THIS IS REDUNDANT
+#"Viruses, AIDS", THIS IS REDUNDANT
 "Acquired Immune Deficiency Syndrome Virus",
 "Acquired Immunodeficiency Syndrome Virus",
 "HTLV-III",
@@ -293,7 +293,11 @@ medical_keywords = [word.lower() for word in [
 "Disease, Kahler",
 "Myeloma-Multiple",
 "Myeloma Multiple",
-"Myeloma-Multiples",
+"Myeloma-Multiples"
+## Our own
+"Multiple Myeloma",
+"Multiple-Myeloma",
+"Multiple-Myelomas",
 
 # Essential Hypertension
 ## PubMed Mesh
