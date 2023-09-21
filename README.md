@@ -29,12 +29,20 @@ Note the datasets analyzed are all English datasets.
 - Arxiv (88 GB)
     - Total data loaded and filtered: 77788
     - Filtered Size: 4.6 GB
-- GitHub (
+- GitHub (213 GB)
+    - Filtered Size: XX GB
 - Stackexchange (20 GB)
+    - Filtered Size: XX GB
 - Wikipedia (112 GB) -> When filtered for English only (20GB)
+    - Filtered Size: XX GB
 - Commoncrawl
+    - 2022-05 Folder: (251 GB)
+    - 2023-06 Folder: (289 GB)
+    - Filtered Size: XX GB
 - C4 (807 GB)
-- Books
+    - Filtered Size: XX GB
+- Books (100.4 GB)
+    - Filtered Size: XX GB
 
 ## Downloading the Training Data:
 
