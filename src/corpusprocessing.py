@@ -1,9 +1,12 @@
+import pandas as pd
 import re
 import json
 import os 
 from multiprocessing import Pool, cpu_count
+from keywords import medical_keywords, racial_keywords, gender_keywords
 from functools import partial
 from transformers import pipeline, AutoTokenizer, AutoModelForTokenClassification
+from tqdm import tqdm  
 
 
 ######################################## Initialize the NER pipeline #######################################################
