@@ -34,12 +34,16 @@ Note the datasets analyzed are all English datasets.
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 2.8 GB
     - Filtered Size (Ambgious Keywords Filtering): 
 - Stackexchange (74.5 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
+    - Total data loaded and filtered: 9212
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 70.1 MB
     - Filtered Size (Ambgious Keywords Filtering): 
 - Wikipedia (112 GB) -> When filtered for English only (20.3GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 1.6 GB
     - Filtered Size (Ambgious Keywords Filtering): 
 - Commoncrawl
+    - 2019-30 Folder: (238 GB)
+    - 2020-05 Folder: (285 GB)
+    - 2021-04 Folder: (274 GB)
     - 2022-05 Folder: (251 GB)
     - 2023-06 Folder: (289 GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
