@@ -224,7 +224,7 @@ def modify_text_for_ambiguous_keywords(text, medical_pattern, racial_pattern, wi
     
     return text
 
-def process_texts(data, ambiguous_medical_keywords, ambiguous_racial_keywords, meta_data_cols, window_size=10):
+def process_texts(chunk, ambiguous_medical_keywords, ambiguous_racial_keywords, meta_data_cols, window_size=10, start_index=0):
     results = []
     
     # Create patterns for the ambiguous keywords using create_keyword_pattern
@@ -232,7 +232,7 @@ def process_texts(data, ambiguous_medical_keywords, ambiguous_racial_keywords, m
     racial_pattern = create_keyword_pattern(ambiguous_racial_keywords)
     
     # Wrap the data with tqdm for progress bar
-    for idx, entry in tqdm(enumerate(data), total=len(data), desc="Processing texts"):
+    for idx, entry in tqdm(enumerate(chunk, start=start_index), total=len(chunk), desc="Processing texts"):
         old_text = entry['text']
         new_text = modify_text_for_ambiguous_keywords(old_text, medical_pattern, racial_pattern, window_size)
         
@@ -243,7 +243,7 @@ def process_texts(data, ambiguous_medical_keywords, ambiguous_racial_keywords, m
         
         result = {
             'clean_text': new_text,
-            'text_index': idx + 1,
+            'text_index': idx,
             'no_ambigous_medical_keywords_replaced': medical_replacements,
             'no_racial_keywords_replaced': racial_replacements,
             'length_old_data': len(old_text),
@@ -255,6 +255,26 @@ def process_texts(data, ambiguous_medical_keywords, ambiguous_racial_keywords, m
         results.append(result)
 
     return pd.DataFrame(results)
+
+def parallel_process_texts(data, ambiguous_medical_keywords, ambiguous_racial_keywords, meta_data_cols, window_size=10):
+    num_cores = cpu_count()
+    chunk_size = len(data) // num_cores
+
+    # If there's a remainder, add an extra chunk for the remaining lines
+    if len(data) % num_cores != 0:
+        num_cores += 1
+
+    # Split the data into chunks
+    chunks = [data[i:i + chunk_size] for i in range(0, len(data), chunk_size)]
+
+    # Use multiprocessing Pool to process chunks in parallel
+    with Pool(num_cores) as p:
+        results = p.starmap(process_texts, [(chunks[i], ambiguous_medical_keywords, ambiguous_racial_keywords, meta_data_cols, window_size, i*chunk_size) for i in range(num_cores)])
+
+    # Combine the results
+    combined_df = pd.concat(results, ignore_index=True)
+
+    return combined_df
 
 
 
