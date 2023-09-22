@@ -41,6 +41,7 @@ Note the datasets analyzed are all English datasets.
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 - C4 (807 GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
+    - Total data loaded and filtered: 2340188
 - Books (100.4 GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 
