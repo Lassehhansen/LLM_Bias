@@ -29,21 +29,25 @@ Note the datasets analyzed are all English datasets.
 - Arxiv (88 GB)
     - Total data loaded and filtered (Keyword Present - Medical AND Racial OR Gender): 77788
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 4.6 GB
+    - Filtered Size (Ambgious Keywords Filtering): 
 - GitHub (213 GB)
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 2.8 GB
+    - Filtered Size (Ambgious Keywords Filtering): 
+- Stackexchange (74.5 GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
-- Stackexchange (20 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
+    - Filtered Size (Ambgious Keywords Filtering): 
 - Wikipedia (112 GB) -> When filtered for English only (20.3GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 1.6 GB
+    - Filtered Size (Ambgious Keywords Filtering): 
 - Commoncrawl
     - 2022-05 Folder: (251 GB)
     - 2023-06 Folder: (289 GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 - C4 (807 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 19.4 GB
     - Total data loaded and filtered: 2340188
 - Books (100.4 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
+    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 52.3 GB
 
 ## Downloading the Training Data:
 
