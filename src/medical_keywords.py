@@ -13,6 +13,12 @@ medical_keywords = [word.lower() for word in [
 ## Our Own
 "Lupus",
 "SLE",
+"Lupus nephritis",
+"Systemic lupus nephritis",
+"Cutaneous lupus nephritis",
+"Drug induced lupus erythematous",
+"Drug-induced lupus erythematous",
+
 
 # HIV/AIDS
 
@@ -54,6 +60,12 @@ medical_keywords = [word.lower() for word in [
 "HIV-AIDS",
 "HIV",
 "AIDS",
+"HIV-positive"
+"HIV positive"
+"Acute HIV infection",
+"Acute HIV",
+"Acquired immune deficiency syndrome",
+
 
 # Prostate Cancer
 ## PubMed Mesh
@@ -74,6 +86,15 @@ medical_keywords = [word.lower() for word in [
 "Cancers, Prostatic",
 "Prostatic Cancers",
 "Cancer of Prostate",
+
+##Our own
+"Prostate adenocarcinoma",
+"Adenocarcinoma of the prostate",
+"Prostate carcinoma",
+"Carcinoma of the prostate",
+"Prostate malignancy",
+"Malignant prostate tumor",
+"Prostate tumor"
 
 # COVID-19
 ## PubMed Mesh
@@ -142,6 +163,25 @@ medical_keywords = [word.lower() for word in [
 "Multiple Sclerosis, Acute Fulminating",
 
 ## Our own
+"Multiple sclerosis, remitting",
+"Multiple sclerosis, relapsing",
+"Relapsing multiple sclerosis",
+"Relapsing, multiple sclerosis",
+"Relapsing MS",
+"Remitting multiple sclerosis",
+"Remitting MS",
+"Remitting, relapsing multiple sclerosis",
+"Remitting, relapsing MS",
+"Primary progressive MS",
+"Primary progressive multiple sclerosis",
+"Secondary progressive MS",
+"Secondary progressive multiple sclerosis",
+"Clinically isolated syndrome multiple sclerosis",
+"Clinically isolated syndrome, MS"
+"MS, clinically isolated syndrome"
+"CIS"
+"Clinically isolated syndrome"
+
 
 # Colon Cancer
 ## PubMed Mesh
@@ -183,6 +223,17 @@ medical_keywords = [word.lower() for word in [
 "sigmoid carcinoma",
 "caecal carcinoma",
 "colorectal carcinoma",
+
+"Rectosigmoid cancer",
+"Rectosigmoid colorectal cancer",
+"Rectosigmoid cancer",
+"Colorectal cancer",
+"Colorectal adenocarcinoma",
+"Ascending colon cancer",
+"Ascending colorectal cancer",
+"Ascending colon adenocarcinoma",
+"Rectal adenocarcinoma",
+"Rectal carcinoma",
   
 #Tuberculoses
 ## PubMed Mesh
@@ -199,6 +250,24 @@ medical_keywords = [word.lower() for word in [
 "Tuberculosis",
 "tb",
 "mycobacterium tuberculosis",
+"Disseminated mycobacterium tuberculosis",
+"Disseminated TB",
+"Peritoneal TB",
+"Peritoneal tuberculosis",
+"Pulmonary TB",
+"Pulmonary tuberculosis",
+"Extrapulmonary TB",
+"Extrapulmonary tuberculosis",
+"Latent TB",
+"Latent tuberculosis",
+"Latent TB infection",
+"Latent tuberculosis infection",
+"Active TB",
+"Active tuberculosis",
+"Active tuberculosis infection",
+"Active TB infection",
+"Consumption",
+
 
 
 #Bacterial Pneumonia
@@ -211,6 +280,17 @@ medical_keywords = [word.lower() for word in [
 ## Our own
 
 "Pneumonia",
+"Community acquired pneumonia",
+"Hospital acquired pneumonia",
+"CAP",
+"HCAP",
+"Necrotizing pneumonia",
+"Viral pneumonia",
+"Mycoplasma pneumonia",
+"Mycoplasma pneumoniae",
+"Legionnaire's disease",
+"Atypical pneumonia",
+
 
 #Endocarditis 
 ## PubMed Mesh
@@ -223,6 +303,14 @@ medical_keywords = [word.lower() for word in [
   
 ## Our own
 "Endocarditis",
+"IE",
+"Bacterial acute endocarditis",
+"Bacterial subacute endocarditis",
+"Prosthetic valve endocarditis",
+"Prosthetic valvular endocarditis",
+"Subacute bacterial endocarditis",
+"Acute bacterial endocarditis",
+
   
 # Syphilis
 ## PubMed Mesh
@@ -231,6 +319,16 @@ medical_keywords = [word.lower() for word in [
 
 ## Our own
 "Treponema pallidum",
+"Syphilitic infection",
+"Primary syphilis infection",
+"Primary syphilis",
+"Secondary syphilis",
+"Secondary syphilis infection",
+"Tertiary syphilis",
+"Tertiary syphilis infection",
+"Latent syphilis",
+"Latent syphilis infection",
+
 
 # Type 2 Diabetes 
 
@@ -270,8 +368,13 @@ medical_keywords = [word.lower() for word in [
 # Our own
 "T2 DM",
 "T2DM",
+"DM2"
+"Juvenile diabetes mellitus",
+"Juvenile DM",
+"Juvenile diabetes",
 
-# Multiple myloma
+
+# Multiple myeloma
 
 ## PubMed Mesh
 "Multiple Myelomas",
@@ -299,6 +402,8 @@ medical_keywords = [word.lower() for word in [
 "Multiple-Myeloma",
 "Multiple-Myelomas",
 
+
+
 # Essential Hypertension
 ## PubMed Mesh
 "Primary Hypertension",
@@ -310,6 +415,11 @@ medical_keywords = [word.lower() for word in [
 ## Our own
 "HTN",
 "Hypertension",
+"Systolic hypertension",
+"Diastolic hypertension",
+"Isolated systolic hypertension",
+"Isolated diastolic hypertension",
+
 
 #Sarcoidoses
 ## PubMed Mesh
@@ -337,10 +447,24 @@ medical_keywords = [word.lower() for word in [
 
 ## Our own
 "Sarcoidosis",
+"Sarcoid",
+"Granulomatous sarcoid",
+"Sarcoid, granulomata",
+"Sarcoid granuloma disease",
+"Granuloma sarcoid disease",
 
 # Rheumatoid Arthritis
 ## PubMed Mesh
 "Rheumatoid Arthritis",
+
+##Our own
+"RA",
+"Rheumatoid"
+"Arthritis, rheumatoid",
+"Seropositive RA",
+"Seropositive rheumatoid arthritis",
+"Seronegative RA",
+"Seronegative rheumatoid arthritis",
 
 #Hepatitis B 
 ## PubMed Mesh
@@ -348,6 +472,40 @@ medical_keywords = [word.lower() for word in [
 
 ## Our won
 "Hep B"
+"Hepatitis B virus"
+"Hepatitis B infection",
+"HBV"
+"HBV infection",
+"Hep B infection"
+"Hep B virus",
+"Active hepatitis B infection",
+"Active HBV",
+"Latent HBV",
+"Latent hepatitis B",
+"Latent hepatitis B infection",
+"Acute HBV",
+"Acute hepatitis B",
+"Chronic HBV",
+"Chronic hepatitis B",
+"Hepatitis B carrier",
+"Carrier, HBV",
+"Carrier, hepatitis B",
+"Immune-tolerant HBV",
+"Immune tolerant HBV",
+"Immune tolerant hepatitis B",
+"Immune-tolerant HBV",
+"Immune-active hepatitis B",
+"Immune active hepatitis B",
+"Immune active HBV",
+"Immune-active HBV",
+"Immune-control hepatitis B",
+"Immune-control HBV",
+"Immune control hepatitis B",
+"Immune control HBV",
+"Immune clearance HBV",
+"Immune-clearance HBV",
+"Immune clearance hepatitis B",
+"Immune-clearance hepatitis B",
 
   
 ]]
