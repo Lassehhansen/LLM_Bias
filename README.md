@@ -29,17 +29,20 @@ Note the datasets analyzed are all English datasets.
 - Arxiv (88 GB)
     - Total data loaded and filtered (Keyword Present - Medical AND Racial OR Gender): 77788
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 4.6 GB
-    - Filtered Size (Ambgious Keywords Filtering): 
+    - Filtered Size (Ambgious Keywords Filtering):
+    - Meta Data Keys: timestamp, yymm, arxiv_id, language, url
 - GitHub (213 GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 2.8 GB
     - Filtered Size (Ambgious Keywords Filtering): 
 - Stackexchange (74.5 GB)
     - Total data loaded and filtered: 9212
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 70.1 MB
-    - Filtered Size (Ambgious Keywords Filtering): 
+    - Filtered Size (Ambgious Keywords Filtering):
+    - Meta Data Keys: language, url, timestamp, question_score
 - Wikipedia (112 GB) -> When filtered for English only (20.3GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 1.6 GB
-    - Filtered Size (Ambgious Keywords Filtering): 
+    - Filtered Size (Ambgious Keywords Filtering):
+    - Meta Data Keys: title, url, language, timestamp
 - Commoncrawl
     - 2019-30 Folder: (238 GB)
     - 2020-05 Folder: (285 GB)
