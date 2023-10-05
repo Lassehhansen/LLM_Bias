@@ -107,15 +107,15 @@ def process_chunk(chunk, medical_patterns, racial_patterns, gender_patterns, met
         total_texts += 1
         try:
             entry = json.loads(line)
-            original_text = entry['text']
+            text = entry['text']
             if remove_latex:
-                text = remove_latex_commands(original_text)
+                text = remove_latex_commands(text)
             meta_data = entry.get('meta', {})
             
             # Check if the text contains a medical keyword
             if any(pattern.search(text) for pattern in medical_patterns.values()):
                 row_data = defaultdict(int)
-                row_data['text'] = original_text
+                row_data['text'] = text
                 
                 for key in metadata_keys:
                     row_data[key] = meta_data.get(key, None)
@@ -187,4 +187,3 @@ def jsonl_single_file_filtering(file_path, medical_dict, racial_dict, gender_dic
             print("Warning: Output folder path is not provided. The DataFrame is not saved to a file.")
     
     return df_output
-
