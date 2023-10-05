@@ -115,3 +115,48 @@ def co_occurrence_within_window_parallel(data, medical_dict, racial_dict, gender
     df_gender = pd.DataFrame(co_occurrences_gender).fillna(0).astype(int).T
     
     return df_racial, df_gender
+
+
+def analyze_data_co_occurence(source_name, data_path):
+    """
+    Analyze the data and save various counts and co-occurrence data to CSV files.
+    
+    Parameters:
+        source_name (str): A name for the data source, used in output directory naming.
+        data_path (str): Path to the CSV file containing the data to be analyzed.
+    """
+    df_output = pd.read_csv(data_path)
+    
+    # Ensure output directory exists
+    output_dir = f'output_{source_name}'
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # 1: Total Disease Mention Counts
+    total_disease_counts = df_output[list(medical_dict.keys())].sum()
+    total_disease_counts.to_csv(os.path.join(output_dir, 'total_disease_counts.csv'))
+    
+    # 2: Disease Mention Counts Over Different Dates
+    disease_date_counts = df_output.groupby('timestamp')[list(medical_dict.keys())].sum().reset_index()
+    disease_date_counts.to_csv(os.path.join(output_dir, 'disease_date_counts.csv'))
+    
+    # 3: Disease Mention Counts with Each Race
+    disease_race_counts = df_output.groupby(list(racial_dict.keys()))[list(medical_dict.keys())].sum().reset_index()
+    disease_race_counts.to_csv(os.path.join(output_dir, 'disease_race_counts.csv'))
+    
+    # 4: Disease Mention Counts with Each Gender
+    disease_gender_counts = df_output.groupby(list(gender_dict.keys()))[list(medical_dict.keys())].sum().reset_index()
+    disease_gender_counts.to_csv(os.path.join(output_dir, 'disease_gender_counts.csv'))
+    
+    # Co-occurrence within window sizes
+    data = df_output['text'].tolist()
+    window_sizes = [10, 50, 100, 250]
+    
+    for window in window_sizes:
+        df_racial, df_gender = co_occurrence_within_window_parallel(data, medical_dict, racial_dict, gender_dict, window)
+        
+        # Ensure sub-directory for window size exists
+        window_dir = os.path.join(output_dir, f'window_{window}')
+        os.makedirs(window_dir, exist_ok=True)
+        
+        df_racial.to_csv(os.path.join(window_dir, 'co_occurrence_racial.csv'))
+        df_gender.to_csv(os.path.join(window_dir, 'co_occurrence_gender.csv'))
