@@ -1,12 +1,12 @@
 data:
-  input_folder_path: '../Data/C4/c4'
-  output_folder_path: '../Data/Filtered/C4'
+  input_folder_path: '../Data/Arxiv/arxiv'
+  output_folder_path: '../Data/Filtered/arxiv'
   metadata_keys: 
     - "timestamp"
-    - "url"
     - "language"
+    - "arxiv_id"
 processing:
-  remove_latex: false
+  remove_latex: true
   save_file: true
-  filename: 'c4_filtered.csv'
-  total_texts_filename: 'tot_texts_c4.txt'
+  filename: 'arxiv_filtered.csv'
+  total_texts_filename: 'tot_texts_arxiv.txt'
