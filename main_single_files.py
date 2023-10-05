@@ -66,6 +66,8 @@ def main(config_name):
     )
 
 if __name__ == "__main__":
-    # Specify the configuration name as an argument when running the script
-    config_name = 'wikipedia'  # Example: 'wikipedia'
-    main(config_name)
+    if len(sys.argv) > 1:
+        config_name = sys.argv[1]  # Get config name from command-line argument
+        main(config_name)
+    else:
+        print("Usage: python main.py <config_name>")
