@@ -11,6 +11,51 @@ This project aims to understand the prevalence of disease mentions for 19 differ
 - Can these results inform us about bias in the final model outputs? I.e., do co-occurrence ratios in pre-training data correlate with fine-tuned LLM bias?
 - How well do the pre-training datasets reflect true disease-demographic relationships? I.e., how well does the distribution of disease-demographic associations in the training data match ‘true’ distributions?
 
+## Repository Structure (Desired):
+
+```
+LLM_Bias/
+│
+├── data/
+│   ├── counts/  
+│   ├── raw_data/  (Too big to fit here naturally)
+│   └── filtered/   (Also too big to fit here)
+│
+├── src/
+│   ├── __init__.py
+│   ├── jsonl_data_filtering.py
+│   └── data_analysis.py
+│
+├── dicts/
+│   ├── __init__.py
+│   ├── dict_medical<py
+│   ├── dict_gender.py
+│   └── dict_racial.py
+│
+├── tests/
+│   └── test_data_filtering.py
+│
+├── docs/
+│   └── README.md
+│
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+│
+├── results/
+│   └── figures/
+│
+├── configs/
+│   ├── stackexchange.yaml
+│   ├── arxiv.yaml
+│   ├── wikipedia.yaml
+│   ├── c4.yaml
+│   ├── books.yaml
+│   ├── github.yaml
+│   └── commoncrawl.yaml
+│
+└── main.py
+```
+
 ## Extracting Relevant Text from Training Data:
 
 ### Step 1:
