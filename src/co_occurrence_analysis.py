@@ -117,7 +117,7 @@ def co_occurrence_within_window_parallel(data, medical_dict, racial_dict, gender
     return df_racial, df_gender
 
 
-def analyze_data_co_occurence(source_name, data_path):
+def analyze_data_co_occurrence(source_name, data_path):
     """
     Analyze the data and save various counts and co-occurrence data to CSV files.
     
