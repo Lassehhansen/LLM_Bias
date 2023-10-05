@@ -1,6 +1,6 @@
 data:
-  input_file_path: '../../data/raw_data/c4/c4.jsonl'
-  output_folder_path: '../../data/filtered/c4'
+  input_folder_path: '../Data/C4/c4'
+  output_folder_path: '../Data/Filtered/C4'
   metadata_keys: 
     - "timestamp"
     - "url"
