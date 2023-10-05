@@ -147,7 +147,7 @@ def jsonl_folder_filtering(input_folder_path, medical_dict, racial_dict, gender_
         if output_folder_path is not None:
             os.makedirs(output_folder_path, exist_ok=True)
             output_path = os.path.join(output_folder_path, filename)
-            df_output.to_json(output_path, orient='records', lines=True)
+            df_output.to_csv(output_path, index=False)  # Save as CSV
         else:
             print("Warning: Output folder path is not provided. The DataFrame is not saved to a file.")
     
@@ -236,7 +236,7 @@ def jsonl_single_file_filtering(file_path, medical_dict, racial_dict, gender_dic
         if output_folder_path is not None:
             os.makedirs(output_folder_path, exist_ok=True)
             output_path = os.path.join(output_folder_path, filename)
-            df_output.to_json(output_path, orient='records', lines=True)
+            df_output.to_csv(output_path, index=False)  # Save as CSV
         else:
             print("Warning: Output folder path is not provided. The DataFrame is not saved to a file.")
     
