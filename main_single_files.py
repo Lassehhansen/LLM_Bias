@@ -2,15 +2,14 @@ import sys
 import yaml
 import pandas as pd
 
-# Adding paths to sys.path for importing modules
-sys.path.append('./dicts')
-sys.path.append('./src')
-
 # Importing necessary modules and functions
-from jsonl_data_filtering import jsonl_single_file_filtering
+sys.path.append('./dicts')
 from dict_gender import gender_keywords_dict
 from dict_medical import medical_keywords_dict
 from dict_racial import racial_keywords_dict
+
+sys.path.append('./src')
+from jsonl_data_filtering import jsonl_single_file_filtering
 from co_occurrence_analysis import analyze_data_co_occurrence
 
 def load_config(config_name):
