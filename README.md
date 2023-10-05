@@ -138,3 +138,59 @@ sudo apt-get install jq
 
 ## on macOS with Homebrew:
 brew install jq
+```
+
+## How to Use
+
+### Configuration Files
+Configuration files are used to specify the parameters for data filtering and analysis. These are stored in the configs/ directory and are written in YAML format. Each dataset should have its own configuration file.
+
+Example of a configuration file (wikipedia.yaml):
+
+```
+data:
+  input_file_path: 'data/raw_data/wikipedia.jsonl'
+  output_folder_path: 'data/filtered/Wikipedia'
+  metadata_keys: 
+    - "language"
+    - "url"
+    - "timestamp"
+processing:
+  remove_latex: true
+  save_file: true
+  filename: 'wikipedia_filtered.csv'
+  total_texts_filename: 'tot_texts_wiki.txt'
+
+```
+
+
+### Data Filtering and Analysis Scripts
+
+Two main scripts are provided for data processing:
+
+- main_folders.py: For datasets organized in folders with multiple .jsonl files.
+- main_single_file.py: For datasets contained in a single .jsonl file.
+
+### Running the Scripts
+To run the scripts, use the following command in your terminal, replacing [script_name] with the name of the script you want to run (main_folders or main_single_file) and [config_name] with the name of your configuration file (without the .yaml extension):
+
+```
+python [script_name].py [config_name]
+
+```
+
+example:
+
+```
+python main_single_file.py wikipedia
+
+```
+
+### This will:
+
+Filter the data based on the terms defined in the dictionaries located in the dicts/ folder.
+Perform a co-occurrence analysis.
+Save the filtered data and analysis results in specified output directories.
+
+## Contributing
+Contributions to improve the code or add additional functionalities are welcome! Please ensure to follow the existing code structure and comment appropriately.
