@@ -1,6 +1,6 @@
 data:
-  input_file_path: '../../Data/Stackexchange/stackexchange/stackexchange.jsonl'
-  output_folder_path: '../../Data/Filtered/Stackexchange'
+  input_file_path: '../Data/Stackexchange/stackexchange/stackexchange.jsonl'
+  output_folder_path: '../Data/Filtered/Stackexchange'
   metadata_keys: 
     - "language"
     - "url"
