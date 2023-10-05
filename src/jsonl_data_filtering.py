@@ -7,10 +7,28 @@ from multiprocessing import Pool, cpu_count
 from functools import partial
 
 def create_keyword_pattern(keywords):
+    """
+    Create a regex pattern for keyword matching.
+    
+    Parameters:
+        keywords (list of str): A list of keywords to create a pattern for.
+        
+    Returns:
+        re.Pattern: A compiled regex pattern that matches any of the provided keywords.
+    """
     pattern = r'(?:(?<=\W)|(?<=^))(' + '|'.join(map(re.escape, keywords)) + r')(?=\W|$)'
     return re.compile(pattern, re.IGNORECASE)
 
 def remove_latex_commands(s):
+    """
+    Remove LaTeX commands from a string.
+    
+    Parameters:
+        s (str): The input string.
+        
+    Returns:
+        str: The string with LaTeX commands removed.
+    """
     s = re.sub(r'\\[nrt]|[\n\r\t]', ' ', s)
     s = re.sub(r'\\[a-zA-Z]+', '', s)
     s = re.sub(r'\\.', '', s)
@@ -24,6 +42,23 @@ def remove_latex_commands(s):
 
 
 def process_file(file_path, medical_patterns, racial_patterns, gender_patterns, metadata_keys, remove_latex):
+    """
+    Process a single JSONL file to extract relevant data.
+    
+    Parameters:
+        file_path (str): Path to the JSONL file.
+        medical_patterns (dict): Dictionary of compiled regex patterns for medical keywords.
+        racial_patterns (dict): Dictionary of compiled regex patterns for racial keywords.
+        gender_patterns (dict): Dictionary of compiled regex patterns for gender keywords.
+        metadata_keys (list of str): List of metadata keys to extract.
+        remove_latex (bool): Whether to remove LaTeX commands from the text.
+        
+    Returns:
+        tuple: A tuple containing:
+            - output_data (list of dict): Extracted data.
+            - total_texts (int): Total number of texts processed.
+    """
+
     output_data = []
     total_texts = 0
     
@@ -57,6 +92,25 @@ def process_file(file_path, medical_patterns, racial_patterns, gender_patterns, 
     return output_data, total_texts
 
 def jsonl_folder_filtering(input_folder_path, medical_dict, racial_dict, gender_dict, metadata_keys=[], output_folder_path=None, remove_latex=True, save_file=True, filename="filtered_data.json", total_texts_filename="total_texts.txt"):
+    """
+    Filter and process all JSONL files in a folder.
+    
+    Parameters:
+        input_folder_path (str): Path to the folder containing JSONL files.
+        medical_dict (dict): Dictionary of medical keywords.
+        racial_dict (dict): Dictionary of racial keywords.
+        gender_dict (dict): Dictionary of gender keywords.
+        metadata_keys (list of str): List of metadata keys to extract.
+        output_folder_path (str): Path to the folder where output should be saved.
+        remove_latex (bool): Whether to remove LaTeX commands from the text.
+        save_file (bool): Whether to save the output data to a file.
+        filename (str): Name of the output file.
+        total_texts_filename (str): Name of the file to save the total number of texts.
+        
+    Returns:
+        pd.DataFrame: A DataFrame containing the extracted data.
+    """
+
     medical_patterns = {k: create_keyword_pattern(v) for k, v in medical_dict.items()}
     racial_patterns = {k: create_keyword_pattern(v) for k, v in racial_dict.items()}
     gender_patterns = {k: create_keyword_pattern(v) for k, v in gender_dict.items()}
