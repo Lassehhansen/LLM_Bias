@@ -62,7 +62,10 @@ def main(config_name):
     # Run co-occurrence analysis
     analyze_data_co_occurrence(
         source_name=config_name,
-        data_path=f"{output_folder_path}/{filename}"
+        data_path=f"{output_folder_path}/{filename}",
+        medical_dict=medical_keywords_dict,
+        racial_dict=racial_keywords_dict,
+        gender_dict=gender_keywords_dict
     )
 
 if __name__ == "__main__":
