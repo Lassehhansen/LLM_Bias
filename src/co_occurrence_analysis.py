@@ -111,8 +111,8 @@ def analyze_data_co_occurrence(source_name, data_path, medical_dict, racial_dict
     total_disease_counts = df_output[list(medical_dict.keys())].sum()
     total_disease_counts.to_csv(os.path.join(output_dir, 'total_disease_counts.csv'))
     
-    disease_date_counts = df_output.groupby('timestamp')[list(medical_dict.keys())].sum().reset_index()
-    disease_date_counts.to_csv(os.path.join(output_dir, 'disease_date_counts.csv'))
+    #disease_date_counts = df_output.groupby('timestamp')[list(medical_dict.keys())].sum().reset_index() # FIX THIS TO BE AN OPTIONAL INPUT
+    #disease_date_counts.to_csv(os.path.join(output_dir, 'disease_date_counts.csv'))
     
     # 3: Disease Mention Counts with Each Race
     disease_gender_counts, disease_race_counts = calculate_disease_by_group(df_output, medical_dict, gender_dict, racial_dict)
