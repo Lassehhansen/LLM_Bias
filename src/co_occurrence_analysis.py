@@ -131,6 +131,8 @@ def analyze_data_co_occurrence(source_name, data_path, medical_dict, racial_dict
         
         window_dir = os.path.join(output_dir, f'window_{window}')
         os.makedirs(window_dir, exist_ok=True)
+
+        
         
         df_racial.to_csv(os.path.join(window_dir, 'co_occurrence_racial.csv'))
         df_gender.to_csv(os.path.join(window_dir, 'co_occurrence_gender.csv'))
