@@ -1,0 +1,469 @@
+---
+title: "total_count_plot"
+output: html_document
+date: "2023-09-05"
+---
+
+## Loading packages
+
+```{r}
+library(tidyverse)
+```
+
+## Create function to load the data
+
+```{r}
+library(readr)
+
+read_custom_csv <- function(prefix = "wiki", window = "window_total", category = c("gender", "racial"), category_total = c("gender", "race")) {
+  # Construct the file path
+  file_path <- ifelse(window == "window_total",
+                      paste0("Oracle_data/", prefix, "/", "disease_", category_total, "_counts", ".csv"),
+                      paste0("Oracle_data/", prefix, "/", "window_", window, "/", "co_occurrence_", category, ".csv"))
+  
+  # Read the CSV
+  data <- read_csv(file_path)
+  return(data)
+}
+```
+
+## Load the data
+
+### Wiki
+
+```{r}
+getwd()
+wiki_window_10_gender <- read_custom_csv(prefix = "wikipedia", window = 10, category = "gender")
+wiki_window_10_racial <- read_custom_csv(prefix = "wikipedia",window = 10, category = "racial")
+
+wiki_window_50_gender <- read_custom_csv(prefix = "wikipedia",window = 50, category = "gender")
+wiki_window_50_racial <- read_custom_csv(prefix = "wikipedia",window = 50, category = "racial")
+
+wiki_window_100_gender <- read_custom_csv(prefix = "wikipedia",window = 100, category = "gender")
+wiki_window_100_racial <- read_custom_csv(prefix = "wikipedia",window = 100, category = "racial")
+
+wiki_window_250_gender <- read_custom_csv(prefix = "wikipedia",window = 250, category = "gender")
+wiki_window_250_racial <- read_custom_csv(prefix = "wikipedia",window = 250, category = "racial")
+
+wiki_window_total_gender <- read_custom_csv(prefix = "wikipedia",window = "window_total", category = "gender", category_total = "gender")
+wiki_window_total_racial <- read_custom_csv(prefix = "wikipedia",window = "window_total", category = "racial", category_total = "race")
+
+```
+
+### Stackexchange
+
+```{r}
+stackexchange_window_10_gender <- read_custom_csv(prefix = "stackexchange", window = 10, category = "gender")
+stackexchange_window_10_racial <- read_custom_csv(prefix = "stackexchange",window = 10, category = "racial")
+
+stackexchange_window_50_gender <- read_custom_csv(prefix = "stackexchange",window = 50, category = "gender")
+stackexchange_window_50_racial <- read_custom_csv(prefix = "stackexchange",window = 50, category = "racial")
+
+stackexchange_window_100_gender <- read_custom_csv(prefix = "stackexchange",window = 100, category = "gender")
+stackexchange_window_100_racial <- read_custom_csv(prefix = "stackexchange",window = 100, category = "racial")
+
+stackexchange_window_250_gender <- read_custom_csv(prefix = "stackexchange",window = 250, category = "gender")
+stackexchange_window_250_racial <- read_custom_csv(prefix = "stackexchange",window = 250, category = "racial")
+
+stackexchange_window_total_gender <- read_custom_csv(prefix = "stackexchange",window = "window_total", category = "gender", category_total = "gender")
+stackexchange_window_total_racial <- read_custom_csv(prefix = "stackexchange",window = "window_total", category = "racial", category_total = "race")
+```
+
+### Arxiv
+
+```{r}
+arxiv_window_10_gender <- read_custom_csv(prefix = "arxiv", window = 10, category = "gender")
+arxiv_window_10_racial <- read_custom_csv(prefix = "arxiv",window = 10, category = "racial")
+
+arxiv_window_50_gender <- read_custom_csv(prefix = "arxiv",window = 50, category = "gender")
+arxiv_window_50_racial <- read_custom_csv(prefix = "arxiv",window = 50, category = "racial")
+
+arxiv_window_100_gender <- read_custom_csv(prefix = "arxiv",window = 100, category = "gender")
+arxiv_window_100_racial <- read_custom_csv(prefix = "arxiv",window = 100, category = "racial")
+
+arxiv_window_250_gender <- read_custom_csv(prefix = "arxiv",window = 250, category = "gender")
+arxiv_window_250_racial <- read_custom_csv(prefix = "arxiv",window = 250, category = "racial")
+
+arxiv_window_total_gender <- read_custom_csv(prefix = "arxiv",window = "window_total", category = "gender", category_total = "gender")
+arxiv_window_total_racial <- read_custom_csv(prefix = "arxiv",window = "window_total", category = "racial", category_total = "race")
+```
+
+### c4
+
+```{r}
+c4_window_10_gender <- read_custom_csv(prefix = "c4", window = 10, category = "gender")
+c4_window_10_racial <- read_custom_csv(prefix = "c4",window = 10, category = "racial")
+
+c4_window_50_gender <- read_custom_csv(prefix = "c4",window = 50, category = "gender")
+c4_window_50_racial <- read_custom_csv(prefix = "c4",window = 50, category = "racial")
+
+c4_window_100_gender <- read_custom_csv(prefix = "c4",window = 100, category = "gender")
+c4_window_100_racial <- read_custom_csv(prefix = "c4",window = 100, category = "racial")
+
+c4_window_250_gender <- read_custom_csv(prefix = "c4",window = 250, category = "gender")
+c4_window_250_racial <- read_custom_csv(prefix = "c4",window = 250, category = "racial")
+
+c4_window_total_gender <- read_custom_csv(prefix = "c4",window = "window_total", category = "gender", category_total = "gender")
+c4_window_total_racial <- read_custom_csv(prefix = "c4",window = "window_total", category = "racial", category_total = "race")
+```
+
+### books
+
+```{r}
+books_window_10_gender <- read_custom_csv(prefix = "books", window = 10, category = "gender")
+books_window_10_racial <- read_custom_csv(prefix = "books",window = 10, category = "racial")
+
+books_window_50_gender <- read_custom_csv(prefix = "books",window = 50, category = "gender")
+books_window_50_racial <- read_custom_csv(prefix = "books",window = 50, category = "racial")
+
+books_window_100_gender <- read_custom_csv(prefix = "books",window = 100, category = "gender")
+books_window_100_racial <- read_custom_csv(prefix = "books",window = 100, category = "racial")
+
+books_window_250_gender <- read_custom_csv(prefix = "books",window = 250, category = "gender")
+books_window_250_racial <- read_custom_csv(prefix = "books",window = 250, category = "racial")
+
+books_window_total_gender <- read_custom_csv(prefix = "books",window = "window_total", category = "gender", category_total = "gender")
+books_window_total_racial <- read_custom_csv(prefix = "books",window = "window_total", category = "racial", category_total = "race")
+```
+
+### github
+
+```{r}
+github_window_10_gender <- read_custom_csv(prefix = "github", window = 10, category = "gender")
+github_window_10_racial <- read_custom_csv(prefix = "github",window = 10, category = "racial")
+
+github_window_50_gender <- read_custom_csv(prefix = "github",window = 50, category = "gender")
+github_window_50_racial <- read_custom_csv(prefix = "github",window = 50, category = "racial")
+
+github_window_100_gender <- read_custom_csv(prefix = "github",window = 100, category = "gender")
+github_window_100_racial <- read_custom_csv(prefix = "github",window = 100, category = "racial")
+
+github_window_250_gender <- read_custom_csv(prefix = "github",window = 250, category = "gender")
+github_window_250_racial <- read_custom_csv(prefix = "github",window = 250, category = "racial")
+
+github_window_total_gender <- read_custom_csv(prefix = "github",window = "window_total", category = "gender", category_total = "gender")
+github_window_total_racial <- read_custom_csv(prefix = "github",window = "window_total", category = "racial", category_total = "race")
+```
+
+## Preprocess
+
+```{r}
+library(dplyr)
+library(tidyr)
+
+# Function to preprocess the regular dataframes
+preprocess_data <- function(df, window, colnames_to_use, cols_to_longer, source) {
+  df_long <- df %>%
+    pivot_longer(cols_to_longer) %>%
+    `colnames<-`(colnames_to_use) %>%
+    mutate(window = window,
+           source = source) %>%
+    group_by(medical_key) %>%
+    mutate(
+      total_count = sum(count),
+      percentage = (count/total_count) * 100
+    )
+  return(df_long)
+}
+
+# Function to preprocess the "total" dataframes
+preprocess_total_data <- function(df, colnames_to_use, source) {
+  df = df %>%
+    select(-1)
+  # Rename columns first
+  colnames(df) <- colnames_to_use
+  
+  # Now do the processing
+  df_processed <- df %>%
+    mutate(window = "total", source = source) %>%
+    group_by(medical_key) %>%
+    mutate(
+      total_count = sum(count),
+      percentage = (count/total_count) * 100
+    ) %>%
+    ungroup()  # This will remove the grouping, which can sometimes cause issues
+  
+  return(df_processed)
+}
+
+# Now, let's preprocess all the dataframes
+
+# Define column names
+colname_gender <- c("medical_key", "gender_key", "count")
+colname_racial <- c("medical_key", "racial_key", "count")
+```
+
+
+### Stackexchange
+
+```{r}
+# Process regular dataframes
+stackexchange_window_10_gender_long <- preprocess_data(stackexchange_window_10_gender, "10", colname_gender, 2:3
+                                                       , source = "Stack")
+stackexchange_window_10_racial_long <- preprocess_data(stackexchange_window_10_racial, "10", colname_racial, 2:7
+                                                       , source = "Stack")
+
+stackexchange_window_50_gender_long <- preprocess_data(stackexchange_window_50_gender, "50", colname_gender, 2:3
+                                                       , source = "Stack")
+stackexchange_window_50_racial_long <- preprocess_data(stackexchange_window_50_racial, "50", colname_racial, 2:7
+                                                       , source = "Stack")
+
+stackexchange_window_100_gender_long <- preprocess_data(stackexchange_window_100_gender, "100", colname_gender, 2:3
+                                                       , source = "Stack")
+stackexchange_window_100_racial_long <- preprocess_data(stackexchange_window_100_racial, "100", colname_racial, 2:7
+                                                       , source = "Stack")
+
+stackexchange_window_250_gender_long <- preprocess_data(stackexchange_window_250_gender, "250", colname_gender, 2:3
+                                                       , source = "Stack")
+stackexchange_window_250_racial_long <- preprocess_data(stackexchange_window_250_racial, "250", colname_racial, 2:7
+                                                       , source = "Stack")
+
+# Process the "total" dataframes
+stackexchange_window_total_gender <- preprocess_total_data(stackexchange_window_total_gender, colname_gender, source = "Stack")
+stackexchange_window_total_racial <- preprocess_total_data(stackexchange_window_total_racial, colname_racial
+                                                       , source = "Stack")
+```
+
+
+### Wiki
+
+```{r}
+# Process regular dataframes
+wiki_window_10_gender_long <- preprocess_data(wiki_window_10_gender, "10", colname_gender, 2:3
+                                                       , source = "Wiki")
+wiki_window_10_racial_long <- preprocess_data(wiki_window_10_racial, "10", colname_racial, 2:7
+                                                       , source = "Wiki")
+
+wiki_window_50_gender_long <- preprocess_data(wiki_window_50_gender, "50", colname_gender, 2:3
+                                                       , source = "Wiki")
+wiki_window_50_racial_long <- preprocess_data(wiki_window_50_racial, "50", colname_racial, 2:7
+                                                       , source = "Wiki")
+
+wiki_window_100_gender_long <- preprocess_data(wiki_window_100_gender, "100", colname_gender, 2:3
+                                                       , source = "Wiki")
+wiki_window_100_racial_long <- preprocess_data(wiki_window_100_racial, "100", colname_racial, 2:7
+                                                       , source = "Wiki")
+
+wiki_window_250_gender_long <- preprocess_data(wiki_window_250_gender, "250", colname_gender, 2:3
+                                                       , source = "Wiki")
+wiki_window_250_racial_long <- preprocess_data(wiki_window_250_racial, "250", colname_racial, 2:7
+                                                       , source = "Wiki")
+
+# Process the "total" dataframes
+wiki_window_total_gender <- preprocess_total_data(wiki_window_total_gender, colname_gender
+                                                       , source = "Wiki")
+wiki_window_total_racial <- preprocess_total_data(wiki_window_total_racial, colname_racial
+                                                       , source = "Wiki")
+```
+
+### Arxiv
+
+```{r}
+# Process regular dataframes
+arxiv_window_10_gender_long <- preprocess_data(arxiv_window_10_gender, "10", colname_gender, 2:3
+                                                       , source = "Arxiv")
+arxiv_window_10_racial_long <- preprocess_data(arxiv_window_10_racial, "10", colname_racial, 2:7
+                                                       , source = "Arxiv")
+
+arxiv_window_50_gender_long <- preprocess_data(arxiv_window_50_gender, "50", colname_gender, 2:3
+                                                       , source = "Arxiv")
+arxiv_window_50_racial_long <- preprocess_data(arxiv_window_50_racial, "50", colname_racial, 2:7
+                                                       , source = "Arxiv")
+
+arxiv_window_100_gender_long <- preprocess_data(arxiv_window_100_gender, "100", colname_gender, 2:3
+                                                       , source = "Arxiv")
+arxiv_window_100_racial_long <- preprocess_data(arxiv_window_100_racial, "100", colname_racial, 2:7
+                                                       , source = "Arxiv")
+
+arxiv_window_250_gender_long <- preprocess_data(arxiv_window_250_gender, "250", colname_gender, 2:3
+                                                       , source = "Arxiv")
+arxiv_window_250_racial_long <- preprocess_data(arxiv_window_250_racial, "250", colname_racial, 2:7
+                                                       , source = "Arxiv")
+
+# Process the "total" dataframes
+arxiv_window_total_gender <- preprocess_total_data(arxiv_window_total_gender, colname_gender
+                                                       , source = "Arxiv")
+arxiv_window_total_racial <- preprocess_total_data(arxiv_window_total_racial, colname_racial
+                                                       , source = "Arxiv")
+```
+
+### Combining it all 
+
+
+```{r}
+df_racial_tot <- bind_rows(arxiv_window_10_racial_long, arxiv_window_50_racial_long, arxiv_window_100_racial_long, 
+                             arxiv_window_250_racial_long, arxiv_window_total_racial,
+                             stackexchange_window_10_racial_long, stackexchange_window_50_racial_long, 
+                             stackexchange_window_100_racial_long, stackexchange_window_250_racial_long, 
+                             stackexchange_window_total_racial,
+                             wiki_window_10_racial_long, wiki_window_50_racial_long, wiki_window_100_racial_long, 
+                             wiki_window_250_racial_long, wiki_window_total_racial)
+
+# Combine all the dataframes
+df_gender_tot <- bind_rows(stackexchange_window_10_gender_long, stackexchange_window_50_gender_long, 
+                             stackexchange_window_100_gender_long, stackexchange_window_250_gender_long, 
+                             stackexchange_window_total_gender,
+                             arxiv_window_10_gender_long, arxiv_window_50_gender_long, arxiv_window_100_gender_long, 
+                             arxiv_window_250_gender_long, arxiv_window_total_gender,
+                             wiki_window_10_gender_long, wiki_window_50_gender_long, wiki_window_100_gender_long, 
+                             wiki_window_250_gender_long, wiki_window_total_gender)
+```
+
+```{r}
+
+df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key")
+df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key")
+
+df_racial_tot2$keyword = ifelse(
+  df_racial_tot2$keyword %in% c("pacific islander", "native american/alaskan native"), "other", df_racial_tot2$keyword 
+)
+
+
+df_racial_tot3_perc = df_racial_tot2 %>%
+    group_by(medical_key, keyword, window, source) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key, window, source) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_tot3_perc = df_gender_tot2 %>%
+    group_by(medical_key, keyword, window, source) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key, window, source) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_racial_tot_perc = rbind(df_racial_tot3_perc, df_gender_tot3_perc)
+
+df_gender_racial_tot_perc$keyword = factor(df_gender_racial_tot_perc$keyword, 
+                                                levels = rev(c("white/caucasian", 
+                                                                        "black", 
+                                                                        "asian",
+                                                                        "hispanic/latino",
+                                                                        "other",
+                                                                        "female",
+                                                                        "male")))
+```
+
+```{r}
+
+med_labels <- c("covid-19" = "Covid-19",
+                "hiv/aids" = "HIV/AIDS",
+                "lupus" = "Lupus",
+                "prostate cancer" = "Prostate Cancer")
+
+df_gender_racial_tot_perc$window <- factor(df_gender_racial_tot_perc$window,
+                                                    levels = c("10", "50", "100", "250",
+                                                               "total"))
+
+window_labels <- c("10" = "20 Words",
+                "50" = "100 Words",
+                "100" = "200 Words",
+                "250" = "500 Words",
+                "total" = "Total Doc.")
+
+plot_racial_tot = ggplot(df_gender_racial_tot_perc, aes(x = data_perc, y = keyword, fill = window)) +
+  geom_bar(stat = 'identity') +
+  #geom_point(size = 2) +
+  scale_fill_manual(values = c("#bc6c25","#344e41", "#540b0e", "#9b2226", "#03045e")) + 
+  #scale_color_manual(values = c("#0072B2", "#D55E00", "#009E73", "#F0E442", "#CC79A7", "#56B4E9")) + 
+  labs(title = "",
+       x = "Percentage ( % )",
+       y = "",
+       fill = "Window Size") +
+  theme_minimal() +
+  theme(
+        plot.title = element_text(hjust = 0.5, size = 10, vjust = 0.2),
+        strip.text = element_text(size = 12, margin = margin(b = 10)),
+        legend.position = "none",
+        axis.title = element_text(size = 11),
+        axis.text = element_text(size = 7),
+        text = element_text(size = 7, family = "Helvetica"),
+        axis.text.x = element_text(size = 9),
+        axis.title.x = element_text(size = 11),
+        axis.text.y = element_text(size = 10),
+        axis.title.y = element_text(size = 10, margin = margin(r = 0)),
+        legend.text = element_text(size = 7)) +
+  facet_grid(medical_key ~ window, scales = "free", switch = "both",
+             labeller = labeller(medical_key = med_labels,
+                                 window = window_labels)) +
+
+
+  theme(
+      strip.text.y.left = element_text(angle = 0),
+      strip.text = element_text(angle = 0, size = 7, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),  # Adjusted margin
+        panel.spacing.x = unit(0.75, "lines"),
+        panel.spacing.y = unit(0.2, "cm"),
+        legend.margin = margin(t = -0.2, unit = "lines"),  
+        plot.margin = unit(c(0.2, 1, 3 , 0.2), 'lines'),
+        strip.background = element_rect(fill = "white", color = "black", size = 0.5)) + 
+    scale_x_continuous(
+                     limits = c(0, 100),
+                     breaks = c(0, 50, 100)) +
+  scale_y_discrete(labels = c("Male", "Female", "Other", "Hispanic", "Asian", "Black", "White"))
+
+
+plot_racial_tot
+```
+
+```{r}
+
+grid_labels2 <- c("white/caucasian" = "White",
+                "black" = "Black",
+                "asian" = "Asian",
+                "hispanic/latino" = "Hispanic",
+                "other" = "Other",
+                "female" = "Female",
+                "male" = "Male")
+
+plot_racial_tot2 = ggplot(df_gender_racial_tot_perc, aes(x = data_perc, y = window, fill = window)) +
+  geom_bar(stat = 'identity') +
+  scale_fill_manual(values = c("#bc6c25","#344e41", "#540b0e", "#9b2226", "#03045e")) + 
+  labs(title = "",
+       x = "Percentage ( % )",
+       y = "",
+       fill = "Window Size") +
+  theme_minimal() +
+  theme(
+        plot.title = element_text(hjust = 0.5, size = 10, vjust = 0.2),
+        strip.text = element_text(size = 12, margin = margin(b = 10)),
+        legend.position = "none",
+        axis.title = element_text(size = 11),
+        axis.text = element_text(size = 7),
+        text = element_text(size = 7, family = "Helvetica"),
+        axis.text.x = element_text(size = 9, color = "black"),
+        axis.title.x = element_text(size = 11),
+        axis.text.y = element_text(size = 10, color = "black"),
+        axis.title.y = element_text(size = 10, margin = margin(r = 0)),
+        legend.text = element_text(size = 7)) +
+  facet_grid(medical_key ~ keyword, scales = "free", switch = "both",
+             labeller = labeller(medical_key = med_labels,
+                                 keyword = grid_labels2)) +
+
+  theme(
+      strip.text.y.left = element_text(angle = 0, size = 12, margin = margin(t = 5, b = 5, l = 5, r = 5)),
+      strip.text.x = element_text(angle = 0, size = 12, margin = margin(t = 5, b = 5, l = 5, r = 5)),  # Adjusted margin
+        panel.spacing.x = unit(0.75, "lines"),
+        panel.spacing.y = unit(0.2, "cm"),
+        legend.margin = margin(t = -0.2, unit = "lines"),  
+        plot.margin = unit(c(0.2, 1, 3 , 0.2), 'lines'),
+        strip.background = element_rect(fill = "white", color = "black", size = 0.5)) + 
+    scale_x_continuous(
+                     limits = c(0, 100),
+                     breaks = c(0, 50, 100)) +
+  scale_y_discrete(labels = c("20 Words", "100 Words", "200 Words", "500 Words", "Total Doc."))
+
+
+```
+
+
