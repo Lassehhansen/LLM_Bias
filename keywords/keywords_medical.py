@@ -34,10 +34,6 @@ medical_keywords = [word.lower() for word in [
 "Viruses, Lymphadenopathy-Associated",
 "Human T Lymphotropic Virus Type III", 
 "Human T-Lymphotropic Virus Type III",
-#"AIDS Virus", THIS IS REDUNDANT
-#"AIDS Viruses", THIS IS REDUNDANT
-#"Virus, AIDS", THIS IS REDUNDANT
-#"Viruses, AIDS", THIS IS REDUNDANT
 "Acquired Immune Deficiency Syndrome Virus",
 "Acquired Immunodeficiency Syndrome Virus",
 "HTLV-III",
@@ -77,24 +73,11 @@ medical_keywords = [word.lower() for word in [
 
 # COVID-19
 ## PubMed Mesh
-#"SARS-CoV-2 Virus", THIS IS REDUNDANT
-#"SARS CoV 2 Virus", THIS IS REDUNDANT
-#"SARS-CoV-2 Viruses", THIS IS REDUNDANT
-#"Virus, SARS-CoV-2", THIS IS REDUNDANT
-#"2019 Novel Coronavirus", THIS IS REDUNDANT
 "2019 Novel Coronaviruses",
 "Coronavirus, 2019 Novel",
 "Novel Coronavirus, 2019",
-#"COVID-19 Virus", THIS IS REDUNDANT
-#"COVID 19 Virus", THIS IS REDUNDANT
-#"COVID-19 Viruses", THIS IS REDUNDANT
-#"Virus, COVID-19", THIS IS REDUNDANT
 "Wuhan Coronavirus",
 "Coronavirus, Wuhan",
-#"COVID19 Virus", THIS IS REDUNDANT
-#"COVID19 Viruses", THIS IS REDUNDANT
-#"Virus, COVID19", THIS IS REDUNDANT
-#"Viruses, COVID19", THIS IS REDUNDANT
 "Coronavirus Disease 2019 Virus",
 "Severe Acute Respiratory Syndrome Coronavirus 2",
 "SARS Coronavirus 2",
@@ -186,7 +169,7 @@ medical_keywords = [word.lower() for word in [
   
 #Tuberculoses
 ## PubMed Mesh
-"Tuberculoses"
+"Tuberculoses",
 "Kochs Disease",
 "Koch's Disease",
 "Koch Disease",
@@ -231,6 +214,16 @@ medical_keywords = [word.lower() for word in [
 
 ## Our own
 "Treponema pallidum",
+"Syphilitic infection",
+"Primary syphilis infection",
+"Primary syphilis",
+"Secondary syphilis",
+"Secondary syphilis infection",
+"Tertiary syphilis",
+"Tertiary syphilis infection",
+"Latent syphilis",
+"Latent syphilis infection",
+
 
 # Type 2 Diabetes 
 
@@ -270,6 +263,10 @@ medical_keywords = [word.lower() for word in [
 # Our own
 "T2 DM",
 "T2DM",
+"DM2",
+"Juvenile diabetes mellitus",
+"Juvenile DM",
+"Juvenile diabetes",
 
 # Multiple myloma
 
@@ -293,7 +290,7 @@ medical_keywords = [word.lower() for word in [
 "Disease, Kahler",
 "Myeloma-Multiple",
 "Myeloma Multiple",
-"Myeloma-Multiples"
+"Myeloma-Multiples",
 ## Our own
 "Multiple Myeloma",
 "Multiple-Myeloma",
@@ -333,21 +330,168 @@ medical_keywords = [word.lower() for word in [
 "Besnier Boeck Disease",
 "Schaumann's Syndrome",
 "Schaumann's Syndromes",
-"Syndrome, Schaumann's"
+"Syndrome, Schaumann's",
 
 ## Our own
 "Sarcoidosis",
+"Sarcoid",
+"Granulomatous sarcoid",
+"Sarcoid, granulomata",
+"Sarcoid granuloma disease",
+"Granuloma sarcoid disease",
 
 # Rheumatoid Arthritis
 ## PubMed Mesh
 "Rheumatoid Arthritis",
+
+##Our own
+
+"Rheumatoid",
+"Arthritis, rheumatoid",
+"Seropositive RA",
+"Seropositive rheumatoid arthritis",
+"Seronegative RA",
+"Seronegative rheumatoid arthritis",
 
 #Hepatitis B 
 ## PubMed Mesh
 "Hepatitis B",
 
 ## Our won
-"Hep B"
+"Hep B",
+"Hepatitis B virus",
+"Hepatitis B infection",
+"HBV",
+"HBV infection",
+"Hep B infection",
+"Hep B virus",
+"Active hepatitis B infection",
+"Active HBV",
+"Latent HBV",
+"Latent hepatitis B",
+"Latent hepatitis B infection",
+"Acute HBV",
+"Acute hepatitis B",
+"Chronic HBV",
+"Chronic hepatitis B",
+"Hepatitis B carrier",
+"Carrier, HBV",
+"Carrier, hepatitis B",
+"Immune-tolerant HBV",
+"Immune tolerant HBV",
+"Immune tolerant hepatitis B",
+"Immune-tolerant HBV",
+"Immune-active hepatitis B",
+"Immune active hepatitis B",
+"Immune active HBV",
+"Immune-active HBV",
+"Immune-control hepatitis B",
+"Immune-control HBV",
+"Immune control hepatitis B",
+"Immune control HBV",
+"Immune clearance HBV",
+"Immune-clearance HBV",
+"Immune clearance hepatitis B",
+"Immune-clearance hepatitis B",
 
+#Ulcerative colitis
+##PubMed search
+"idiopathic prtoctolitis",
+"colitis gravis",
+"inflammatory bowel disease, ulcerative colitis type",
+
+##Our Own
+"ulcerative colitis",
+"IBD-UC",
+"IBD-indeterminate",
+"ulcerative proctitis",
+"ulcerative rectosigmoiditis",
+
+
+#Crohn’s disease
+## PubMed Mesh
+"Crohn disease",
+"Crohn’s enteritis",
+"Crohn’s disease",
+"Inflammatory bowel disease 1",
+"inflammatory bowel disease, Crohn’s disease",
+"Enteritis, granulomatous",
+"Granulomatous enteritis",
+"Ileitis, terminal",
+"Terminal ileitis",
+
+
+## Our own
+"Crohn’s colitis",
+"Crohns colitis",
+"Crohns disease",
+"Small bowel Crohns disease",
+"Small bowel Crohn’s disease",
+"Upper gastrointestinal Crohn’s disease",
+"Upper GI Crohn’s disease",
+"Upper gastrointestinal Crohns disease",
+"Upper GI Crohns disease",
+"reginal enteritis",
+"ileitis",
+"gastroduodenal Crohn’s disease",
+"gastric Crohn’s disease",
+"duodenal Crohn’s disease",
+"jejunal Crohn’s disease",
+
+
+#Gastric cancer 
+##PubMed Search
+"Stomach Neoplasms",
+"gastric neoplasms",
+"gastroesophageal neoplasms",
+"gastro-esophageal neoplasms",
+"gastric adenocarcinoma",
+"stomach cancers",
+"gastric cancers",
+
+##Our own
+"gastric malignancy",
+"gastric cancer",
+"stomach cancer",
+"GE junction cancer",
+"GE junction neoplasm",
+
+
+#Chagas disease
+##PubMed
+"chagas disease",
+"American Trypanosomiasis",
+"Trypanosomiasis, American",
+"Trypanosomiasis, South America",
+"South American Trypanosomiasis",
+"Trypanosoma cruzi Infection",
+"Infection, Trypanosoma cruzi",
+"Infections, Trypanosoma cruzi",
+"Trypanosoma cruzi Infections",
+"Chagas' Disease",
+
+
+##Our Own
+"T. cruzi infection",
+"T. cruzi",
+
+#Ovarian Cancer
+"Neoplasm, Ovarian",
+"Ovarian Neoplasm",
+"Ovary Neoplasms",
+"Neoplasm, Ovary",
+"Neoplasms, Ovary",
+"Ovary Neoplasm",
+"Neoplasms, Ovarian",
+"Ovary Cancer",
+"Cancer, Ovary",
+"Cancers, Ovary",
+"Ovary Cancers",
+"Ovarian Cancer",
+"Cancer, Ovarian",
+"Cancers, Ovarian",
+"Ovarian Cancers",
+"Cancer of Ovary",
+"Cancer of the Ovary"
   
 ]]
