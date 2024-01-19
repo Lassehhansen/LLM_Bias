@@ -65,6 +65,19 @@ LLM_Bias/
 │
 └── main.py
 ```
+
+## Overview of Text Corpora Analyzed for Bias Analysis in LLMs
+
+| Corpus              | Contents                                                     | Size               |
+| --------------------| -------------------------------------------------------------| ------------------ |
+| C4                  | A cleaned version of CommonCrawl’s web-crawled corpus        | 175B (807 GB)      |
+| GitHub              | Raw GitHub data, filtered by license                         | 59B (213 GB)       |
+| Books               | The PG19 subset of the Gutenberg Project and Books3 datasets | 26B (100.4 GB)     |
+| arXiv               | Scientific articles from arXiv. Boilerplate removed          | 28B (88 GB)        |
+| Wikipedia (English) | All English Wikipedia articles                               | 24B (20.3 GB)      |
+| StackExchange       | A network of Q and A websites                                | 20B (74.5 GB)      |
+
+
 ## Datasets
 
 Note the datasets analyzed are all English datasets. 
@@ -176,6 +189,8 @@ python main_single_file.py wikipedia
 Filter the data based on the terms defined in the dictionaries located in the dicts/ folder.
 Perform a co-occurrence analysis.
 Save the filtered data and analysis results in specified output directories.
+
+### Data used for visualizations can be found in the visualiations folder.
 
 ## Contributing
 Contributions to improve the code or add additional functionalities are welcome! Please ensure to follow the existing code structure and comment appropriately.
