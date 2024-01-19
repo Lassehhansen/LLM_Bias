@@ -603,7 +603,12 @@ df_gender_tot <- bind_rows(stackexchange_window_10_gender_long,
                            
                            
                            )
+# fixing spelling error 
+df_racial_tot = df_racial_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+df_gender_tot = df_gender_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
 ```
+
+
 
 ## Saving the data
 
