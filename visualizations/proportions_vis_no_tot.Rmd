@@ -1,0 +1,362 @@
+---
+title: "Proportions - Without 'no disease mention'"
+subtitle: "LLM Bias"
+author: "Lasse Hyldig Hansen"
+date: "2024-19-01"
+output: 
+  html_document:
+    toc: true
+---
+
+## Loading data
+
+```{r}
+df_gender_tot = read_csv("count_vis_data/df_gender_tot.csv")
+df_racial_tot = read_csv("count_vis_data/df_racial_tot.csv")
+```
+
+## Packages
+
+```{r}
+library(tidyverse)
+```
+
+### Calculating proportions only for window == 50
+
+```{r}
+
+df_racial_tot = df_racial_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+df_gender_tot = df_gender_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+
+df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 mutate(
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 mutate(
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+
+df_racial_tot3_perc = df_racial_tot2 %>%
+    filter(window == 50 & keyword != "tot_disease_counts") %>% 
+    group_by(medical_key, keyword) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_tot3_perc = df_gender_tot2 %>%
+    filter(window == 50 & keyword != "tot_disease_counts") %>% 
+    group_by(medical_key, keyword) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_racial_tot_perc = rbind(df_racial_tot3_perc, df_gender_tot3_perc)
+
+df_racial_tot3_perc$keyword = factor(df_racial_tot3_perc$keyword, 
+                                                levels = c(
+                                                            "tot_disease_counts",
+                                                            "white/caucasian", 
+                                                                        "black", 
+                                                                        "asian",
+                                                                        "hispanic/latino",
+                                                                        "native american/alaskan native",
+                                                                        "pacific islander"
+                                                           ))
+
+df_gender_tot3_perc$keyword = factor(df_gender_tot3_perc$keyword, 
+                                                levels = c("tot_disease_counts",
+                                                                        "female",
+                                                                        "male"))
+
+df_gender_racial_tot_perc$keyword = factor(df_gender_racial_tot_perc$keyword, 
+                                                levels = c(
+                                                           "tot_disease_counts", "white/caucasian", 
+                                                                        "black", 
+                                                                        "asian",
+                                                                        "hispanic/latino",
+                                                                        "native american/alaskan native",
+                                                                        "pacific islander",
+                                                                        "female",
+                                                                        "male"))
+
+```
+
+```{r}
+# Now create the plot
+
+### adding total percentages
+sum_count = sum(df_gender_tot3_perc$count)
+
+df_gender_tot3_perc$perc_of_total = (df_gender_tot3_perc$total_count/sum_count)*100
+
+# Create a custom label for faceting
+df_gender_tot3_perc <- df_gender_tot3_perc %>%
+  mutate(facet_label = paste0(round(total_count / 1000, 1), 
+                              " K (", 
+                              round(perc_of_total, 2), "%)"))
+
+
+### adding total percentages
+sum_count = sum(df_racial_tot3_perc$count)
+
+df_racial_tot3_perc$perc_of_total = (df_racial_tot3_perc$total_count/sum_count)*100
+
+# Create a custom label for faceting
+df_racial_tot3_perc <- df_racial_tot3_perc %>%
+  mutate(facet_label = paste0(round(total_count / 1000, 1), 
+                              " K (", 
+                              round(perc_of_total, 2), "%)"))
+```
+
+
+## Visualizing
+
+```{r}
+# Now create the plot
+p1_stacked_bar = ggplot(data = df_gender_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
+  geom_bar(stat = "identity", position = "stack", color = "black") +
+  facet_grid(reorder(facet_label, -total_count) ~ ., scales = "free_y",  switch = "y") +
+  labs(title = "",
+       x = "",
+       y = "",
+       fill = "") +
+  scale_fill_manual(values = rev(c("#344e41", "#9b2226")),
+                    labels = c("Female", "Male")) +
+  coord_flip() +
+  theme_classic() +
+  theme(legend.position = "right",
+        strip.text.y.left = element_text(angle = 0),
+        panel.spacing.x = unit(0, "lines"),
+        panel.spacing.y = unit(0.1, "cm"),
+        legend.margin = margin(t = -0.2, unit = "lines"),
+        plot.margin = unit(c(-0.5, 0.2, -0.5, 0.2), 'lines'),
+        legend.text = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black", face = "bold"),
+        strip.text = element_text(size = 12, color = "black"),
+        axis.text.x = element_text(size = 10, color = "black"),
+        #strip.text = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
+        strip.background = element_rect(fill = "white", color = "black", size = 1)) +
+  scale_y_continuous(expand = c(0,0))
+
+
+p2_stacked_bar = ggplot(data = df_racial_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
+  geom_bar(stat = "identity", position = "stack", color = "black") +
+  facet_grid(reorder(facet_label, -total_count) ~ ., scales = "free_y",  switch = "y") +
+  #facet_grid(facet_label ~ ., scales = "free_y",  switch = "y") +
+  labs(title = "",
+       x = "",
+       y = "",
+       fill = "") +
+  scale_fill_manual(values=rev(c("#bc6c25", "#344e41", "#540b0e", "#9b2226", "#03045e", "#0077b6")),
+                    labels = c("White", "Black", "Asian", "Hispanic", "Native", "Pac. Islander")) +
+  coord_flip() +
+  theme_classic() +
+  theme(legend.position = "right",
+        strip.text.y.left = element_text(angle = 0),
+        panel.spacing.x = unit(0, "lines"),
+        panel.spacing.y = unit(0.1, "cm"),
+        legend.margin = margin(t = -0.2, unit = "lines"),
+        plot.margin = unit(c(-0.5, 0.2, -0.5, 0.2), 'lines'),
+        legend.text = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black", face = "bold"),
+        strip.text = element_text(size = 12, color = "black"),
+        axis.text.x = element_text(size = 10, color = "black"),
+        #strip.text = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
+        strip.background = element_rect(fill = "white", color = "black", size = 1)) +
+  scale_y_continuous(expand = c(0,0))
+```
+
+
+## Calculating proportions by data source now
+
+```{r}
+
+df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 mutate(
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 mutate(
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+
+
+df_racial_tot3_perc = df_racial_tot2 %>%
+    filter(window == 50 & keyword != "tot_disease_counts") %>% 
+    group_by(medical_key, keyword, source) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key, source) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_tot3_perc = df_gender_tot2 %>%
+    filter(window == 50 & keyword != "tot_disease_counts") %>% 
+    group_by(medical_key, keyword, source) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key, source) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_racial_tot_perc = rbind(df_racial_tot3_perc, df_gender_tot3_perc)
+
+df_racial_tot3_perc$keyword = factor(df_racial_tot3_perc$keyword, 
+                                                levels = c(
+                                                            "tot_disease_counts",
+                                                            "white/caucasian", 
+                                                                        "black", 
+                                                                        "asian",
+                                                                        "hispanic/latino",
+                                                                        "native american/alaskan native",
+                                                                        "pacific islander"
+                                                           ))
+
+df_gender_tot3_perc$keyword = factor(df_gender_tot3_perc$keyword, 
+                                                levels = c("tot_disease_counts",
+                                                                        "female",
+                                                                        "male"))
+
+df_gender_racial_tot_perc$keyword = factor(df_gender_racial_tot_perc$keyword, 
+                                                levels = c(
+                                                           "tot_disease_counts", "white/caucasian", 
+                                                                        "black", 
+                                                                        "asian",
+                                                                        "hispanic/latino",
+                                                                        "native american/alaskan native",
+                                                                        "pacific islander",
+                                                                        "female",
+                                                                        "male"))
+
+```
+
+### adding total percentage information
+
+```{r}
+### adding total percentages
+sum_count_sources = sum(df_gender_tot3_perc$count)
+
+df_gender_tot3_perc$perc_of_total = (df_gender_tot3_perc$total_count/sum_count_sources)*100
+
+## getting source counts 
+
+df_gender_tot3_perc = df_gender_tot3_perc %>% 
+  group_by(source) %>% 
+  mutate(source_count = sum(count),
+         source_perc = (source_count/sum_count_sources)*100)
+
+# Create a custom label for faceting
+df_gender_tot3_perc <- df_gender_tot3_perc %>%
+  mutate(facet_label = paste0(source,
+                              "\n",
+                              round(source_count / 1000, 1), 
+                              " K (", 
+                              round(source_perc, 2), "%)"))
+
+
+### adding total percentages
+sum_count_sources = sum(df_racial_tot3_perc$count)
+
+df_racial_tot3_perc$perc_of_total = (df_racial_tot3_perc$total_count/sum_count_sources)*100
+
+## getting source counts 
+
+df_racial_tot3_perc = df_racial_tot3_perc %>% 
+  group_by(source) %>% 
+  mutate(source_count = sum(count),
+         source_perc = (source_count/sum_count_sources)*100)
+
+# Create a custom label for faceting
+df_racial_tot3_perc <- df_racial_tot3_perc %>%
+  mutate(facet_label = paste0(source,
+                              "\n",
+                              round(source_count / 1000, 1), 
+                              " K (", 
+                              round(source_perc, 2), "%)"))
+```
+
+### Visualizing
+
+```{r}
+# Create the updated stacked bar chart with facet labels
+p1_stacked_bar_source = ggplot(data = df_gender_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
+  geom_bar(stat = "identity", position = "stack", color = "black") +
+  labs(title = "",
+       x = "",
+       y = "",
+       fill = "") +
+scale_fill_manual(values = rev(c("#344e41", "#9b2226")),
+                    labels = c("Female", "Male")) +  facet_grid(. ~ reorder(facet_label, -total_count)) +
+    
+  #facet_grid(. ~ facet_label, scales = "free") +
+  coord_flip() +
+  theme_classic() +
+  theme(legend.position = "bottom",
+        #strip.text.y.left = element_text(angle = 0),
+        panel.spacing.x = unit(1.5, "lines"),
+        panel.spacing.y = unit(0.2, "cm"),
+        legend.margin = margin(t = -0.2, unit = "lines"),  
+        plot.margin = unit(c(0.2, 1, 3 , 0.2), 'lines'),
+        legend.text = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        strip.text = element_text(size = 12, color = "black"),
+        axis.text.x = element_text(size = 10, color = "black"),
+        
+        strip.text.y.left = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
+        strip.background = element_rect(fill = "white", color = "black", size = 1.5)) +
+  scale_y_continuous(expand = c(0,0))
+
+
+p2_stacked_bar_source = ggplot(data = df_racial_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
+  geom_bar(stat = "identity", position = "stack", color = "black") +
+  labs(title = "",
+       x = "",
+       y = "",
+       fill = "") +
+  scale_fill_manual(values=rev(c("#bc6c25", "#344e41", "#540b0e", "#9b2226", "#03045e", "#0077b6")),
+                    labels = c("White", "Black", "Asian", "Hispanic", "Native", "Pac. Islander")) +
+  facet_grid(. ~ reorder(facet_label, -total_count)) +
+    
+  #facet_grid(. ~ facet_label, scales = "free") +
+  coord_flip() +
+  theme_classic() +
+  theme(legend.position = "bottom",
+        #strip.text.y.left = element_text(angle = 0),
+        panel.spacing.x = unit(1.5, "lines"),
+        panel.spacing.y = unit(0.2, "cm"),
+        legend.margin = margin(t = -0.2, unit = "lines"),  
+        plot.margin = unit(c(0.2, 1, 3 , 0.2), 'lines'),
+        legend.text = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        strip.text = element_text(size = 12, color = "black"),
+        axis.text.x = element_text(size = 10, color = "black"),
+        
+        strip.text.y.left = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
+        strip.background = element_rect(fill = "white", color = "black", size = 1.5)) +
+  scale_y_continuous(expand = c(0,0))
+```
+
+
+
+

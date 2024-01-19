@@ -1,0 +1,138 @@
+---
+title: "Window Impact Visualization"
+subtitle: "LLM Bias"
+author: "Lasse Hyldig Hansen"
+date: "2024-19-01"
+output: 
+  html_document:
+    toc: true
+---
+
+## Loading data
+
+```{r}
+df_gender_tot = read_csv("count_vis_data/df_gender_tot.csv")
+df_racial_tot = read_csv("count_vis_data/df_racial_tot.csv")
+```
+
+## Packages
+
+```{r}
+library(tidyverse)
+```
+
+## Calculaing counts for different windows 
+
+```{r}
+
+df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 mutate(
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 mutate(
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+
+df_racial_tot3_perc = df_racial_tot2 %>%
+    filter(keyword != "tot_disease_counts") %>% 
+    group_by(medical_key, keyword, window) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key, window) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_tot3_perc = df_gender_tot2 %>%
+    filter(keyword != "tot_disease_counts") %>% 
+    group_by(medical_key, keyword, window) %>%
+    summarize(
+      count = sum(count)
+    ) %>%
+    ungroup() %>% 
+    group_by(medical_key, window) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+
+df_gender_racial_tot_perc = rbind(df_racial_tot3_perc, df_gender_tot3_perc)
+
+df_racial_tot3_perc$keyword = factor(df_racial_tot3_perc$keyword, 
+                                                levels = c(
+                                                            "white/caucasian", 
+                                                                        "black", 
+                                                                        "asian",
+                                                                        "hispanic/latino",
+                                                                        "native american/alaskan native",
+                                                                        "pacific islander"
+                                                           ))
+
+df_gender_tot3_perc$keyword = factor(df_gender_tot3_perc$keyword, 
+                                                levels = c(
+                                                                        "female",
+                                                                        "male"))
+
+df_gender_racial_tot_perc$keyword = factor(df_gender_racial_tot_perc$keyword, 
+                                                levels = c(
+                                                           "white/caucasian", 
+                                                                        "black", 
+                                                                        "asian",
+                                                                        "hispanic/latino",
+                                                                        "native american/alaskan native",
+                                                                        "pacific islander",
+                                                                        "female",
+                                                                        "male"))
+
+```
+
+### visualizing
+
+```{r}
+
+window_labels <- c("10" = "20 W",
+                "50" = "100 W",
+                "100" = "200 W",
+                "250" = "500 W",
+                "total" = "Tot Doc.")
+
+p_windows_gender_race = ggplot(df_gender_racial_tot_perc, aes(x = window, y = data_perc, color = keyword)) +
+  geom_point(aes(color = keyword), alpha = 1) + # Plot individual points
+  geom_line(aes(group = keyword)) + # Add lines for each medical_key
+  labs(title = "",
+       x = "Context Window Size (N. Words)",
+       y = "",
+       color = "") +
+  #scale_color_manual(values=rev(c("#bc6c25", "#344e41", "#540b0e", "#9b2226", "#03045e", "#6a0dad"))) +
+  scale_color_manual(values=rev(c("#344e41", "#9b2226", "#bc6c25", "#540b0e", "#03045e", "#0077b6", "#9ab973", "#89CFF0")), labels = c("White", "Black", "Asian", "Hispanic", "Native", "Pac. Islander", "Female", "Male")) +
+  theme_light() +
+  theme(legend.position = "top",
+        strip.text = element_text(size = 14, color = "black"),
+        axis.title = element_text(size = 11),
+        axis.text = element_text(size = 12),
+        text = element_text(size = 12, family = "Helvetica"),
+        axis.text.x = element_text(size = 10, color = "black"),
+        axis.title.x = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 11, color = "black"),
+        panel.border = element_rect(fill = NA, color = "black", size = 0.5),
+        legend.text = element_text(size = 14, color = "black"),
+        axis.title.y = element_text(size = 12)) +
+    theme(
+      strip.text.x = element_text(angle = 0, size = 12),  # Adjusted margin
+        panel.spacing.x = unit(0.2, "lines"),
+        panel.spacing.y = unit(0.05, "cm"),
+        legend.margin = margin(b = -0.5, unit = "lines"),  
+        plot.margin = unit(c(0, 1, 0.4 , 0.2), 'lines'),
+        strip.background = element_rect(fill = "white", color = "black", size = 0.5)) + 
+  facet_wrap(~ medical_key, nrow = 5, scales = "free") +
+  scale_x_discrete(labels = c("20", "100", "200", "500", "Tot. Doc")) +
+  scale_y_continuous(limits = c(0, 100), expand = c(0,0),
+                     breaks = c(0, 25, 50, 75, 100),
+                     labels = c(0, 25, 50, 75, 100))
+```
+
+
