@@ -17,53 +17,78 @@ Text data in JSON Lines format was extracted from these corpora using standard r
 ## Co-Occurrence Analysis
 We computed co-occurrence counts for race and gender-related keywords against various diseases within defined token windows. The analysis spanned multiple window sizes to capture immediate and broader contextual associations. This methodology created a co-occurrence matrix, delineating the relationship between diseases and demographic categories. Our primary focus was on the ratio of specific racial or gender mentions relative to total occurrences for each disease, offering a quantifiable perspective on demographic representation in disease-related discourse within these corpora. All code is available at GitHub Repository.
 
-## Repository Structure (Desired):
+## Repository Structure:
 
 ```
 LLM_Bias/
 │
-├── data/
-│   ├── counts/  
-│   ├── raw_data/  (Too big to fit here naturally)
-│   └── filtered/   (Also too big to fit here)
+├── Oracle_Counts/             # Initial set of results and analyses
+│   ├── output_arxiv/          # Results specific to the arXiv dataset
+│   ├── output_books/          # Results specific to the Books dataset
+│   ├── output_c4/             # Results specific to the C4 dataset
+│   ├── output_github/         # Results specific to the GitHub dataset
+│   ├── output_stackexchange/  # Results specific to the StackExchange dataset
+│   └── output_wikipedia/      # Results specific to the Wikipedia dataset
 │
-├── src/
-│   ├── __init__.py
-│   ├── jsonl_data_filtering.py
-│   └── data_analysis.py
+├── Oracle_counts_v2/          # Updated or version 2 of results and analyses
+│   ├── output_arxiv/          # Updated results for the arXiv dataset
+│   ├── output_books/          # Updated results for the Books dataset
+│   ├── output_c4/             # Updated results for the C4 dataset
+│   ├── output_github/         # Updated results for the GitHub dataset
+│   ├── output_stackexchange/  # Updated results for the StackExchange dataset
+│   └── output_wikipedia/      # Updated results for the Wikipedia dataset
 │
-├── dicts/
-│   ├── dict_medical.py
+├── configs/                   # Configuration files for data processing
+│   ├── arxiv.yaml
+│   ├── books.yaml
+│   ├── c4.yaml
+│   ├── github.yaml
+│   ├── stackexchange.yaml
+│   └── wikipedia.yaml
+│
+├── dicts/                     # Dictionary files for medical, gender, and racial terms
 │   ├── dict_gender.py
+│   ├── dict_medical.py
 │   └── dict_racial.py
 │
-├── keywords/
-│   ├── keywords_medical.py
+├── keywords/                  # Keyword files for filtering and analysis
 │   ├── keywords_gender.py
+│   ├── keywords_medical.py
 │   └── keywords_racial.py
 │
-├── tests/
-│   └── test_data_filtering.py
+├── src/                       # Source code for data processing and analysis
+│   ├── co_occurrence_analysis.py
+│   ├── jsonl_data_filtering.py
+│   └── jsonl_data_filtering_c4.py
 │
-├── docs/
-│   └── README.md
+├── visualizations/            # Visualization scripts and generated figures
+│   ├── count_vis_data/
+│   │   ├── df_gender_tot.csv
+│   │   └── df_racial_tot.csv
+│   ├── data_coding_inequity/
+│   │   └── final_true_dist (2).csv
+│   ├── figures/
+│   │   ├── gender_mix.eps
+│   │   ├── gender_no_tot.eps
+│   │   ├── gender_sources.eps
+│   │   ├── race_mix.eps
+│   │   ├── race_no_tot.eps
+│   │   ├── race_sources.eps
+│   │   ├── red_vs_realworld.eps
+│   │   ├── text.txt
+│   │   ├── window_together.eps
+│   │   ├── windows_gender.eps
+│   │   └── windows_race.eps
+│   ├── coding_inequity_vis.Rmd
+│   ├── count_preprocessing.Rmd
+│   ├── proportions_vis_including_tot.Rmd
+│   ├── proportions_vis_no_tot.Rmd
+│   └── window_impact_visualization.Rmd
 │
-├── notebooks/
-│   └── exploratory_analysis.ipynb
-│
-├── results/
-│   └── figures/
-│
-├── configs/
-│   ├── stackexchange.yaml
-│   ├── arxiv.yaml
-│   ├── wikipedia.yaml
-│   ├── c4.yaml
-│   ├── books.yaml
-│   ├── github.yaml
-│   └── commoncrawl.yaml
-│
-└── main.py
+├── LICENSE
+├── README.md
+├── main_folders.py
+└── main_single_files.py
 ```
 
 ## Overview of Text Corpora Analyzed for Bias Analysis in LLMs
