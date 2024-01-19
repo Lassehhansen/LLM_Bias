@@ -1,0 +1,1981 @@
+medical_key,gender_key,count,window,source,total_count,percentage
+tuberculosis,male,585,10,Stack,128678,0.45462316790749
+tuberculosis,female,460,10,Stack,128678,0.35748146536315456
+tuberculosis,tot_disease_counts,127633,10,Stack,128678,99.18789536672935
+covid-19,male,218,10,Stack,11950,1.8242677824267781
+covid-19,female,68,10,Stack,11950,0.5690376569037657
+covid-19,tot_disease_counts,11664,10,Stack,11950,97.60669456066947
+hiv/aids,male,437,10,Stack,8502,5.139967066572571
+hiv/aids,female,308,10,Stack,8502,3.62267701717243
+hiv/aids,tot_disease_counts,7757,10,Stack,8502,91.237355916255
+prostate cancer,male,50,10,Stack,274,18.248175182481752
+prostate cancer,female,5,10,Stack,274,1.824817518248175
+prostate cancer,tot_disease_counts,219,10,Stack,274,79.92700729927007
+rheumatoid arthritis,male,4,10,Stack,107,3.7383177570093453
+rheumatoid arthritis,female,2,10,Stack,107,1.8691588785046727
+rheumatoid arthritis,tot_disease_counts,101,10,Stack,107,94.39252336448598
+hepatitis b,male,40,10,Stack,454,8.81057268722467
+hepatitis b,female,16,10,Stack,454,3.524229074889868
+hepatitis b,tot_disease_counts,398,10,Stack,454,87.66519823788546
+bacterial pneumonia,male,102,10,Stack,2093,4.873387482083134
+bacterial pneumonia,female,67,10,Stack,2093,3.201146679407549
+bacterial pneumonia,tot_disease_counts,1924,10,Stack,2093,91.92546583850931
+ovarian cancer,male,9,10,Stack,139,6.474820143884892
+ovarian cancer,female,22,10,Stack,139,15.827338129496402
+ovarian cancer,tot_disease_counts,108,10,Stack,139,77.6978417266187
+gastric cancer,male,21,10,Stack,72,29.166666666666668
+gastric cancer,female,0,10,Stack,72,0
+gastric cancer,tot_disease_counts,51,10,Stack,72,70.83333333333334
+essential hypertension,male,108,10,Stack,2371,4.555040067482075
+essential hypertension,female,94,10,Stack,2371,3.9645719105862502
+essential hypertension,tot_disease_counts,2169,10,Stack,2371,91.48038802193167
+syphilis,male,14,10,Stack,136,10.294117647058822
+syphilis,female,4,10,Stack,136,2.941176470588235
+syphilis,tot_disease_counts,118,10,Stack,136,86.76470588235294
+lupus,male,40,10,Stack,2364,1.6920473773265652
+lupus,female,48,10,Stack,2364,2.030456852791878
+lupus,tot_disease_counts,2276,10,Stack,2364,96.27749576988155
+type 2 diabetes,male,23,10,Stack,1607,1.4312383322962041
+type 2 diabetes,female,6,10,Stack,1607,0.37336652146857496
+type 2 diabetes,tot_disease_counts,1578,10,Stack,1607,98.19539514623521
+multiple sclerosis,male,4,10,Stack,108,3.7037037037037033
+multiple sclerosis,female,6,10,Stack,108,5.555555555555555
+multiple sclerosis,tot_disease_counts,98,10,Stack,108,90.74074074074075
+takotsubo cardiomyopathy,male,1,10,Stack,5,20
+takotsubo cardiomyopathy,female,1,10,Stack,5,20
+takotsubo cardiomyopathy,tot_disease_counts,3,10,Stack,5,60
+colon cancer,male,21,10,Stack,392,5.357142857142857
+colon cancer,female,28,10,Stack,392,7.142857142857142
+colon cancer,tot_disease_counts,343,10,Stack,392,87.5
+ulcerative colitis,male,10,10,Stack,84,11.904761904761903
+ulcerative colitis,female,8,10,Stack,84,9.523809523809524
+ulcerative colitis,tot_disease_counts,66,10,Stack,84,78.57142857142857
+sarcoidoses,male,0,10,Stack,10,0
+sarcoidoses,female,1,10,Stack,10,10
+sarcoidoses,tot_disease_counts,9,10,Stack,10,90
+crohn’s disease,male,1,10,Stack,10,10
+crohn’s disease,female,1,10,Stack,10,10
+crohn’s disease,tot_disease_counts,8,10,Stack,10,80
+endocarditis,male,0,10,Stack,27,0
+endocarditis,female,0,10,Stack,27,0
+endocarditis,tot_disease_counts,27,10,Stack,27,100
+multiple myeloma,male,0,10,Stack,23,0
+multiple myeloma,female,0,10,Stack,23,0
+multiple myeloma,tot_disease_counts,23,10,Stack,23,100
+chagas disease,male,0,10,Stack,10,0
+chagas disease,female,0,10,Stack,10,0
+chagas disease,tot_disease_counts,10,10,Stack,10,100
+tuberculosis,male,2599,50,Stack,131510,1.9762755683978406
+tuberculosis,female,1278,50,Stack,131510,0.9717892175499963
+tuberculosis,tot_disease_counts,127633,50,Stack,131510,97.05193521405216
+covid-19,male,825,50,Stack,12850,6.420233463035019
+covid-19,female,361,50,Stack,12850,2.809338521400778
+covid-19,tot_disease_counts,11664,50,Stack,12850,90.77042801556419
+hiv/aids,male,1582,50,Stack,10261,15.417600623720883
+hiv/aids,female,922,50,Stack,10261,8.985478998148329
+hiv/aids,tot_disease_counts,7757,50,Stack,10261,75.59692037813079
+essential hypertension,male,366,50,Stack,2894,12.646855563234277
+essential hypertension,female,359,50,Stack,2894,12.40497581202488
+essential hypertension,tot_disease_counts,2169,50,Stack,2894,74.94816862474084
+prostate cancer,male,166,50,Stack,404,41.089108910891085
+prostate cancer,female,19,50,Stack,404,4.702970297029703
+prostate cancer,tot_disease_counts,219,50,Stack,404,54.207920792079214
+bacterial pneumonia,male,387,50,Stack,2567,15.075964160498637
+bacterial pneumonia,female,256,50,Stack,2567,9.972730814179977
+bacterial pneumonia,tot_disease_counts,1924,50,Stack,2567,74.95130502532139
+rheumatoid arthritis,male,11,50,Stack,124,8.870967741935484
+rheumatoid arthritis,female,12,50,Stack,124,9.67741935483871
+rheumatoid arthritis,tot_disease_counts,101,50,Stack,124,81.45161290322581
+lupus,male,151,50,Stack,2603,5.8009988474836724
+lupus,female,176,50,Stack,2603,6.76142912024587
+lupus,tot_disease_counts,2276,50,Stack,2603,87.43757203227047
+hepatitis b,male,139,50,Stack,591,23.519458544839257
+hepatitis b,female,54,50,Stack,591,9.137055837563452
+hepatitis b,tot_disease_counts,398,50,Stack,591,67.34348561759728
+ovarian cancer,male,21,50,Stack,212,9.90566037735849
+ovarian cancer,female,83,50,Stack,212,39.15094339622642
+ovarian cancer,tot_disease_counts,108,50,Stack,212,50.943396226415096
+multiple sclerosis,male,23,50,Stack,143,16.083916083916083
+multiple sclerosis,female,22,50,Stack,143,15.384615384615385
+multiple sclerosis,tot_disease_counts,98,50,Stack,143,68.53146853146853
+gastric cancer,male,79,50,Stack,132,59.84848484848485
+gastric cancer,female,2,50,Stack,132,1.5151515151515151
+gastric cancer,tot_disease_counts,51,50,Stack,132,38.63636363636363
+syphilis,male,86,50,Stack,234,36.75213675213676
+syphilis,female,30,50,Stack,234,12.82051282051282
+syphilis,tot_disease_counts,118,50,Stack,234,50.427350427350426
+colon cancer,male,53,50,Stack,457,11.597374179431071
+colon cancer,female,61,50,Stack,457,13.347921225382933
+colon cancer,tot_disease_counts,343,50,Stack,457,75.054704595186
+multiple myeloma,male,7,50,Stack,35,20
+multiple myeloma,female,5,50,Stack,35,14.285714285714285
+multiple myeloma,tot_disease_counts,23,50,Stack,35,65.71428571428571
+type 2 diabetes,male,84,50,Stack,1695,4.95575221238938
+type 2 diabetes,female,33,50,Stack,1695,1.9469026548672566
+type 2 diabetes,tot_disease_counts,1578,50,Stack,1695,93.09734513274336
+takotsubo cardiomyopathy,male,2,50,Stack,7,28.57142857142857
+takotsubo cardiomyopathy,female,2,50,Stack,7,28.57142857142857
+takotsubo cardiomyopathy,tot_disease_counts,3,50,Stack,7,42.857142857142854
+ulcerative colitis,male,29,50,Stack,124,23.387096774193548
+ulcerative colitis,female,29,50,Stack,124,23.387096774193548
+ulcerative colitis,tot_disease_counts,66,50,Stack,124,53.2258064516129
+endocarditis,male,0,50,Stack,30,0
+endocarditis,female,3,50,Stack,30,10
+endocarditis,tot_disease_counts,27,50,Stack,30,90
+sarcoidoses,male,3,50,Stack,14,21.428571428571427
+sarcoidoses,female,2,50,Stack,14,14.285714285714285
+sarcoidoses,tot_disease_counts,9,50,Stack,14,64.28571428571429
+crohn’s disease,male,1,50,Stack,10,10
+crohn’s disease,female,1,50,Stack,10,10
+crohn’s disease,tot_disease_counts,8,50,Stack,10,80
+chagas disease,male,0,50,Stack,10,0
+chagas disease,female,0,50,Stack,10,0
+chagas disease,tot_disease_counts,10,50,Stack,10,100
+tuberculosis,male,5105,100,Stack,134761,3.788187977233769
+tuberculosis,female,2023,100,Stack,134761,1.5011761563063497
+tuberculosis,tot_disease_counts,127633,100,Stack,134761,94.71063586645988
+covid-19,male,1446,100,Stack,13813,10.468399333960763
+covid-19,female,703,100,Stack,13813,5.089408528198074
+covid-19,tot_disease_counts,11664,100,Stack,13813,84.44219213784116
+hiv/aids,male,2746,100,Stack,12050,22.78838174273859
+hiv/aids,female,1547,100,Stack,12050,12.838174273858922
+hiv/aids,tot_disease_counts,7757,100,Stack,12050,64.3734439834025
+essential hypertension,male,622,100,Stack,3429,18.13939924176145
+essential hypertension,female,638,100,Stack,3429,18.606007582385537
+essential hypertension,tot_disease_counts,2169,100,Stack,3429,63.25459317585301
+type 2 diabetes,male,137,100,Stack,1772,7.7313769751693
+type 2 diabetes,female,57,100,Stack,1772,3.216704288939052
+type 2 diabetes,tot_disease_counts,1578,100,Stack,1772,89.05191873589165
+lupus,male,285,100,Stack,2841,10.03167898627244
+lupus,female,280,100,Stack,2841,9.855684618092221
+lupus,tot_disease_counts,2276,100,Stack,2841,80.11263639563533
+prostate cancer,male,253,100,Stack,500,50.6
+prostate cancer,female,28,100,Stack,500,5.6000000000000005
+prostate cancer,tot_disease_counts,219,100,Stack,500,43.8
+bacterial pneumonia,male,672,100,Stack,3068,21.903520208604952
+bacterial pneumonia,female,472,100,Stack,3068,15.384615384615385
+bacterial pneumonia,tot_disease_counts,1924,100,Stack,3068,62.71186440677966
+rheumatoid arthritis,male,16,100,Stack,133,12.030075187969924
+rheumatoid arthritis,female,16,100,Stack,133,12.030075187969924
+rheumatoid arthritis,tot_disease_counts,101,100,Stack,133,75.93984962406014
+multiple sclerosis,male,40,100,Stack,167,23.952095808383234
+multiple sclerosis,female,29,100,Stack,167,17.365269461077844
+multiple sclerosis,tot_disease_counts,98,100,Stack,167,58.68263473053892
+hepatitis b,male,213,100,Stack,697,30.55954088952654
+hepatitis b,female,86,100,Stack,697,12.338593974175035
+hepatitis b,tot_disease_counts,398,100,Stack,697,57.10186513629842
+ovarian cancer,male,27,100,Stack,278,9.712230215827338
+ovarian cancer,female,143,100,Stack,278,51.438848920863315
+ovarian cancer,tot_disease_counts,108,100,Stack,278,38.84892086330935
+gastric cancer,male,133,100,Stack,192,69.27083333333334
+gastric cancer,female,8,100,Stack,192,4.166666666666666
+gastric cancer,tot_disease_counts,51,100,Stack,192,26.5625
+syphilis,male,159,100,Stack,332,47.89156626506024
+syphilis,female,55,100,Stack,332,16.566265060240966
+syphilis,tot_disease_counts,118,100,Stack,332,35.54216867469879
+colon cancer,male,109,100,Stack,561,19.429590017825312
+colon cancer,female,109,100,Stack,561,19.429590017825312
+colon cancer,tot_disease_counts,343,100,Stack,561,61.14081996434938
+multiple myeloma,male,9,100,Stack,39,23.076923076923077
+multiple myeloma,female,7,100,Stack,39,17.94871794871795
+multiple myeloma,tot_disease_counts,23,100,Stack,39,58.97435897435898
+endocarditis,male,0,100,Stack,34,0
+endocarditis,female,7,100,Stack,34,20.588235294117645
+endocarditis,tot_disease_counts,27,100,Stack,34,79.41176470588235
+takotsubo cardiomyopathy,male,5,100,Stack,15,33.33333333333333
+takotsubo cardiomyopathy,female,7,100,Stack,15,46.666666666666664
+takotsubo cardiomyopathy,tot_disease_counts,3,100,Stack,15,20
+ulcerative colitis,male,67,100,Stack,170,39.411764705882355
+ulcerative colitis,female,37,100,Stack,170,21.764705882352942
+ulcerative colitis,tot_disease_counts,66,100,Stack,170,38.82352941176471
+sarcoidoses,male,4,100,Stack,15,26.666666666666668
+sarcoidoses,female,2,100,Stack,15,13.333333333333334
+sarcoidoses,tot_disease_counts,9,100,Stack,15,60
+crohn’s disease,male,1,100,Stack,10,10
+crohn’s disease,female,1,100,Stack,10,10
+crohn’s disease,tot_disease_counts,8,100,Stack,10,80
+chagas disease,male,0,100,Stack,10,0
+chagas disease,female,0,100,Stack,10,0
+chagas disease,tot_disease_counts,10,100,Stack,10,100
+tuberculosis,female,3832,250,Stack,141456,2.7089695735776496
+tuberculosis,male,9991,250,Stack,141456,7.062973645515214
+tuberculosis,tot_disease_counts,127633,250,Stack,141456,90.22805678090714
+covid-19,female,1559,250,Stack,16088,9.690452511188463
+covid-19,male,2865,250,Stack,16088,17.808304326205867
+covid-19,tot_disease_counts,11664,250,Stack,16088,72.50124316260566
+lupus,female,506,250,Stack,3310,15.28700906344411
+lupus,male,528,250,Stack,3310,15.951661631419938
+lupus,tot_disease_counts,2276,250,Stack,3310,68.76132930513596
+hiv/aids,female,2779,250,Stack,15612,17.80040994107097
+hiv/aids,male,5076,250,Stack,15612,32.51345119139123
+hiv/aids,tot_disease_counts,7757,250,Stack,15612,49.68613886753779
+essential hypertension,female,1064,250,Stack,4273,24.900538263515095
+essential hypertension,male,1040,250,Stack,4273,24.338871986894453
+essential hypertension,tot_disease_counts,2169,250,Stack,4273,50.76058974959046
+bacterial pneumonia,female,1168,250,Stack,4390,26.605922551252846
+bacterial pneumonia,male,1298,250,Stack,4390,29.56719817767654
+bacterial pneumonia,tot_disease_counts,1924,250,Stack,4390,43.82687927107061
+type 2 diabetes,female,105,250,Stack,1916,5.480167014613778
+type 2 diabetes,male,233,250,Stack,1916,12.160751565762004
+type 2 diabetes,tot_disease_counts,1578,250,Stack,1916,82.35908141962422
+prostate cancer,female,62,250,Stack,617,10.048622366288493
+prostate cancer,male,336,250,Stack,617,54.45705024311182
+prostate cancer,tot_disease_counts,219,250,Stack,617,35.49432739059968
+rheumatoid arthritis,female,41,250,Stack,174,23.563218390804597
+rheumatoid arthritis,male,32,250,Stack,174,18.39080459770115
+rheumatoid arthritis,tot_disease_counts,101,250,Stack,174,58.04597701149425
+multiple sclerosis,female,54,250,Stack,223,24.2152466367713
+multiple sclerosis,male,71,250,Stack,223,31.838565022421523
+multiple sclerosis,tot_disease_counts,98,250,Stack,223,43.946188340807176
+hepatitis b,female,127,250,Stack,932,13.626609442060087
+hepatitis b,male,407,250,Stack,932,43.66952789699571
+hepatitis b,tot_disease_counts,398,250,Stack,932,42.70386266094421
+ovarian cancer,female,239,250,Stack,389,61.43958868894601
+ovarian cancer,male,42,250,Stack,389,10.796915167095115
+ovarian cancer,tot_disease_counts,108,250,Stack,389,27.76349614395887
+ulcerative colitis,female,86,250,Stack,307,28.013029315960914
+ulcerative colitis,male,155,250,Stack,307,50.4885993485342
+ulcerative colitis,tot_disease_counts,66,250,Stack,307,21.49837133550489
+gastric cancer,female,29,250,Stack,303,9.570957095709572
+gastric cancer,male,223,250,Stack,303,73.5973597359736
+gastric cancer,tot_disease_counts,51,250,Stack,303,16.831683168316832
+syphilis,female,85,250,Stack,543,15.65377532228361
+syphilis,male,340,250,Stack,543,62.61510128913444
+syphilis,tot_disease_counts,118,250,Stack,543,21.731123388581953
+colon cancer,female,155,250,Stack,655,23.66412213740458
+colon cancer,male,157,250,Stack,655,23.969465648854964
+colon cancer,tot_disease_counts,343,250,Stack,655,52.36641221374045
+multiple myeloma,female,7,250,Stack,39,17.94871794871795
+multiple myeloma,male,9,250,Stack,39,23.076923076923077
+multiple myeloma,tot_disease_counts,23,250,Stack,39,58.97435897435898
+endocarditis,female,11,250,Stack,40,27.500000000000004
+endocarditis,male,2,250,Stack,40,5
+endocarditis,tot_disease_counts,27,250,Stack,40,67.5
+takotsubo cardiomyopathy,female,19,250,Stack,31,61.29032258064516
+takotsubo cardiomyopathy,male,9,250,Stack,31,29.03225806451613
+takotsubo cardiomyopathy,tot_disease_counts,3,250,Stack,31,9.67741935483871
+crohn’s disease,female,2,250,Stack,15,13.333333333333334
+crohn’s disease,male,5,250,Stack,15,33.33333333333333
+crohn’s disease,tot_disease_counts,8,250,Stack,15,53.333333333333336
+sarcoidoses,female,3,250,Stack,16,18.75
+sarcoidoses,male,4,250,Stack,16,25
+sarcoidoses,tot_disease_counts,9,250,Stack,16,56.25
+chagas disease,female,0,250,Stack,10,0
+chagas disease,male,0,250,Stack,10,0
+chagas disease,tot_disease_counts,10,250,Stack,10,100
+lupus,male,1545,total,Stack,4864,31.763980263157894
+lupus,female,1043,total,Stack,4864,21.443256578947366
+lupus,tot_disease_counts,2276,total,Stack,4864,46.79276315789473
+hiv/aids,male,10663,total,Stack,23465,45.44214787982101
+hiv/aids,female,5045,total,Stack,23465,21.500106541657786
+hiv/aids,tot_disease_counts,7757,total,Stack,23465,33.0577455785212
+prostate cancer,male,565,total,Stack,1054,53.605313092979124
+prostate cancer,female,270,total,Stack,1054,25.616698292220114
+prostate cancer,tot_disease_counts,219,total,Stack,1054,20.777988614800762
+covid-19,male,7000,total,Stack,22581,30.99951286479784
+covid-19,female,3917,total,Stack,22581,17.346441698773305
+covid-19,tot_disease_counts,11664,total,Stack,22581,51.65404543642885
+takotsubo cardiomyopathy,male,20,total,Stack,91,21.978021978021978
+takotsubo cardiomyopathy,female,68,total,Stack,91,74.72527472527473
+takotsubo cardiomyopathy,tot_disease_counts,3,total,Stack,91,3.296703296703297
+multiple sclerosis,male,99,total,Stack,271,36.53136531365313
+multiple sclerosis,female,74,total,Stack,271,27.30627306273063
+multiple sclerosis,tot_disease_counts,98,total,Stack,271,36.162361623616235
+colon cancer,male,331,total,Stack,1043,31.73537871524449
+colon cancer,female,369,total,Stack,1043,35.378715244487054
+colon cancer,tot_disease_counts,343,total,Stack,1043,32.88590604026846
+tuberculosis,male,21461,total,Stack,158690,13.523851534438213
+tuberculosis,female,9596,total,Stack,158690,6.047009893503056
+tuberculosis,tot_disease_counts,127633,total,Stack,158690,80.42913857205873
+bacterial pneumonia,male,3357,total,Stack,8253,40.67611777535441
+bacterial pneumonia,female,2972,total,Stack,8253,36.01114746152914
+bacterial pneumonia,tot_disease_counts,1924,total,Stack,8253,23.312734763116445
+endocarditis,male,26,total,Stack,68,38.23529411764706
+endocarditis,female,15,total,Stack,68,22.058823529411764
+endocarditis,tot_disease_counts,27,total,Stack,68,39.705882352941174
+syphilis,male,752,total,Stack,1050,71.61904761904762
+syphilis,female,180,total,Stack,1050,17.142857142857142
+syphilis,tot_disease_counts,118,total,Stack,1050,11.238095238095239
+type 2 diabetes,male,599,total,Stack,2426,24.690849134377576
+type 2 diabetes,female,249,total,Stack,2426,10.263808738664467
+type 2 diabetes,tot_disease_counts,1578,total,Stack,2426,65.04534212695795
+multiple myeloma,male,27,total,Stack,68,39.705882352941174
+multiple myeloma,female,18,total,Stack,68,26.47058823529412
+multiple myeloma,tot_disease_counts,23,total,Stack,68,33.82352941176471
+essential hypertension,male,1708,total,Stack,5397,31.647211413748376
+essential hypertension,female,1520,total,Stack,5397,28.16379470075968
+essential hypertension,tot_disease_counts,2169,total,Stack,5397,40.18899388549194
+sarcoidoses,male,4,total,Stack,17,23.52941176470588
+sarcoidoses,female,4,total,Stack,17,23.52941176470588
+sarcoidoses,tot_disease_counts,9,total,Stack,17,52.94117647058824
+rheumatoid arthritis,male,62,total,Stack,246,25.203252032520325
+rheumatoid arthritis,female,83,total,Stack,246,33.739837398373986
+rheumatoid arthritis,tot_disease_counts,101,total,Stack,246,41.05691056910569
+hepatitis b,male,593,total,Stack,1151,51.52041702867072
+hepatitis b,female,160,total,Stack,1151,13.900955690703737
+hepatitis b,tot_disease_counts,398,total,Stack,1151,34.57862728062555
+ulcerative colitis,male,179,total,Stack,344,52.03488372093024
+ulcerative colitis,female,99,total,Stack,344,28.77906976744186
+ulcerative colitis,tot_disease_counts,66,total,Stack,344,19.186046511627907
+crohn’s disease,male,5,total,Stack,15,33.33333333333333
+crohn’s disease,female,2,total,Stack,15,13.333333333333334
+crohn’s disease,tot_disease_counts,8,total,Stack,15,53.333333333333336
+gastric cancer,male,748,total,Stack,849,88.10365135453475
+gastric cancer,female,50,total,Stack,849,5.889281507656066
+gastric cancer,tot_disease_counts,51,total,Stack,849,6.007067137809187
+chagas disease,male,0,total,Stack,10,0
+chagas disease,female,0,total,Stack,10,0
+chagas disease,tot_disease_counts,10,total,Stack,10,100
+ovarian cancer,male,147,total,Stack,699,21.030042918454935
+ovarian cancer,female,444,total,Stack,699,63.519313304721024
+ovarian cancer,tot_disease_counts,108,total,Stack,699,15.450643776824036
+essential hypertension,male,99,10,Arxiv,6514,1.5198035001535155
+essential hypertension,female,142,10,Arxiv,6514,2.1799201719373653
+essential hypertension,tot_disease_counts,6273,10,Arxiv,6514,96.30027632790912
+tuberculosis,male,1219,10,Arxiv,402720,0.3026916964640445
+tuberculosis,female,558,10,Arxiv,402720,0.13855780691299166
+tuberculosis,tot_disease_counts,400943,10,Arxiv,402720,99.55875049662296
+covid-19,male,1548,10,Arxiv,144671,1.070014031837756
+covid-19,female,532,10,Arxiv,144671,0.36773092050238126
+covid-19,tot_disease_counts,142591,10,Arxiv,144671,98.56225504765986
+prostate cancer,male,361,10,Arxiv,4768,7.571308724832216
+prostate cancer,female,42,10,Arxiv,4768,0.8808724832214765
+prostate cancer,tot_disease_counts,4365,10,Arxiv,4768,91.54781879194631
+hiv/aids,male,613,10,Arxiv,38322,1.599603360993685
+hiv/aids,female,698,10,Arxiv,38322,1.821408068472418
+hiv/aids,tot_disease_counts,37011,10,Arxiv,38322,96.5789885705339
+lupus,male,104,10,Arxiv,33624,0.30930287889602665
+lupus,female,24,10,Arxiv,33624,0.07137758743754462
+lupus,tot_disease_counts,33496,10,Arxiv,33624,99.61931953366643
+type 2 diabetes,male,32,10,Arxiv,7966,0.40170725583730854
+type 2 diabetes,female,20,10,Arxiv,7966,0.25106703489831783
+type 2 diabetes,tot_disease_counts,7914,10,Arxiv,7966,99.34722570926438
+gastric cancer,male,30,10,Arxiv,742,4.0431266846361185
+gastric cancer,female,6,10,Arxiv,742,0.8086253369272237
+gastric cancer,tot_disease_counts,706,10,Arxiv,742,95.14824797843666
+bacterial pneumonia,male,71,10,Arxiv,11395,0.6230802983764809
+bacterial pneumonia,female,45,10,Arxiv,11395,0.39491004826678366
+bacterial pneumonia,tot_disease_counts,11279,10,Arxiv,11395,98.98200965335674
+colon cancer,male,194,10,Arxiv,4061,4.777148485594681
+colon cancer,female,52,10,Arxiv,4061,1.2804727899532136
+colon cancer,tot_disease_counts,3815,10,Arxiv,4061,93.9423787244521
+rheumatoid arthritis,male,4,10,Arxiv,556,0.7194244604316548
+rheumatoid arthritis,female,8,10,Arxiv,556,1.4388489208633095
+rheumatoid arthritis,tot_disease_counts,544,10,Arxiv,556,97.84172661870504
+syphilis,male,20,10,Arxiv,390,5.128205128205128
+syphilis,female,3,10,Arxiv,390,0.7692307692307693
+syphilis,tot_disease_counts,367,10,Arxiv,390,94.1025641025641
+ovarian cancer,male,16,10,Arxiv,1386,1.1544011544011543
+ovarian cancer,female,72,10,Arxiv,1386,5.194805194805195
+ovarian cancer,tot_disease_counts,1298,10,Arxiv,1386,93.65079365079364
+multiple sclerosis,male,14,10,Arxiv,1281,1.092896174863388
+multiple sclerosis,female,12,10,Arxiv,1281,0.936768149882904
+multiple sclerosis,tot_disease_counts,1255,10,Arxiv,1281,97.97033567525371
+crohn’s disease,male,0,10,Arxiv,77,0
+crohn’s disease,female,1,10,Arxiv,77,1.2987012987012987
+crohn’s disease,tot_disease_counts,76,10,Arxiv,77,98.7012987012987
+hepatitis b,male,6,10,Arxiv,971,0.6179196704428425
+hepatitis b,female,13,10,Arxiv,971,1.3388259526261586
+hepatitis b,tot_disease_counts,952,10,Arxiv,971,98.043254376931
+sarcoidoses,male,4,10,Arxiv,141,2.8368794326241136
+sarcoidoses,female,0,10,Arxiv,141,0
+sarcoidoses,tot_disease_counts,137,10,Arxiv,141,97.16312056737588
+ulcerative colitis,male,0,10,Arxiv,260,0
+ulcerative colitis,female,2,10,Arxiv,260,0.7692307692307693
+ulcerative colitis,tot_disease_counts,258,10,Arxiv,260,99.23076923076923
+multiple myeloma,male,1,10,Arxiv,268,0.3731343283582089
+multiple myeloma,female,1,10,Arxiv,268,0.3731343283582089
+multiple myeloma,tot_disease_counts,266,10,Arxiv,268,99.25373134328358
+takotsubo cardiomyopathy,male,0,10,Arxiv,21,0
+takotsubo cardiomyopathy,female,0,10,Arxiv,21,0
+takotsubo cardiomyopathy,tot_disease_counts,21,10,Arxiv,21,100
+endocarditis,male,0,10,Arxiv,55,0
+endocarditis,female,0,10,Arxiv,55,0
+endocarditis,tot_disease_counts,55,10,Arxiv,55,100
+chagas disease,male,0,10,Arxiv,104,0
+chagas disease,female,0,10,Arxiv,104,0
+chagas disease,tot_disease_counts,104,10,Arxiv,104,100
+tuberculosis,male,6534,50,Arxiv,410864,1.5903072549554111
+tuberculosis,female,3387,50,Arxiv,410864,0.8243603722886406
+tuberculosis,tot_disease_counts,400943,50,Arxiv,410864,97.58533237275596
+type 2 diabetes,male,146,50,Arxiv,8212,1.7778860204578666
+type 2 diabetes,female,152,50,Arxiv,8212,1.8509498295177789
+type 2 diabetes,tot_disease_counts,7914,50,Arxiv,8212,96.37116415002436
+hiv/aids,male,2831,50,Arxiv,42545,6.654130920202139
+hiv/aids,female,2703,50,Arxiv,42545,6.353273005053472
+hiv/aids,tot_disease_counts,37011,50,Arxiv,42545,86.99259607474438
+essential hypertension,male,442,50,Arxiv,7382,5.987537252777026
+essential hypertension,female,667,50,Arxiv,7382,9.035491736656732
+essential hypertension,tot_disease_counts,6273,50,Arxiv,7382,84.97697101056623
+covid-19,male,7484,50,Arxiv,152776,4.898675184583966
+covid-19,female,2701,50,Arxiv,152776,1.7679478452112898
+covid-19,tot_disease_counts,142591,50,Arxiv,152776,93.33337697020474
+prostate cancer,male,1082,50,Arxiv,5553,19.48496308301819
+prostate cancer,female,106,50,Arxiv,5553,1.9088780839186026
+prostate cancer,tot_disease_counts,4365,50,Arxiv,5553,78.6061588330632
+lupus,male,559,50,Arxiv,34161,1.636368958754135
+lupus,female,106,50,Arxiv,34161,0.3102953660607125
+lupus,tot_disease_counts,33496,50,Arxiv,34161,98.05333567518515
+colon cancer,male,651,50,Arxiv,4707,13.830465264499681
+colon cancer,female,241,50,Arxiv,4707,5.120033991926917
+colon cancer,tot_disease_counts,3815,50,Arxiv,4707,81.0495007435734
+bacterial pneumonia,male,335,50,Arxiv,11853,2.8262887032818695
+bacterial pneumonia,female,239,50,Arxiv,11853,2.0163671644309455
+bacterial pneumonia,tot_disease_counts,11279,50,Arxiv,11853,95.15734413228718
+ovarian cancer,male,75,50,Arxiv,1636,4.584352078239609
+ovarian cancer,female,263,50,Arxiv,1636,16.075794621026894
+ovarian cancer,tot_disease_counts,1298,50,Arxiv,1636,79.3398533007335
+gastric cancer,male,96,50,Arxiv,824,11.650485436893204
+gastric cancer,female,22,50,Arxiv,824,2.669902912621359
+gastric cancer,tot_disease_counts,706,50,Arxiv,824,85.67961165048543
+multiple sclerosis,male,61,50,Arxiv,1359,4.488594554819721
+multiple sclerosis,female,43,50,Arxiv,1359,3.164091243561442
+multiple sclerosis,tot_disease_counts,1255,50,Arxiv,1359,92.34731420161883
+rheumatoid arthritis,male,22,50,Arxiv,599,3.672787979966611
+rheumatoid arthritis,female,33,50,Arxiv,599,5.509181969949917
+rheumatoid arthritis,tot_disease_counts,544,50,Arxiv,599,90.81803005008348
+syphilis,male,62,50,Arxiv,441,14.058956916099774
+syphilis,female,12,50,Arxiv,441,2.7210884353741496
+syphilis,tot_disease_counts,367,50,Arxiv,441,83.21995464852607
+ulcerative colitis,male,3,50,Arxiv,273,1.098901098901099
+ulcerative colitis,female,12,50,Arxiv,273,4.395604395604396
+ulcerative colitis,tot_disease_counts,258,50,Arxiv,273,94.5054945054945
+hepatitis b,male,30,50,Arxiv,1018,2.9469548133595285
+hepatitis b,female,36,50,Arxiv,1018,3.536345776031434
+hepatitis b,tot_disease_counts,952,50,Arxiv,1018,93.51669941060904
+crohn’s disease,male,0,50,Arxiv,77,0
+crohn’s disease,female,1,50,Arxiv,77,1.2987012987012987
+crohn’s disease,tot_disease_counts,76,50,Arxiv,77,98.7012987012987
+multiple myeloma,male,10,50,Arxiv,282,3.546099290780142
+multiple myeloma,female,6,50,Arxiv,282,2.127659574468085
+multiple myeloma,tot_disease_counts,266,50,Arxiv,282,94.32624113475178
+endocarditis,male,0,50,Arxiv,60,0
+endocarditis,female,5,50,Arxiv,60,8.333333333333332
+endocarditis,tot_disease_counts,55,50,Arxiv,60,91.66666666666666
+sarcoidoses,male,14,50,Arxiv,161,8.695652173913043
+sarcoidoses,female,10,50,Arxiv,161,6.211180124223603
+sarcoidoses,tot_disease_counts,137,50,Arxiv,161,85.09316770186336
+chagas disease,male,2,50,Arxiv,106,1.8867924528301887
+chagas disease,female,0,50,Arxiv,106,0
+chagas disease,tot_disease_counts,104,50,Arxiv,106,98.11320754716981
+takotsubo cardiomyopathy,male,1,50,Arxiv,23,4.3478260869565215
+takotsubo cardiomyopathy,female,1,50,Arxiv,23,4.3478260869565215
+takotsubo cardiomyopathy,tot_disease_counts,21,50,Arxiv,23,91.30434782608695
+tuberculosis,female,6999,100,Arxiv,421523,1.6604076171407016
+tuberculosis,male,13581,100,Arxiv,421523,3.2218882480908513
+tuberculosis,tot_disease_counts,400943,100,Arxiv,421523,95.11770413476845
+type 2 diabetes,female,291,100,Arxiv,8490,3.4275618374558303
+type 2 diabetes,male,285,100,Arxiv,8490,3.356890459363958
+type 2 diabetes,tot_disease_counts,7914,100,Arxiv,8490,93.2155477031802
+hiv/aids,female,4796,100,Arxiv,47094,10.183887544060815
+hiv/aids,male,5287,100,Arxiv,47094,11.226483203805156
+hiv/aids,tot_disease_counts,37011,100,Arxiv,47094,78.58962925213403
+essential hypertension,female,1141,100,Arxiv,8189,13.933325192331175
+essential hypertension,male,775,100,Arxiv,8189,9.463915007937478
+essential hypertension,tot_disease_counts,6273,100,Arxiv,8189,76.60275979973134
+covid-19,female,5510,100,Arxiv,162910,3.3822355902031793
+covid-19,male,14809,100,Arxiv,162910,9.0902952550488
+covid-19,tot_disease_counts,142591,100,Arxiv,162910,87.52746915474802
+prostate cancer,female,166,100,Arxiv,6124,2.7106466361854995
+prostate cancer,male,1593,100,Arxiv,6124,26.012410189418684
+prostate cancer,tot_disease_counts,4365,100,Arxiv,6124,71.27694317439583
+lupus,female,213,100,Arxiv,34828,0.6115768921557367
+lupus,male,1119,100,Arxiv,34828,3.2129321235787294
+lupus,tot_disease_counts,33496,100,Arxiv,34828,96.17549098426554
+colon cancer,female,364,100,Arxiv,5253,6.929373691224063
+colon cancer,male,1074,100,Arxiv,5253,20.445459737292975
+colon cancer,tot_disease_counts,3815,100,Arxiv,5253,72.62516657148296
+bacterial pneumonia,female,456,100,Arxiv,12346,3.6935039688968088
+bacterial pneumonia,male,611,100,Arxiv,12346,4.948971326745505
+bacterial pneumonia,tot_disease_counts,11279,100,Arxiv,12346,91.35752470435769
+ovarian cancer,female,425,100,Arxiv,1850,22.972972972972975
+ovarian cancer,male,127,100,Arxiv,1850,6.864864864864866
+ovarian cancer,tot_disease_counts,1298,100,Arxiv,1850,70.16216216216216
+gastric cancer,female,38,100,Arxiv,921,4.125950054288817
+gastric cancer,male,177,100,Arxiv,921,19.218241042345277
+gastric cancer,tot_disease_counts,706,100,Arxiv,921,76.65580890336591
+multiple sclerosis,female,72,100,Arxiv,1434,5.02092050209205
+multiple sclerosis,male,107,100,Arxiv,1434,7.461645746164574
+multiple sclerosis,tot_disease_counts,1255,100,Arxiv,1434,87.51743375174338
+hepatitis b,female,62,100,Arxiv,1109,5.5906221821460775
+hepatitis b,male,95,100,Arxiv,1109,8.566275924256086
+hepatitis b,tot_disease_counts,952,100,Arxiv,1109,85.84310189359783
+chagas disease,female,0,100,Arxiv,110,0
+chagas disease,male,6,100,Arxiv,110,5.454545454545454
+chagas disease,tot_disease_counts,104,100,Arxiv,110,94.54545454545455
+rheumatoid arthritis,female,61,100,Arxiv,660,9.242424242424242
+rheumatoid arthritis,male,55,100,Arxiv,660,8.333333333333332
+rheumatoid arthritis,tot_disease_counts,544,100,Arxiv,660,82.42424242424242
+syphilis,female,34,100,Arxiv,526,6.4638783269961975
+syphilis,male,125,100,Arxiv,526,23.76425855513308
+syphilis,tot_disease_counts,367,100,Arxiv,526,69.77186311787072
+ulcerative colitis,female,24,100,Arxiv,287,8.362369337979095
+ulcerative colitis,male,5,100,Arxiv,287,1.7421602787456445
+ulcerative colitis,tot_disease_counts,258,100,Arxiv,287,89.89547038327527
+crohn’s disease,female,2,100,Arxiv,79,2.5316455696202533
+crohn’s disease,male,1,100,Arxiv,79,1.2658227848101267
+crohn’s disease,tot_disease_counts,76,100,Arxiv,79,96.20253164556962
+multiple myeloma,female,11,100,Arxiv,301,3.6544850498338874
+multiple myeloma,male,24,100,Arxiv,301,7.973421926910299
+multiple myeloma,tot_disease_counts,266,100,Arxiv,301,88.37209302325581
+endocarditis,female,10,100,Arxiv,69,14.492753623188406
+endocarditis,male,4,100,Arxiv,69,5.797101449275362
+endocarditis,tot_disease_counts,55,100,Arxiv,69,79.71014492753623
+sarcoidoses,female,14,100,Arxiv,172,8.13953488372093
+sarcoidoses,male,21,100,Arxiv,172,12.209302325581394
+sarcoidoses,tot_disease_counts,137,100,Arxiv,172,79.65116279069767
+takotsubo cardiomyopathy,female,1,100,Arxiv,23,4.3478260869565215
+takotsubo cardiomyopathy,male,1,100,Arxiv,23,4.3478260869565215
+takotsubo cardiomyopathy,tot_disease_counts,21,100,Arxiv,23,91.30434782608695
+tuberculosis,male,33796,250,Arxiv,452595,7.467161590384339
+tuberculosis,female,17856,250,Arxiv,452595,3.945249063732476
+tuberculosis,tot_disease_counts,400943,250,Arxiv,452595,88.58758934588319
+type 2 diabetes,male,726,250,Arxiv,9284,7.819905213270142
+type 2 diabetes,female,644,250,Arxiv,9284,6.936665230504093
+type 2 diabetes,tot_disease_counts,7914,250,Arxiv,9284,85.24342955622576
+hiv/aids,male,11527,250,Arxiv,58926,19.561823303804772
+hiv/aids,female,10388,250,Arxiv,58926,17.62889047279639
+hiv/aids,tot_disease_counts,37011,250,Arxiv,58926,62.80928622339884
+essential hypertension,male,1534,250,Arxiv,10036,15.284974093264248
+essential hypertension,female,2229,250,Arxiv,10036,22.210043842168194
+essential hypertension,tot_disease_counts,6273,250,Arxiv,10036,62.50498206456756
+covid-19,male,35862,250,Arxiv,192396,18.639680658641552
+covid-19,female,13943,250,Arxiv,192396,7.247032162830829
+covid-19,tot_disease_counts,142591,250,Arxiv,192396,74.11328717852761
+bacterial pneumonia,male,1509,250,Arxiv,13935,10.828848223896664
+bacterial pneumonia,female,1147,250,Arxiv,13935,8.231072838177251
+bacterial pneumonia,tot_disease_counts,11279,250,Arxiv,13935,80.94007893792609
+prostate cancer,male,2739,250,Arxiv,7458,36.72566371681416
+prostate cancer,female,354,250,Arxiv,7458,4.746580852775542
+prostate cancer,tot_disease_counts,4365,250,Arxiv,7458,58.5277554304103
+lupus,male,2523,250,Arxiv,36514,6.9096784794873205
+lupus,female,495,250,Arxiv,36514,1.3556444103631484
+lupus,tot_disease_counts,33496,250,Arxiv,36514,91.73467711014953
+colon cancer,male,2107,250,Arxiv,6601,31.919406150583246
+colon cancer,female,679,250,Arxiv,6601,10.286320254506894
+colon cancer,tot_disease_counts,3815,250,Arxiv,6601,57.79427359490986
+ovarian cancer,male,287,250,Arxiv,2320,12.370689655172413
+ovarian cancer,female,735,250,Arxiv,2320,31.68103448275862
+ovarian cancer,tot_disease_counts,1298,250,Arxiv,2320,55.94827586206896
+hepatitis b,male,210,250,Arxiv,1296,16.203703703703702
+hepatitis b,female,134,250,Arxiv,1296,10.339506172839506
+hepatitis b,tot_disease_counts,952,250,Arxiv,1296,73.4567901234568
+gastric cancer,male,372,250,Arxiv,1168,31.84931506849315
+gastric cancer,female,90,250,Arxiv,1168,7.705479452054795
+gastric cancer,tot_disease_counts,706,250,Arxiv,1168,60.445205479452056
+multiple sclerosis,male,260,250,Arxiv,1662,15.643802647412755
+multiple sclerosis,female,147,250,Arxiv,1662,8.844765342960288
+multiple sclerosis,tot_disease_counts,1255,250,Arxiv,1662,75.51143200962696
+chagas disease,male,12,250,Arxiv,117,10.256410256410255
+chagas disease,female,1,250,Arxiv,117,0.8547008547008548
+chagas disease,tot_disease_counts,104,250,Arxiv,117,88.88888888888889
+rheumatoid arthritis,male,125,250,Arxiv,795,15.723270440251572
+rheumatoid arthritis,female,126,250,Arxiv,795,15.849056603773585
+rheumatoid arthritis,tot_disease_counts,544,250,Arxiv,795,68.42767295597484
+syphilis,male,250,250,Arxiv,705,35.46099290780142
+syphilis,female,88,250,Arxiv,705,12.4822695035461
+syphilis,tot_disease_counts,367,250,Arxiv,705,52.05673758865248
+ulcerative colitis,male,13,250,Arxiv,326,3.9877300613496933
+ulcerative colitis,female,55,250,Arxiv,326,16.87116564417178
+ulcerative colitis,tot_disease_counts,258,250,Arxiv,326,79.14110429447852
+endocarditis,male,13,250,Arxiv,84,15.476190476190476
+endocarditis,female,16,250,Arxiv,84,19.047619047619047
+endocarditis,tot_disease_counts,55,250,Arxiv,84,65.47619047619048
+crohn’s disease,male,2,250,Arxiv,83,2.4096385542168677
+crohn’s disease,female,5,250,Arxiv,83,6.024096385542169
+crohn’s disease,tot_disease_counts,76,250,Arxiv,83,91.56626506024097
+multiple myeloma,male,70,250,Arxiv,357,19.607843137254903
+multiple myeloma,female,21,250,Arxiv,357,5.88235294117647
+multiple myeloma,tot_disease_counts,266,250,Arxiv,357,74.50980392156863
+sarcoidoses,male,38,250,Arxiv,198,19.19191919191919
+sarcoidoses,female,23,250,Arxiv,198,11.616161616161616
+sarcoidoses,tot_disease_counts,137,250,Arxiv,198,69.1919191919192
+takotsubo cardiomyopathy,male,2,250,Arxiv,25,8
+takotsubo cardiomyopathy,female,2,250,Arxiv,25,8
+takotsubo cardiomyopathy,tot_disease_counts,21,250,Arxiv,25,84
+lupus,male,55630,total,Arxiv,98804,56.303388526780296
+lupus,female,9678,total,Arxiv,98804,9.795149993927371
+lupus,tot_disease_counts,33496,total,Arxiv,98804,33.90146147929234
+hiv/aids,male,178527,total,Arxiv,341174,52.327258231869955
+hiv/aids,female,125636,total,Arxiv,341174,36.82461148856595
+hiv/aids,tot_disease_counts,37011,total,Arxiv,341174,10.848130279564092
+prostate cancer,male,27961,total,Arxiv,46448,60.19850155012057
+prostate cancer,female,14122,total,Arxiv,46448,30.403892524974165
+prostate cancer,tot_disease_counts,4365,total,Arxiv,46448,9.397605924905271
+covid-19,male,673458,total,Arxiv,1176970,57.21964026270848
+covid-19,female,360921,total,Arxiv,1176970,30.665267593906385
+covid-19,tot_disease_counts,142591,total,Arxiv,1176970,12.115092143385132
+takotsubo cardiomyopathy,male,131,total,Arxiv,211,62.08530805687204
+takotsubo cardiomyopathy,female,59,total,Arxiv,211,27.96208530805687
+takotsubo cardiomyopathy,tot_disease_counts,21,total,Arxiv,211,9.95260663507109
+multiple sclerosis,male,4071,total,Arxiv,7423,54.84305536844941
+multiple sclerosis,female,2097,total,Arxiv,7423,28.250033679105485
+multiple sclerosis,tot_disease_counts,1255,total,Arxiv,7423,16.906910952445102
+colon cancer,male,16442,total,Arxiv,28054,58.60839808939902
+colon cancer,female,7797,total,Arxiv,28054,27.79282811720254
+colon cancer,tot_disease_counts,3815,total,Arxiv,28054,13.598773793398447
+tuberculosis,male,805194,total,Arxiv,1563049,51.51431592995485
+tuberculosis,female,356912,total,Arxiv,1563049,22.834344924567304
+tuberculosis,tot_disease_counts,400943,total,Arxiv,1563049,25.65133914547785
+bacterial pneumonia,male,24670,total,Arxiv,48532,50.832440451660766
+bacterial pneumonia,female,12583,total,Arxiv,48532,25.927223275364707
+bacterial pneumonia,tot_disease_counts,11279,total,Arxiv,48532,23.24033627297453
+endocarditis,male,167,total,Arxiv,696,23.99425287356322
+endocarditis,female,474,total,Arxiv,696,68.10344827586206
+endocarditis,tot_disease_counts,55,total,Arxiv,696,7.902298850574713
+syphilis,male,2942,total,Arxiv,5161,57.00445650067816
+syphilis,female,1852,total,Arxiv,5161,35.88451850416586
+syphilis,tot_disease_counts,367,total,Arxiv,5161,7.111024995155978
+type 2 diabetes,male,16302,total,Arxiv,33961,48.002120078914054
+type 2 diabetes,female,9745,total,Arxiv,33961,28.694679190836546
+type 2 diabetes,tot_disease_counts,7914,total,Arxiv,33961,23.303200730249404
+multiple myeloma,male,762,total,Arxiv,1285,59.29961089494164
+multiple myeloma,female,257,total,Arxiv,1285,20
+multiple myeloma,tot_disease_counts,266,total,Arxiv,1285,20.700389105058363
+essential hypertension,male,21420,total,Arxiv,47334,45.25288376220053
+essential hypertension,female,19641,total,Arxiv,47334,41.49448599315503
+essential hypertension,tot_disease_counts,6273,total,Arxiv,47334,13.252630244644442
+sarcoidoses,male,360,total,Arxiv,712,50.56179775280899
+sarcoidoses,female,215,total,Arxiv,712,30.196629213483146
+sarcoidoses,tot_disease_counts,137,total,Arxiv,712,19.241573033707866
+rheumatoid arthritis,male,1198,total,Arxiv,2836,42.2425952045134
+rheumatoid arthritis,female,1094,total,Arxiv,2836,38.57545839210155
+rheumatoid arthritis,tot_disease_counts,544,total,Arxiv,2836,19.18194640338505
+hepatitis b,male,2600,total,Arxiv,5066,51.3225424397947
+hepatitis b,female,1514,total,Arxiv,5066,29.885511251480455
+hepatitis b,tot_disease_counts,952,total,Arxiv,5066,18.79194630872483
+ulcerative colitis,male,139,total,Arxiv,808,17.2029702970297
+ulcerative colitis,female,411,total,Arxiv,808,50.866336633663366
+ulcerative colitis,tot_disease_counts,258,total,Arxiv,808,31.93069306930693
+crohn’s disease,male,165,total,Arxiv,378,43.65079365079365
+crohn’s disease,female,137,total,Arxiv,378,36.24338624338625
+crohn’s disease,tot_disease_counts,76,total,Arxiv,378,20.105820105820104
+gastric cancer,male,2966,total,Arxiv,4637,63.963769678671554
+gastric cancer,female,965,total,Arxiv,4637,20.810869096398534
+gastric cancer,tot_disease_counts,706,total,Arxiv,4637,15.225361224929912
+chagas disease,male,189,total,Arxiv,317,59.62145110410094
+chagas disease,female,24,total,Arxiv,317,7.570977917981073
+chagas disease,tot_disease_counts,104,total,Arxiv,317,32.80757097791798
+ovarian cancer,male,3493,total,Arxiv,10707,32.623517325114406
+ovarian cancer,female,5916,total,Arxiv,10707,55.253572429251896
+ovarian cancer,tot_disease_counts,1298,total,Arxiv,10707,12.122910245633697
+tuberculosis,male,15379,10,Wiki,60677,25.345682878191077
+tuberculosis,female,7725,10,Wiki,60677,12.73134795721608
+tuberculosis,tot_disease_counts,37573,10,Wiki,60677,61.92296916459284
+hiv/aids,male,22785,10,Wiki,137951,16.516734202724155
+hiv/aids,female,16250,10,Wiki,137951,11.77954491087415
+hiv/aids,tot_disease_counts,98916,10,Wiki,137951,71.70372088640168
+syphilis,male,1931,10,Wiki,7434,25.97524885660479
+syphilis,female,727,10,Wiki,7434,9.779391982781812
+syphilis,tot_disease_counts,4776,10,Wiki,7434,64.2453591606134
+lupus,male,1116,10,Wiki,9187,12.147599869380647
+lupus,female,800,10,Wiki,9187,8.707956895613368
+lupus,tot_disease_counts,7271,10,Wiki,9187,79.144443235006
+multiple sclerosis,male,1447,10,Wiki,8358,17.312754247427613
+multiple sclerosis,female,1371,10,Wiki,8358,16.403445800430724
+multiple sclerosis,tot_disease_counts,5540,10,Wiki,8358,66.28379995214166
+bacterial pneumonia,male,12452,10,Wiki,39575,31.464308275426404
+bacterial pneumonia,female,4406,10,Wiki,39575,11.133291219204043
+bacterial pneumonia,tot_disease_counts,22717,10,Wiki,39575,57.402400505369556
+rheumatoid arthritis,male,417,10,Wiki,3734,11.167648634172469
+rheumatoid arthritis,female,394,10,Wiki,3734,10.551687198714516
+rheumatoid arthritis,tot_disease_counts,2923,10,Wiki,3734,78.28066416711302
+covid-19,male,23718,10,Wiki,217674,10.896110697648778
+covid-19,female,11373,10,Wiki,217674,5.224785688690427
+covid-19,tot_disease_counts,182583,10,Wiki,217674,83.8791036136608
+essential hypertension,male,968,10,Wiki,9411,10.285835724152587
+essential hypertension,female,565,10,Wiki,9411,6.0036127935394745
+essential hypertension,tot_disease_counts,7878,10,Wiki,9411,83.71055148230793
+prostate cancer,male,3870,10,Wiki,12586,30.748450659462893
+prostate cancer,female,478,10,Wiki,12586,3.797870649928492
+prostate cancer,tot_disease_counts,8238,10,Wiki,12586,65.45367869060861
+ovarian cancer,male,342,10,Wiki,5250,6.514285714285714
+ovarian cancer,female,1649,10,Wiki,5250,31.409523809523808
+ovarian cancer,tot_disease_counts,3259,10,Wiki,5250,62.076190476190476
+gastric cancer,male,1723,10,Wiki,5873,29.337646858505025
+gastric cancer,female,634,10,Wiki,5873,10.795164311254895
+gastric cancer,tot_disease_counts,3516,10,Wiki,5873,59.86718883024008
+colon cancer,male,2163,10,Wiki,9720,22.25308641975309
+colon cancer,female,1024,10,Wiki,9720,10.534979423868313
+colon cancer,tot_disease_counts,6533,10,Wiki,9720,67.2119341563786
+type 2 diabetes,male,573,10,Wiki,4445,12.890888638920133
+type 2 diabetes,female,292,10,Wiki,4445,6.569178852643419
+type 2 diabetes,tot_disease_counts,3580,10,Wiki,4445,80.53993250843644
+chagas disease,male,68,10,Wiki,707,9.618104667609618
+chagas disease,female,20,10,Wiki,707,2.828854314002829
+chagas disease,tot_disease_counts,619,10,Wiki,707,87.55304101838756
+multiple myeloma,male,466,10,Wiki,2691,17.31698253437384
+multiple myeloma,female,231,10,Wiki,2691,8.58416945373467
+multiple myeloma,tot_disease_counts,1994,10,Wiki,2691,74.09884801189149
+hepatitis b,male,334,10,Wiki,3858,8.657335406946604
+hepatitis b,female,201,10,Wiki,3858,5.209953343701399
+hepatitis b,tot_disease_counts,3323,10,Wiki,3858,86.132711249352
+ulcerative colitis,male,182,10,Wiki,1238,14.70113085621971
+ulcerative colitis,female,36,10,Wiki,1238,2.9079159935379644
+ulcerative colitis,tot_disease_counts,1020,10,Wiki,1238,82.39095315024232
+endocarditis,male,134,10,Wiki,1256,10.668789808917198
+endocarditis,female,46,10,Wiki,1256,3.662420382165605
+endocarditis,tot_disease_counts,1076,10,Wiki,1256,85.6687898089172
+crohn’s disease,male,23,10,Wiki,209,11.004784688995215
+crohn’s disease,female,12,10,Wiki,209,5.741626794258373
+crohn’s disease,tot_disease_counts,174,10,Wiki,209,83.25358851674642
+sarcoidoses,male,103,10,Wiki,1003,10.269192422731804
+sarcoidoses,female,40,10,Wiki,1003,3.988035892323031
+sarcoidoses,tot_disease_counts,860,10,Wiki,1003,85.74277168494517
+takotsubo cardiomyopathy,male,12,10,Wiki,109,11.009174311926607
+takotsubo cardiomyopathy,female,7,10,Wiki,109,6.422018348623854
+takotsubo cardiomyopathy,tot_disease_counts,90,10,Wiki,109,82.56880733944955
+tuberculosis,male,64191,50,Wiki,134718,47.648421146394696
+tuberculosis,female,32954,50,Wiki,134718,24.461467658367848
+tuberculosis,tot_disease_counts,37573,50,Wiki,134718,27.89011119523746
+hiv/aids,male,107457,50,Wiki,282852,37.990539221925246
+hiv/aids,female,76479,50,Wiki,282852,27.03852191251962
+hiv/aids,tot_disease_counts,98916,50,Wiki,282852,34.97093886555513
+covid-19,male,133047,50,Wiki,382285,34.80309193402828
+covid-19,female,66655,50,Wiki,382285,17.435944387041083
+covid-19,tot_disease_counts,182583,50,Wiki,382285,47.760963678930644
+syphilis,male,8661,50,Wiki,16980,51.007067137809194
+syphilis,female,3543,50,Wiki,16980,20.86572438162544
+syphilis,tot_disease_counts,4776,50,Wiki,16980,28.12720848056537
+lupus,male,5466,50,Wiki,16217,33.705370907072826
+lupus,female,3480,50,Wiki,16217,21.45896281679719
+lupus,tot_disease_counts,7271,50,Wiki,16217,44.835666276129984
+multiple sclerosis,male,6060,50,Wiki,16960,35.7311320754717
+multiple sclerosis,female,5360,50,Wiki,16960,31.60377358490566
+multiple sclerosis,tot_disease_counts,5540,50,Wiki,16960,32.66509433962264
+bacterial pneumonia,male,51637,50,Wiki,95179,54.25251368474137
+bacterial pneumonia,female,20825,50,Wiki,95179,21.879826432301243
+bacterial pneumonia,tot_disease_counts,22717,50,Wiki,95179,23.867659882957376
+rheumatoid arthritis,male,1786,50,Wiki,6310,28.304278922345482
+rheumatoid arthritis,female,1601,50,Wiki,6310,25.37242472266244
+rheumatoid arthritis,tot_disease_counts,2923,50,Wiki,6310,46.323296354992074
+essential hypertension,male,4560,50,Wiki,15204,29.99210734017364
+essential hypertension,female,2766,50,Wiki,15204,18.192580899763218
+essential hypertension,tot_disease_counts,7878,50,Wiki,15204,51.815311760063146
+colon cancer,male,8863,50,Wiki,19767,44.837355187939494
+colon cancer,female,4371,50,Wiki,19767,22.11261192897253
+colon cancer,tot_disease_counts,6533,50,Wiki,19767,33.05003288308798
+prostate cancer,male,14631,50,Wiki,25639,57.06540816724521
+prostate cancer,female,2770,50,Wiki,25639,10.803853504426849
+prostate cancer,tot_disease_counts,8238,50,Wiki,25639,32.13073832832794
+ovarian cancer,male,1846,50,Wiki,11387,16.21146921928515
+ovarian cancer,female,6282,50,Wiki,11387,55.16817423377536
+ovarian cancer,tot_disease_counts,3259,50,Wiki,11387,28.62035654693949
+gastric cancer,male,7005,50,Wiki,13190,53.108415466262315
+gastric cancer,female,2669,50,Wiki,13190,20.23502653525398
+gastric cancer,tot_disease_counts,3516,50,Wiki,13190,26.6565579984837
+ulcerative colitis,male,751,50,Wiki,1971,38.10248604769153
+ulcerative colitis,female,200,50,Wiki,1971,10.147133434804667
+ulcerative colitis,tot_disease_counts,1020,50,Wiki,1971,51.7503805175038
+type 2 diabetes,male,2474,50,Wiki,7509,32.947130110534026
+type 2 diabetes,female,1455,50,Wiki,7509,19.376747902516982
+type 2 diabetes,tot_disease_counts,3580,50,Wiki,7509,47.67612198694899
+hepatitis b,male,1543,50,Wiki,5853,26.362549120109346
+hepatitis b,female,987,50,Wiki,5853,16.863147104049204
+hepatitis b,tot_disease_counts,3323,50,Wiki,5853,56.77430377584145
+multiple myeloma,male,2148,50,Wiki,5171,41.53935409011796
+multiple myeloma,female,1029,50,Wiki,5171,19.899439180042545
+multiple myeloma,tot_disease_counts,1994,50,Wiki,5171,38.56120672983948
+chagas disease,male,314,50,Wiki,1056,29.734848484848484
+chagas disease,female,123,50,Wiki,1056,11.647727272727272
+chagas disease,tot_disease_counts,619,50,Wiki,1056,58.61742424242424
+endocarditis,male,608,50,Wiki,1928,31.535269709543567
+endocarditis,female,244,50,Wiki,1928,12.655601659751037
+endocarditis,tot_disease_counts,1076,50,Wiki,1928,55.809128630705395
+sarcoidoses,male,536,50,Wiki,1590,33.71069182389937
+sarcoidoses,female,194,50,Wiki,1590,12.20125786163522
+sarcoidoses,tot_disease_counts,860,50,Wiki,1590,54.088050314465406
+crohn’s disease,male,108,50,Wiki,350,30.857142857142854
+crohn’s disease,female,68,50,Wiki,350,19.428571428571427
+crohn’s disease,tot_disease_counts,174,50,Wiki,350,49.714285714285715
+takotsubo cardiomyopathy,male,55,50,Wiki,189,29.100529100529098
+takotsubo cardiomyopathy,female,44,50,Wiki,189,23.28042328042328
+takotsubo cardiomyopathy,tot_disease_counts,90,50,Wiki,189,47.61904761904761
+tuberculosis,male,118330,100,Wiki,216267,54.71477386748788
+tuberculosis,female,60364,100,Wiki,216267,27.911794217333203
+tuberculosis,tot_disease_counts,37573,100,Wiki,216267,17.373431915178923
+hiv/aids,male,208049,100,Wiki,456476,45.57720449706009
+hiv/aids,female,149511,100,Wiki,456476,32.75331014116843
+hiv/aids,tot_disease_counts,98916,100,Wiki,456476,21.669485361771486
+covid-19,male,266031,100,Wiki,582800,45.64704873026768
+covid-19,female,134186,100,Wiki,582800,23.02436513383665
+covid-19,tot_disease_counts,182583,100,Wiki,582800,31.328586135895677
+syphilis,male,16304,100,Wiki,28085,58.05234110735268
+syphilis,female,7005,100,Wiki,28085,24.94213993234823
+syphilis,tot_disease_counts,4776,100,Wiki,28085,17.005518960299092
+lupus,male,10504,100,Wiki,24270,43.279769262463944
+lupus,female,6495,100,Wiki,24270,26.761433868974045
+lupus,tot_disease_counts,7271,100,Wiki,24270,29.95879686856201
+multiple sclerosis,male,11230,100,Wiki,26489,42.394956396994985
+multiple sclerosis,female,9719,100,Wiki,26489,36.69070180074748
+multiple sclerosis,tot_disease_counts,5540,100,Wiki,26489,20.914341802257542
+prostate cancer,male,25765,100,Wiki,39417,65.36519775731283
+prostate cancer,female,5414,100,Wiki,39417,13.735190400081182
+prostate cancer,tot_disease_counts,8238,100,Wiki,39417,20.899611842605985
+bacterial pneumonia,male,90876,100,Wiki,151310,60.05948053664662
+bacterial pneumonia,female,37717,100,Wiki,151310,24.926971118894983
+bacterial pneumonia,tot_disease_counts,22717,100,Wiki,151310,15.013548344458396
+rheumatoid arthritis,male,3283,100,Wiki,9053,36.26422180492654
+rheumatoid arthritis,female,2847,100,Wiki,9053,31.44813873853971
+rheumatoid arthritis,tot_disease_counts,2923,100,Wiki,9053,32.287639456533746
+endocarditis,male,1158,100,Wiki,2703,42.841287458379576
+endocarditis,female,469,100,Wiki,2703,17.351091379948205
+endocarditis,tot_disease_counts,1076,100,Wiki,2703,39.807621161672216
+essential hypertension,male,8563,100,Wiki,21770,39.33394579696831
+essential hypertension,female,5329,100,Wiki,21770,24.478640330730364
+essential hypertension,tot_disease_counts,7878,100,Wiki,21770,36.187413872301335
+colon cancer,male,15803,100,Wiki,30076,52.54355632397926
+colon cancer,female,7740,100,Wiki,30076,25.73480516026067
+colon cancer,tot_disease_counts,6533,100,Wiki,30076,21.721638515760073
+ovarian cancer,male,3625,100,Wiki,17987,20.153444154111302
+ovarian cancer,female,11103,100,Wiki,17987,61.72791460499249
+ovarian cancer,tot_disease_counts,3259,100,Wiki,17987,18.118641240896203
+gastric cancer,male,12405,100,Wiki,20704,59.915958268933544
+gastric cancer,female,4783,100,Wiki,20704,23.101816074188562
+gastric cancer,tot_disease_counts,3516,100,Wiki,20704,16.982225656877898
+ulcerative colitis,male,1386,100,Wiki,2815,49.236234458259325
+ulcerative colitis,female,409,100,Wiki,2815,14.52930728241563
+ulcerative colitis,tot_disease_counts,1020,100,Wiki,2815,36.234458259325045
+type 2 diabetes,male,4688,100,Wiki,11082,42.30283342356975
+type 2 diabetes,female,2814,100,Wiki,11082,25.392528424472115
+type 2 diabetes,tot_disease_counts,3580,100,Wiki,11082,32.30463815195813
+hepatitis b,male,2938,100,Wiki,8210,35.785627283800245
+hepatitis b,female,1949,100,Wiki,8210,23.739342265529842
+hepatitis b,tot_disease_counts,3323,100,Wiki,8210,40.47503045066991
+multiple myeloma,male,3773,100,Wiki,7611,49.57298646695572
+multiple myeloma,female,1844,100,Wiki,7611,24.228090921035346
+multiple myeloma,tot_disease_counts,1994,100,Wiki,7611,26.198922612008936
+chagas disease,male,598,100,Wiki,1453,41.15622849277357
+chagas disease,female,236,100,Wiki,1453,16.24225739848589
+chagas disease,tot_disease_counts,619,100,Wiki,1453,42.60151410874053
+sarcoidoses,male,1041,100,Wiki,2264,45.98056537102473
+sarcoidoses,female,363,100,Wiki,2264,16.03356890459364
+sarcoidoses,tot_disease_counts,860,100,Wiki,2264,37.985865724381625
+crohn’s disease,male,191,100,Wiki,468,40.81196581196581
+crohn’s disease,female,103,100,Wiki,468,22.00854700854701
+crohn’s disease,tot_disease_counts,174,100,Wiki,468,37.17948717948718
+takotsubo cardiomyopathy,male,95,100,Wiki,264,35.984848484848484
+takotsubo cardiomyopathy,female,79,100,Wiki,264,29.924242424242426
+takotsubo cardiomyopathy,tot_disease_counts,90,100,Wiki,264,34.090909090909086
+covid-19,male,606393,250,Wiki,1098711,55.191310544811145
+covid-19,female,309735,250,Wiki,1098711,28.190761719869922
+covid-19,tot_disease_counts,182583,250,Wiki,1098711,16.617927735318933
+tuberculosis,male,250769,250,Wiki,413836,60.59622652451696
+tuberculosis,female,125494,250,Wiki,413836,30.324573019263667
+tuberculosis,tot_disease_counts,37573,250,Wiki,413836,9.079200456219372
+hiv/aids,male,468835,250,Wiki,905720,51.76379013381619
+hiv/aids,female,337969,250,Wiki,905720,37.31495384887162
+hiv/aids,tot_disease_counts,98916,250,Wiki,905720,10.921256017312194
+syphilis,male,36127,250,Wiki,56471,63.9744293531193
+syphilis,female,15568,250,Wiki,56471,27.568132315701867
+syphilis,tot_disease_counts,4776,250,Wiki,56471,8.457438331178835
+lupus,male,22842,250,Wiki,43542,52.459694088466314
+lupus,female,13429,250,Wiki,43542,30.841486380965506
+lupus,tot_disease_counts,7271,250,Wiki,43542,16.698819530568187
+multiple sclerosis,male,24167,250,Wiki,49664,48.66100193298969
+multiple sclerosis,female,19957,250,Wiki,49664,40.18403672680412
+multiple sclerosis,tot_disease_counts,5540,250,Wiki,49664,11.154961340206187
+prostate cancer,male,52248,250,Wiki,72350,72.2156185210781
+prostate cancer,female,11864,250,Wiki,72350,16.398064961990325
+prostate cancer,tot_disease_counts,8238,250,Wiki,72350,11.386316516931583
+bacterial pneumonia,male,186403,250,Wiki,287345,64.87079990951644
+bacterial pneumonia,female,78225,250,Wiki,287345,27.223372600880474
+bacterial pneumonia,tot_disease_counts,22717,250,Wiki,287345,7.90582748960309
+colon cancer,male,32416,250,Wiki,54789,59.165160889959665
+colon cancer,female,15840,250,Wiki,54789,28.910912774462027
+colon cancer,tot_disease_counts,6533,250,Wiki,54789,11.92392633557831
+rheumatoid arthritis,male,6877,250,Wiki,15555,44.21086467373835
+rheumatoid arthritis,female,5755,250,Wiki,15555,36.997749919639986
+rheumatoid arthritis,tot_disease_counts,2923,250,Wiki,15555,18.791385406621668
+endocarditis,male,2490,250,Wiki,4579,54.37868530246779
+endocarditis,female,1013,250,Wiki,4579,22.122734221445732
+endocarditis,tot_disease_counts,1076,250,Wiki,4579,23.49858047608648
+chagas disease,male,1310,250,Wiki,2475,52.92929292929293
+chagas disease,female,546,250,Wiki,2475,22.060606060606062
+chagas disease,tot_disease_counts,619,250,Wiki,2475,25.01010101010101
+essential hypertension,male,18743,250,Wiki,38561,48.60610461346957
+essential hypertension,female,11940,250,Wiki,38561,30.963927284043464
+essential hypertension,tot_disease_counts,7878,250,Wiki,38561,20.42996810248697
+hepatitis b,male,6707,250,Wiki,14558,46.070888858359666
+hepatitis b,female,4528,250,Wiki,14558,31.103173512845174
+hepatitis b,tot_disease_counts,3323,250,Wiki,14558,22.825937628795163
+multiple myeloma,male,7907,250,Wiki,13599,58.1439811750864
+multiple myeloma,female,3698,250,Wiki,13599,27.193175968821237
+multiple myeloma,tot_disease_counts,1994,250,Wiki,13599,14.66284285609236
+ovarian cancer,male,8418,250,Wiki,34678,24.274756329661457
+ovarian cancer,female,23001,250,Wiki,34678,66.32735451871503
+ovarian cancer,tot_disease_counts,3259,250,Wiki,34678,9.397889151623508
+gastric cancer,male,25171,250,Wiki,38477,65.41830184265926
+gastric cancer,female,9790,250,Wiki,38477,25.443771603815268
+gastric cancer,tot_disease_counts,3516,250,Wiki,38477,9.137926553525483
+ulcerative colitis,male,2870,250,Wiki,4727,60.71504125237994
+ulcerative colitis,female,837,250,Wiki,4727,17.706790776390946
+ulcerative colitis,tot_disease_counts,1020,250,Wiki,4727,21.57816797122911
+type 2 diabetes,male,10046,250,Wiki,19602,51.249872461993675
+type 2 diabetes,female,5976,250,Wiki,19602,30.486685032139576
+type 2 diabetes,tot_disease_counts,3580,250,Wiki,19602,18.26344250586675
+sarcoidoses,male,2149,250,Wiki,3846,55.87623504940198
+sarcoidoses,female,837,250,Wiki,3846,21.76287051482059
+sarcoidoses,tot_disease_counts,860,250,Wiki,3846,22.360894435777432
+crohn’s disease,male,437,250,Wiki,781,55.953905249679906
+crohn’s disease,female,170,250,Wiki,781,21.76696542893726
+crohn’s disease,tot_disease_counts,174,250,Wiki,781,22.279129321382843
+takotsubo cardiomyopathy,male,182,250,Wiki,460,39.565217391304344
+takotsubo cardiomyopathy,female,188,250,Wiki,460,40.869565217391305
+takotsubo cardiomyopathy,tot_disease_counts,90,250,Wiki,460,19.565217391304348
+lupus,male,120665,total,Wiki,196953,61.2658857697014
+lupus,female,69017,total,Wiki,196953,35.04237051479287
+lupus,tot_disease_counts,7271,total,Wiki,196953,3.69174371550573
+hiv/aids,male,2684079,total,Wiki,4612923,58.18607854499197
+hiv/aids,female,1829928,total,Wiki,4612923,39.66959777997595
+hiv/aids,tot_disease_counts,98916,total,Wiki,4612923,2.144323675032078
+prostate cancer,male,246798,total,Wiki,321453,76.77576504185681
+prostate cancer,female,66417,total,Wiki,321453,20.661496392940805
+prostate cancer,tot_disease_counts,8238,total,Wiki,321453,2.562738565202378
+covid-19,male,3922380,total,Wiki,6014574,65.21459375177695
+covid-19,female,1909611,total,Wiki,6014574,31.74972990605818
+covid-19,tot_disease_counts,182583,total,Wiki,6014574,3.0356763421648814
+takotsubo cardiomyopathy,male,550,total,Wiki,1431,38.434661076170514
+takotsubo cardiomyopathy,female,791,total,Wiki,1431,55.27603074772887
+takotsubo cardiomyopathy,tot_disease_counts,90,total,Wiki,1431,6.289308176100629
+multiple sclerosis,male,100995,total,Wiki,192445,52.479929330458056
+multiple sclerosis,female,85910,total,Wiki,192445,44.641326093169475
+multiple sclerosis,tot_disease_counts,5540,total,Wiki,192445,2.87874457637247
+colon cancer,male,135025,total,Wiki,208970,64.6145379719577
+colon cancer,female,67412,total,Wiki,208970,32.25917595827153
+colon cancer,tot_disease_counts,6533,total,Wiki,208970,3.1262860697707806
+tuberculosis,male,1022589,total,Wiki,1523517,67.12028812281058
+tuberculosis,female,463355,total,Wiki,1523517,30.413510318558966
+tuberculosis,tot_disease_counts,37573,total,Wiki,1523517,2.466201558630458
+bacterial pneumonia,male,805185,total,Wiki,1162163,69.28331051668312
+bacterial pneumonia,female,334261,total,Wiki,1162163,28.761972287880443
+bacterial pneumonia,tot_disease_counts,22717,total,Wiki,1162163,1.9547171954364406
+endocarditis,male,9071,total,Wiki,13639,66.50780849035853
+endocarditis,female,3492,total,Wiki,13639,25.603050076985117
+endocarditis,tot_disease_counts,1076,total,Wiki,13639,7.889141432656353
+syphilis,male,191692,total,Wiki,277795,69.0048416998146
+syphilis,female,81327,total,Wiki,277795,29.275904893896577
+syphilis,tot_disease_counts,4776,total,Wiki,277795,1.71925340628881
+type 2 diabetes,male,44813,total,Wiki,75018,59.73632994747927
+type 2 diabetes,female,26625,total,Wiki,75018,35.491482044309365
+type 2 diabetes,tot_disease_counts,3580,total,Wiki,75018,4.772188008211362
+multiple myeloma,male,30354,total,Wiki,47726,63.60055315760801
+multiple myeloma,female,15378,total,Wiki,47726,32.22143066672254
+multiple myeloma,tot_disease_counts,1994,total,Wiki,47726,4.1780161756694465
+essential hypertension,male,82565,total,Wiki,148310,55.67055491875127
+essential hypertension,female,57867,total,Wiki,148310,39.01759827388578
+essential hypertension,tot_disease_counts,7878,total,Wiki,148310,5.311846807362956
+sarcoidoses,male,8954,total,Wiki,16170,55.374149659863946
+sarcoidoses,female,6356,total,Wiki,16170,39.307359307359306
+sarcoidoses,tot_disease_counts,860,total,Wiki,16170,5.3184910327767465
+rheumatoid arthritis,male,24340,total,Wiki,48138,50.562964809506006
+rheumatoid arthritis,female,20875,total,Wiki,48138,43.36490921932777
+rheumatoid arthritis,tot_disease_counts,2923,total,Wiki,48138,6.072125971166231
+hepatitis b,male,33013,total,Wiki,64311,51.333364432212214
+hepatitis b,female,27975,total,Wiki,64311,43.499556840975885
+hepatitis b,tot_disease_counts,3323,total,Wiki,64311,5.167078726811898
+ulcerative colitis,male,13234,total,Wiki,19495,67.88407283918954
+ulcerative colitis,female,5241,total,Wiki,19495,26.883816363170045
+ulcerative colitis,tot_disease_counts,1020,total,Wiki,19495,5.232110797640421
+crohn’s disease,male,1242,total,Wiki,1847,67.24417975094748
+crohn’s disease,female,431,total,Wiki,1847,23.33513806172171
+crohn’s disease,tot_disease_counts,174,total,Wiki,1847,9.420682187330806
+gastric cancer,male,108823,total,Wiki,151634,71.76688605457879
+gastric cancer,female,39295,total,Wiki,151634,25.914372766002348
+gastric cancer,tot_disease_counts,3516,total,Wiki,151634,2.318741179418864
+chagas disease,male,8927,total,Wiki,12465,71.61652627356598
+chagas disease,female,2919,total,Wiki,12465,23.41756919374248
+chagas disease,tot_disease_counts,619,total,Wiki,12465,4.965904532691536
+ovarian cancer,male,50569,total,Wiki,178898,28.266945410233763
+ovarian cancer,female,125070,total,Wiki,178898,69.91134613019709
+ovarian cancer,tot_disease_counts,3259,total,Wiki,178898,1.82170845956914
+hiv/aids,female,598,10,github,20609,2.9016449124169053
+hiv/aids,male,452,10,github,20609,2.193216555873647
+hiv/aids,tot_disease_counts,19559,10,github,20609,94.90513853170944
+tuberculosis,female,547,10,github,265618,0.20593483875339774
+tuberculosis,male,386,10,github,265618,0.14532147670715087
+tuberculosis,tot_disease_counts,264685,10,github,265618,99.64874368453945
+essential hypertension,female,65,10,github,2313,2.810203199308258
+essential hypertension,male,72,10,github,2313,3.11284046692607
+essential hypertension,tot_disease_counts,2176,10,github,2313,94.07695633376566
+covid-19,female,22,10,github,5048,0.4358161648177496
+covid-19,male,52,10,github,5048,1.0301109350237718
+covid-19,tot_disease_counts,4974,10,github,5048,98.53407290015848
+bacterial pneumonia,female,55,10,github,1742,3.1572904707233063
+bacterial pneumonia,male,52,10,github,1742,2.9850746268656714
+bacterial pneumonia,tot_disease_counts,1635,10,github,1742,93.85763490241102
+type 2 diabetes,female,40,10,github,3473,1.151742009789807
+type 2 diabetes,male,14,10,github,3473,0.4031097034264325
+type 2 diabetes,tot_disease_counts,3419,10,github,3473,98.44514828678376
+gastric cancer,female,13,10,github,286,4.545454545454546
+gastric cancer,male,33,10,github,286,11.538461538461538
+gastric cancer,tot_disease_counts,240,10,github,286,83.91608391608392
+ovarian cancer,female,30,10,github,264,11.363636363636363
+ovarian cancer,male,1,10,github,264,0.3787878787878788
+ovarian cancer,tot_disease_counts,233,10,github,264,88.25757575757575
+lupus,female,82,10,github,4837,1.6952656605333885
+lupus,male,40,10,github,4837,0.8269588587967749
+lupus,tot_disease_counts,4715,10,github,4837,97.47777548066983
+prostate cancer,female,5,10,github,632,0.7911392405063291
+prostate cancer,male,102,10,github,632,16.139240506329113
+prostate cancer,tot_disease_counts,525,10,github,632,83.06962025316456
+colon cancer,female,66,10,github,988,6.680161943319838
+colon cancer,male,66,10,github,988,6.680161943319838
+colon cancer,tot_disease_counts,856,10,github,988,86.63967611336032
+syphilis,female,43,10,github,528,8.143939393939394
+syphilis,male,22,10,github,528,4.166666666666666
+syphilis,tot_disease_counts,463,10,github,528,87.68939393939394
+hepatitis b,female,40,10,github,1900,2.1052631578947367
+hepatitis b,male,14,10,github,1900,0.7368421052631579
+hepatitis b,tot_disease_counts,1846,10,github,1900,97.15789473684211
+multiple sclerosis,female,9,10,github,376,2.393617021276596
+multiple sclerosis,male,9,10,github,376,2.393617021276596
+multiple sclerosis,tot_disease_counts,358,10,github,376,95.2127659574468
+endocarditis,female,3,10,github,167,1.7964071856287425
+endocarditis,male,1,10,github,167,0.5988023952095809
+endocarditis,tot_disease_counts,163,10,github,167,97.60479041916167
+rheumatoid arthritis,female,19,10,github,441,4.308390022675737
+rheumatoid arthritis,male,5,10,github,441,1.1337868480725624
+rheumatoid arthritis,tot_disease_counts,417,10,github,441,94.5578231292517
+sarcoidoses,female,1,10,github,149,0.6711409395973155
+sarcoidoses,male,5,10,github,149,3.3557046979865772
+sarcoidoses,tot_disease_counts,143,10,github,149,95.9731543624161
+chagas disease,female,3,10,github,452,0.6637168141592921
+chagas disease,male,2,10,github,452,0.4424778761061947
+chagas disease,tot_disease_counts,447,10,github,452,98.89380530973452
+multiple myeloma,female,2,10,github,189,1.0582010582010581
+multiple myeloma,male,0,10,github,189,0
+multiple myeloma,tot_disease_counts,187,10,github,189,98.94179894179894
+takotsubo cardiomyopathy,female,0,10,github,4,0
+takotsubo cardiomyopathy,male,0,10,github,4,0
+takotsubo cardiomyopathy,tot_disease_counts,4,10,github,4,100
+ulcerative colitis,female,0,10,github,97,0
+ulcerative colitis,male,0,10,github,97,0
+ulcerative colitis,tot_disease_counts,97,10,github,97,100
+crohn’s disease,female,0,10,github,92,0
+crohn’s disease,male,0,10,github,92,0
+crohn’s disease,tot_disease_counts,92,10,github,92,100
+hiv/aids,male,2168,50,github,24132,8.983921763633349
+hiv/aids,female,2405,50,github,24132,9.966020222111718
+hiv/aids,tot_disease_counts,19559,50,github,24132,81.05005801425493
+covid-19,male,283,50,github,5369,5.271000186254423
+covid-19,female,112,50,github,5369,2.0860495436766624
+covid-19,tot_disease_counts,4974,50,github,5369,92.64295027006891
+bacterial pneumonia,male,214,50,github,2118,10.103871576959396
+bacterial pneumonia,female,269,50,github,2118,12.700661000944288
+bacterial pneumonia,tot_disease_counts,1635,50,github,2118,77.19546742209631
+tuberculosis,male,1976,50,github,269306,0.7337378298292648
+tuberculosis,female,2645,50,github,269306,0.9821541295032417
+tuberculosis,tot_disease_counts,264685,50,github,269306,98.28410804066749
+essential hypertension,male,241,50,github,2729,8.831073653352876
+essential hypertension,female,312,50,github,2729,11.432759252473433
+essential hypertension,tot_disease_counts,2176,50,github,2729,79.7361670941737
+syphilis,male,136,50,github,801,16.978776529338326
+syphilis,female,202,50,github,801,25.21847690387016
+syphilis,tot_disease_counts,463,50,github,801,57.802746566791505
+type 2 diabetes,male,72,50,github,3735,1.9277108433734942
+type 2 diabetes,female,244,50,github,3735,6.532797858099062
+type 2 diabetes,tot_disease_counts,3419,50,github,3735,91.53949129852744
+gastric cancer,male,97,50,github,380,25.526315789473685
+gastric cancer,female,43,50,github,380,11.31578947368421
+gastric cancer,tot_disease_counts,240,50,github,380,63.1578947368421
+rheumatoid arthritis,male,28,50,github,525,5.333333333333334
+rheumatoid arthritis,female,80,50,github,525,15.238095238095239
+rheumatoid arthritis,tot_disease_counts,417,50,github,525,79.42857142857143
+endocarditis,male,8,50,github,174,4.597701149425287
+endocarditis,female,3,50,github,174,1.7241379310344827
+endocarditis,tot_disease_counts,163,50,github,174,93.67816091954023
+lupus,male,127,50,github,5117,2.4819230017588434
+lupus,female,275,50,github,5117,5.374242720343951
+lupus,tot_disease_counts,4715,50,github,5117,92.14383427789721
+ovarian cancer,male,3,50,github,371,0.8086253369272237
+ovarian cancer,female,135,50,github,371,36.38814016172507
+ovarian cancer,tot_disease_counts,233,50,github,371,62.8032345013477
+multiple sclerosis,male,34,50,github,441,7.709750566893423
+multiple sclerosis,female,49,50,github,441,11.11111111111111
+multiple sclerosis,tot_disease_counts,358,50,github,441,81.17913832199547
+sarcoidoses,male,35,50,github,186,18.817204301075268
+sarcoidoses,female,8,50,github,186,4.301075268817205
+sarcoidoses,tot_disease_counts,143,50,github,186,76.88172043010752
+prostate cancer,male,337,50,github,921,36.59066232356135
+prostate cancer,female,59,50,github,921,6.406080347448426
+prostate cancer,tot_disease_counts,525,50,github,921,57.00325732899023
+colon cancer,male,295,50,github,1466,20.122783083219645
+colon cancer,female,315,50,github,1466,21.487039563437925
+colon cancer,tot_disease_counts,856,50,github,1466,58.39017735334243
+hepatitis b,male,108,50,github,2145,5.034965034965035
+hepatitis b,female,191,50,github,2145,8.904428904428904
+hepatitis b,tot_disease_counts,1846,50,github,2145,86.06060606060606
+multiple myeloma,male,11,50,github,220,5
+multiple myeloma,female,22,50,github,220,10
+multiple myeloma,tot_disease_counts,187,50,github,220,85
+ulcerative colitis,male,3,50,github,103,2.912621359223301
+ulcerative colitis,female,3,50,github,103,2.912621359223301
+ulcerative colitis,tot_disease_counts,97,50,github,103,94.1747572815534
+chagas disease,male,12,50,github,480,2.5
+chagas disease,female,21,50,github,480,4.375
+chagas disease,tot_disease_counts,447,50,github,480,93.125
+takotsubo cardiomyopathy,male,0,50,github,4,0
+takotsubo cardiomyopathy,female,0,50,github,4,0
+takotsubo cardiomyopathy,tot_disease_counts,4,50,github,4,100
+crohn’s disease,male,0,50,github,92,0
+crohn’s disease,female,0,50,github,92,0
+crohn’s disease,tot_disease_counts,92,50,github,92,100
+hiv/aids,male,4061,100,github,27818,14.598461427852468
+hiv/aids,female,4198,100,github,27818,15.09094830685168
+hiv/aids,tot_disease_counts,19559,100,github,27818,70.31059026529584
+type 2 diabetes,male,134,100,github,4031,3.3242371619945423
+type 2 diabetes,female,478,100,github,4031,11.85809972711486
+type 2 diabetes,tot_disease_counts,3419,100,github,4031,84.81766311089059
+essential hypertension,male,475,100,github,3294,14.420157862780814
+essential hypertension,female,643,100,github,3294,19.520340012143294
+essential hypertension,tot_disease_counts,2176,100,github,3294,66.0595021250759
+covid-19,male,538,100,github,5761,9.338656483249435
+covid-19,female,249,100,github,5761,4.322166290574553
+covid-19,tot_disease_counts,4974,100,github,5761,86.339177226176
+bacterial pneumonia,male,407,100,github,2672,15.232035928143711
+bacterial pneumonia,female,630,100,github,2672,23.57784431137725
+bacterial pneumonia,tot_disease_counts,1635,100,github,2672,61.19011976047904
+tuberculosis,male,4128,100,github,272705,1.5137236207623623
+tuberculosis,female,3892,100,github,272705,1.4271832199629635
+tuberculosis,tot_disease_counts,264685,100,github,272705,97.05909315927468
+multiple myeloma,male,28,100,github,268,10.44776119402985
+multiple myeloma,female,53,100,github,268,19.776119402985074
+multiple myeloma,tot_disease_counts,187,100,github,268,69.77611940298507
+lupus,male,318,100,github,5525,5.755656108597285
+lupus,female,492,100,github,5525,8.904977375565611
+lupus,tot_disease_counts,4715,100,github,5525,85.3393665158371
+syphilis,male,267,100,github,1079,24.7451343836886
+syphilis,female,349,100,github,1079,32.34476367006487
+syphilis,tot_disease_counts,463,100,github,1079,42.91010194624653
+multiple sclerosis,male,57,100,github,498,11.44578313253012
+multiple sclerosis,female,83,100,github,498,16.666666666666664
+multiple sclerosis,tot_disease_counts,358,100,github,498,71.8875502008032
+rheumatoid arthritis,male,53,100,github,643,8.242612752721618
+rheumatoid arthritis,female,173,100,github,643,26.905132192846033
+rheumatoid arthritis,tot_disease_counts,417,100,github,643,64.85225505443235
+gastric cancer,male,145,100,github,466,31.115879828326182
+gastric cancer,female,81,100,github,466,17.381974248927037
+gastric cancer,tot_disease_counts,240,100,github,466,51.50214592274678
+endocarditis,male,18,100,github,186,9.67741935483871
+endocarditis,female,5,100,github,186,2.6881720430107525
+endocarditis,tot_disease_counts,163,100,github,186,87.63440860215054
+ovarian cancer,male,16,100,github,469,3.411513859275053
+ovarian cancer,female,220,100,github,469,46.908315565031984
+ovarian cancer,tot_disease_counts,233,100,github,469,49.68017057569296
+sarcoidoses,male,38,100,github,195,19.48717948717949
+sarcoidoses,female,14,100,github,195,7.179487179487179
+sarcoidoses,tot_disease_counts,143,100,github,195,73.33333333333333
+prostate cancer,male,567,100,github,1227,46.21026894865526
+prostate cancer,female,135,100,github,1227,11.00244498777506
+prostate cancer,tot_disease_counts,525,100,github,1227,42.78728606356968
+colon cancer,male,560,100,github,2001,27.98600699650175
+colon cancer,female,585,100,github,2001,29.235382308845576
+colon cancer,tot_disease_counts,856,100,github,2001,42.77861069465268
+hepatitis b,male,214,100,github,2447,8.745402533714753
+hepatitis b,female,387,100,github,2447,15.81528402125051
+hepatitis b,tot_disease_counts,1846,100,github,2447,75.43931344503474
+ulcerative colitis,male,6,100,github,111,5.405405405405405
+ulcerative colitis,female,8,100,github,111,7.207207207207207
+ulcerative colitis,tot_disease_counts,97,100,github,111,87.38738738738738
+chagas disease,male,25,100,github,507,4.930966469428008
+chagas disease,female,35,100,github,507,6.903353057199212
+chagas disease,tot_disease_counts,447,100,github,507,88.16568047337277
+crohn’s disease,male,3,100,github,100,3
+crohn’s disease,female,5,100,github,100,5
+crohn’s disease,tot_disease_counts,92,100,github,100,92
+takotsubo cardiomyopathy,male,0,100,github,4,0
+takotsubo cardiomyopathy,female,0,100,github,4,0
+takotsubo cardiomyopathy,tot_disease_counts,4,100,github,4,100
+hiv/aids,male,9029,250,github,37758,23.912813178664123
+hiv/aids,female,9170,250,github,37758,24.2862439747868
+hiv/aids,tot_disease_counts,19559,250,github,37758,51.80094284654908
+covid-19,male,1196,250,github,6742,17.73954316226639
+covid-19,female,572,250,github,6742,8.48412933847523
+covid-19,tot_disease_counts,4974,250,github,6742,73.77632749925837
+tuberculosis,male,8842,250,github,280019,3.157642874233534
+tuberculosis,female,6492,250,github,280019,2.3184141076141263
+tuberculosis,tot_disease_counts,264685,250,github,280019,94.52394301815234
+type 2 diabetes,male,406,250,github,4778,8.49727919631645
+type 2 diabetes,female,953,250,github,4778,19.945583926329007
+type 2 diabetes,tot_disease_counts,3419,250,github,4778,71.55713687735454
+essential hypertension,male,940,250,github,4479,20.986827416834114
+essential hypertension,female,1363,250,github,4479,30.430899754409467
+essential hypertension,tot_disease_counts,2176,250,github,4479,48.582272828756416
+bacterial pneumonia,male,902,250,github,4122,21.88258127122756
+bacterial pneumonia,female,1585,250,github,4122,38.452207666181465
+bacterial pneumonia,tot_disease_counts,1635,250,github,4122,39.66521106259098
+hepatitis b,male,548,250,github,3323,16.49112247968703
+hepatitis b,female,929,250,github,3323,27.95666566355703
+hepatitis b,tot_disease_counts,1846,250,github,3323,55.55221185675594
+syphilis,male,536,250,github,1691,31.697220579538733
+syphilis,female,692,250,github,1691,40.92253104671792
+syphilis,tot_disease_counts,463,250,github,1691,27.38024837374335
+lupus,male,692,250,github,6439,10.747010405342444
+lupus,female,1032,250,github,6439,16.02733343686908
+lupus,tot_disease_counts,4715,250,github,6439,73.22565615778848
+gastric cancer,male,276,250,github,707,39.038189533239034
+gastric cancer,female,191,250,github,707,27.015558698727016
+gastric cancer,tot_disease_counts,240,250,github,707,33.946251768033946
+multiple myeloma,male,67,250,github,380,17.63157894736842
+multiple myeloma,female,126,250,github,380,33.1578947368421
+multiple myeloma,tot_disease_counts,187,250,github,380,49.21052631578947
+multiple sclerosis,male,109,250,github,637,17.111459968602826
+multiple sclerosis,female,170,250,github,637,26.687598116169546
+multiple sclerosis,tot_disease_counts,358,250,github,637,56.20094191522763
+rheumatoid arthritis,male,95,250,github,860,11.046511627906977
+rheumatoid arthritis,female,348,250,github,860,40.46511627906977
+rheumatoid arthritis,tot_disease_counts,417,250,github,860,48.48837209302326
+endocarditis,male,37,250,github,232,15.948275862068966
+endocarditis,female,32,250,github,232,13.793103448275861
+endocarditis,tot_disease_counts,163,250,github,232,70.25862068965517
+ovarian cancer,male,56,250,github,715,7.8321678321678325
+ovarian cancer,female,426,250,github,715,59.58041958041959
+ovarian cancer,tot_disease_counts,233,250,github,715,32.58741258741259
+sarcoidoses,male,54,250,github,227,23.788546255506606
+sarcoidoses,female,30,250,github,227,13.215859030837004
+sarcoidoses,tot_disease_counts,143,250,github,227,62.99559471365639
+colon cancer,male,1142,250,github,3179,35.923246303869135
+colon cancer,female,1181,250,github,3179,37.15004718464926
+colon cancer,tot_disease_counts,856,250,github,3179,26.926706511481598
+prostate cancer,male,1019,250,github,1833,55.59192580469177
+prostate cancer,female,289,250,github,1833,15.766503000545553
+prostate cancer,tot_disease_counts,525,250,github,1833,28.641571194762683
+ulcerative colitis,male,20,250,github,148,13.513513513513514
+ulcerative colitis,female,31,250,github,148,20.945945945945947
+ulcerative colitis,tot_disease_counts,97,250,github,148,65.54054054054053
+crohn’s disease,male,11,250,github,119,9.243697478991598
+crohn’s disease,female,16,250,github,119,13.445378151260504
+crohn’s disease,tot_disease_counts,92,250,github,119,77.31092436974791
+chagas disease,male,61,250,github,585,10.427350427350428
+chagas disease,female,77,250,github,585,13.162393162393164
+chagas disease,tot_disease_counts,447,250,github,585,76.41025641025641
+takotsubo cardiomyopathy,male,0,250,github,4,0
+takotsubo cardiomyopathy,female,0,250,github,4,0
+takotsubo cardiomyopathy,tot_disease_counts,4,250,github,4,100
+lupus,male,18472,total,github,31786,58.11363493361858
+lupus,female,8599,total,github,31786,27.052790536714276
+lupus,tot_disease_counts,4715,total,github,31786,14.833574529667148
+hiv/aids,male,116745,total,github,232912,50.124081198049055
+hiv/aids,female,96608,total,github,232912,41.47832657827849
+hiv/aids,tot_disease_counts,19559,total,github,232912,8.397592223672461
+prostate cancer,male,4958,total,github,7915,62.640555906506634
+prostate cancer,female,2432,total,github,7915,30.726468730259004
+prostate cancer,tot_disease_counts,525,total,github,7915,6.632975363234365
+covid-19,male,6170,total,github,15560,39.652956298200515
+covid-19,female,4416,total,github,15560,28.380462724935736
+covid-19,tot_disease_counts,4974,total,github,15560,31.96658097686375
+takotsubo cardiomyopathy,male,17,total,github,36,47.22222222222222
+takotsubo cardiomyopathy,female,15,total,github,36,41.66666666666667
+takotsubo cardiomyopathy,tot_disease_counts,4,total,github,36,11.11111111111111
+multiple sclerosis,male,695,total,github,1742,39.89667049368542
+multiple sclerosis,female,689,total,github,1742,39.55223880597015
+multiple sclerosis,tot_disease_counts,358,total,github,1742,20.55109070034443
+colon cancer,male,4986,total,github,11688,42.659137577002056
+colon cancer,female,5846,total,github,11688,50.01711156741958
+colon cancer,tot_disease_counts,856,total,github,11688,7.32375085557837
+tuberculosis,male,115206,total,github,436495,26.393429478000897
+tuberculosis,female,56604,total,github,436495,12.967846137985545
+tuberculosis,tot_disease_counts,264685,total,github,436495,60.638724384013564
+bacterial pneumonia,male,48024,total,github,116423,41.24958126830609
+bacterial pneumonia,female,66764,total,github,116423,57.346057050582786
+bacterial pneumonia,tot_disease_counts,1635,total,github,116423,1.4043616811111206
+endocarditis,male,970,total,github,2696,35.97922848664689
+endocarditis,female,1563,total,github,2696,57.974777448071215
+endocarditis,tot_disease_counts,163,total,github,2696,6.045994065281899
+syphilis,male,11486,total,github,18237,62.981850084992054
+syphilis,female,6288,total,github,18237,34.479355157098205
+syphilis,tot_disease_counts,463,total,github,18237,2.5387947579097436
+type 2 diabetes,male,1446,total,github,6924,20.88388214904679
+type 2 diabetes,female,2059,total,github,6924,29.737146158290006
+type 2 diabetes,tot_disease_counts,3419,total,github,6924,49.3789716926632
+multiple myeloma,male,2650,total,github,7902,33.535813718046064
+multiple myeloma,female,5065,total,github,7902,64.0976967856239
+multiple myeloma,tot_disease_counts,187,total,github,7902,2.3664894963300434
+essential hypertension,male,4403,total,github,18610,23.659322944653415
+essential hypertension,female,12031,total,github,18610,64.64803868887695
+essential hypertension,tot_disease_counts,2176,total,github,18610,11.692638366469641
+sarcoidoses,male,343,total,github,807,42.50309789343247
+sarcoidoses,female,321,total,github,807,39.77695167286245
+sarcoidoses,tot_disease_counts,143,total,github,807,17.71995043370508
+rheumatoid arthritis,male,2526,total,github,6791,37.19628920630246
+rheumatoid arthritis,female,3848,total,github,6791,56.66323074657635
+rheumatoid arthritis,tot_disease_counts,417,total,github,6791,6.14048004712119
+hepatitis b,male,5621,total,github,16950,33.1622418879056
+hepatitis b,female,9483,total,github,16950,55.94690265486726
+hepatitis b,tot_disease_counts,1846,total,github,16950,10.890855457227138
+ulcerative colitis,male,370,total,github,813,45.51045510455104
+ulcerative colitis,female,346,total,github,813,42.55842558425584
+ulcerative colitis,tot_disease_counts,97,total,github,813,11.931119311193111
+crohn’s disease,male,708,total,github,1794,39.46488294314381
+crohn’s disease,female,994,total,github,1794,55.406911928651056
+crohn’s disease,tot_disease_counts,92,total,github,1794,5.128205128205128
+gastric cancer,male,2668,total,github,5802,45.984143398827996
+gastric cancer,female,2894,total,github,5802,49.87935194760427
+gastric cancer,tot_disease_counts,240,total,github,5802,4.1365046535677354
+chagas disease,male,370,total,github,1578,23.44740177439797
+chagas disease,female,761,total,github,1578,48.2256020278834
+chagas disease,tot_disease_counts,447,total,github,1578,28.32699619771863
+ovarian cancer,male,785,total,github,4089,19.197847884568354
+ovarian cancer,female,3071,total,github,4089,75.10393739300562
+ovarian cancer,tot_disease_counts,233,total,github,4089,5.698214722426021
+tuberculosis,male,100909,10,c4,1373024,7.349398116857389
+tuberculosis,female,63446,10,c4,1373024,4.620895191926725
+tuberculosis,tot_disease_counts,1208669,10,c4,1373024,88.02970669121588
+rheumatoid arthritis,male,12312,10,c4,344021,3.5788512910549066
+rheumatoid arthritis,female,22344,10,c4,344021,6.494952343025571
+rheumatoid arthritis,tot_disease_counts,309365,10,c4,344021,89.92619636591952
+hiv/aids,male,314421,10,c4,4653990,6.755944898893208
+hiv/aids,female,340246,10,c4,4653990,7.31084510280426
+hiv/aids,tot_disease_counts,3999323,10,c4,4653990,85.93320999830253
+prostate cancer,male,156815,10,c4,647229,24.228673313464014
+prostate cancer,female,14515,10,c4,647229,2.242637459075536
+prostate cancer,tot_disease_counts,475899,10,c4,647229,73.52868922746045
+multiple sclerosis,male,23305,10,c4,333400,6.99010197960408
+multiple sclerosis,female,33939,10,c4,333400,10.179664067186563
+multiple sclerosis,tot_disease_counts,276156,10,c4,333400,82.83023395320936
+syphilis,male,11437,10,c4,88662,12.899551104193455
+syphilis,female,7168,10,c4,88662,8.084636033475446
+syphilis,tot_disease_counts,70057,10,c4,88662,79.0158128623311
+gastric cancer,male,12186,10,c4,114324,10.659179174976382
+gastric cancer,female,7100,10,c4,114324,6.210419509464329
+gastric cancer,tot_disease_counts,95038,10,c4,114324,83.13040131555928
+type 2 diabetes,male,27233,10,c4,614999,4.428137281524035
+type 2 diabetes,female,31445,10,c4,614999,5.113016443929177
+type 2 diabetes,tot_disease_counts,556321,10,c4,614999,90.45884627454679
+essential hypertension,male,37159,10,c4,800724,4.640675188953996
+essential hypertension,female,42492,10,c4,800724,5.30669743881787
+essential hypertension,tot_disease_counts,721073,10,c4,800724,90.05262737222813
+bacterial pneumonia,male,82252,10,c4,569596,14.440410396140422
+bacterial pneumonia,female,55430,10,c4,569596,9.731458788334187
+bacterial pneumonia,tot_disease_counts,431914,10,c4,569596,75.82813081552538
+colon cancer,male,41027,10,c4,433156,9.471645319469198
+colon cancer,female,34641,10,c4,433156,7.9973496846401755
+colon cancer,tot_disease_counts,357488,10,c4,433156,82.53100499589063
+lupus,male,16477,10,c4,407552,4.0429196765075375
+lupus,female,41431,10,c4,407552,10.16581933103015
+lupus,tot_disease_counts,349644,10,c4,407552,85.79126099246231
+crohn’s disease,male,5940,10,c4,80240,7.4027916251246255
+crohn’s disease,female,6139,10,c4,80240,7.650797607178466
+crohn’s disease,tot_disease_counts,68161,10,c4,80240,84.94641076769692
+multiple myeloma,male,6667,10,c4,86428,7.713935298745776
+multiple myeloma,female,4728,10,c4,86428,5.470449391400935
+multiple myeloma,tot_disease_counts,75033,10,c4,86428,86.81561530985329
+ovarian cancer,male,8033,10,c4,315827,2.5434810829979706
+ovarian cancer,female,81132,10,c4,315827,25.688747320526744
+ovarian cancer,tot_disease_counts,226662,10,c4,315827,71.76777159647528
+endocarditis,male,1692,10,c4,42211,4.008433820568098
+endocarditis,female,991,10,c4,42211,2.347729264883561
+endocarditis,tot_disease_counts,39528,10,c4,42211,93.64383691454834
+sarcoidoses,male,2195,10,c4,45390,4.83586693104208
+sarcoidoses,female,1958,10,c4,45390,4.313725490196078
+sarcoidoses,tot_disease_counts,41237,10,c4,45390,90.85040757876183
+hepatitis b,male,7666,10,c4,247386,3.0988010639243937
+hepatitis b,female,10929,10,c4,247386,4.417792437728893
+hepatitis b,tot_disease_counts,228791,10,c4,247386,92.48340649834671
+ulcerative colitis,male,4285,10,c4,72403,5.918263055398257
+ulcerative colitis,female,3673,10,c4,72403,5.072994212946978
+ulcerative colitis,tot_disease_counts,64445,10,c4,72403,89.00874273165476
+takotsubo cardiomyopathy,male,373,10,c4,8038,4.640457825329683
+takotsubo cardiomyopathy,female,842,10,c4,8038,10.47524259766111
+takotsubo cardiomyopathy,tot_disease_counts,6823,10,c4,8038,84.8842995770092
+chagas disease,male,459,10,c4,24773,1.8528236386388408
+chagas disease,female,586,10,c4,24773,2.3654785451903284
+chagas disease,tot_disease_counts,23728,10,c4,24773,95.78169781617083
+covid-19,male,60,10,c4,877,6.841505131128849
+covid-19,female,5,10,c4,877,0.5701254275940707
+covid-19,tot_disease_counts,812,10,c4,877,92.58836944127708
+tuberculosis,male,457319,50,c4,1955090,23.39119938212563
+tuberculosis,female,289102,50,c4,1955090,14.78714534880747
+tuberculosis,tot_disease_counts,1208669,50,c4,1955090,61.8216552690669
+rheumatoid arthritis,male,61009,50,c4,462941,13.178569191322437
+rheumatoid arthritis,female,92567,50,c4,462941,19.995420582752445
+rheumatoid arthritis,tot_disease_counts,309365,50,c4,462941,66.82601022592512
+bacterial pneumonia,male,344629,50,c4,1023405,33.674742648316155
+bacterial pneumonia,female,246862,50,c4,1023405,24.121633175526796
+bacterial pneumonia,tot_disease_counts,431914,50,c4,1023405,42.20362417615704
+hiv/aids,male,1479187,50,c4,6963307,21.242593497601067
+hiv/aids,female,1484797,50,c4,6963307,21.32315866584656
+hiv/aids,tot_disease_counts,3999323,50,c4,6963307,57.43424783655237
+prostate cancer,male,543496,50,c4,1097519,49.52041832533195
+prostate cancer,female,78124,50,c4,1097519,7.1182366774515975
+prostate cancer,tot_disease_counts,475899,50,c4,1097519,43.36134499721645
+multiple sclerosis,male,105467,50,c4,515819,20.446513214906776
+multiple sclerosis,female,134196,50,c4,515819,26.01610254759906
+multiple sclerosis,tot_disease_counts,276156,50,c4,515819,53.53738423749416
+syphilis,male,48571,50,c4,150111,32.35672269187468
+syphilis,female,31483,50,c4,150111,20.973146538228377
+syphilis,tot_disease_counts,70057,50,c4,150111,46.67013076989694
+essential hypertension,male,176478,50,c4,1096838,16.089705134213077
+essential hypertension,female,199287,50,c4,1096838,18.16922827254344
+essential hypertension,tot_disease_counts,721073,50,c4,1096838,65.74106659324349
+gastric cancer,male,45409,50,c4,169027,26.864938737598138
+gastric cancer,female,28580,50,c4,169027,16.908541238973655
+gastric cancer,tot_disease_counts,95038,50,c4,169027,56.22652002342821
+type 2 diabetes,male,122195,50,c4,818350,14.931875114559784
+type 2 diabetes,female,139834,50,c4,818350,17.08730983075701
+type 2 diabetes,tot_disease_counts,556321,50,c4,818350,67.9808150546832
+lupus,male,83080,50,c4,607282,13.680629427514729
+lupus,female,174558,50,c4,607282,28.744141930766926
+lupus,tot_disease_counts,349644,50,c4,607282,57.57522864171835
+colon cancer,male,159884,50,c4,661281,24.177921337525195
+colon cancer,female,143909,50,c4,661281,21.762155573802964
+colon cancer,tot_disease_counts,357488,50,c4,661281,54.05992308867184
+hepatitis b,male,38332,50,c4,316661,12.105058722103449
+hepatitis b,female,49538,50,c4,316661,15.643858890106454
+hepatitis b,tot_disease_counts,228791,50,c4,316661,72.2510823877901
+ulcerative colitis,male,18960,50,c4,100230,18.91649206824304
+ulcerative colitis,female,16825,50,c4,100230,16.786391300009974
+ulcerative colitis,tot_disease_counts,64445,50,c4,100230,64.29711663174699
+crohn’s disease,male,24945,50,c4,118784,21.00030307112069
+crohn’s disease,female,25678,50,c4,118784,21.617389547413794
+crohn’s disease,tot_disease_counts,68161,50,c4,118784,57.382307381465516
+multiple myeloma,male,27968,50,c4,123335,22.676450318238942
+multiple myeloma,female,20334,50,c4,123335,16.48680423237524
+multiple myeloma,tot_disease_counts,75033,50,c4,123335,60.83674544938582
+ovarian cancer,male,43601,50,c4,562984,7.744625069273726
+ovarian cancer,female,292721,50,c4,562984,51.99455046679835
+ovarian cancer,tot_disease_counts,226662,50,c4,562984,40.260824463927925
+endocarditis,male,8402,50,c4,53243,15.780478184925716
+endocarditis,female,5313,50,c4,53243,9.978776552786282
+endocarditis,tot_disease_counts,39528,50,c4,53243,74.240745262288
+sarcoidoses,male,10615,50,c4,61442,17.27645584453631
+sarcoidoses,female,9590,50,c4,61442,15.608215878389375
+sarcoidoses,tot_disease_counts,41237,50,c4,61442,67.11532827707431
+takotsubo cardiomyopathy,male,1800,50,c4,12793,14.070194637692488
+takotsubo cardiomyopathy,female,4170,50,c4,12793,32.59595091065427
+takotsubo cardiomyopathy,tot_disease_counts,6823,50,c4,12793,53.33385445165325
+chagas disease,male,2524,50,c4,29163,8.654802318005691
+chagas disease,female,2911,50,c4,29163,9.98182628673319
+chagas disease,tot_disease_counts,23728,50,c4,29163,81.36337139526113
+covid-19,male,261,50,c4,1137,22.95514511873351
+covid-19,female,64,50,c4,1137,5.628847845206685
+covid-19,tot_disease_counts,812,50,c4,1137,71.41600703605981
+tuberculosis,male,853324,100,c4,2602660,32.78661062144114
+tuberculosis,female,540667,100,c4,2602660,20.773631592294038
+tuberculosis,tot_disease_counts,1208669,100,c4,2602660,46.43975778626482
+rheumatoid arthritis,male,116846,100,c4,591779,19.74487097379258
+rheumatoid arthritis,female,165568,100,c4,591779,27.97801206193528
+rheumatoid arthritis,tot_disease_counts,309365,100,c4,591779,52.27711696427213
+bacterial pneumonia,male,616611,100,c4,1495292,41.236828659552785
+bacterial pneumonia,female,446767,100,c4,1495292,29.87824451679003
+bacterial pneumonia,tot_disease_counts,431914,100,c4,1495292,28.884926823657185
+hiv/aids,male,2787351,100,c4,9531726,29.2428779425678
+hiv/aids,female,2745052,100,c4,9531726,28.799107318024035
+hiv/aids,tot_disease_counts,3999323,100,c4,9531726,41.95801473940816
+prostate cancer,male,918381,100,c4,1545329,59.42948071252141
+prostate cancer,female,151049,100,c4,1545329,9.774552862206042
+prostate cancer,tot_disease_counts,475899,100,c4,1545329,30.795966425272546
+multiple sclerosis,male,195823,100,c4,708005,27.65842049138071
+multiple sclerosis,female,236026,100,c4,708005,33.33677022054929
+multiple sclerosis,tot_disease_counts,276156,100,c4,708005,39.00480928807
+syphilis,male,88627,100,c4,217521,40.74411206274336
+syphilis,female,58837,100,c4,217521,27.04888263661899
+syphilis,tot_disease_counts,70057,100,c4,217521,32.20700530063764
+essential hypertension,male,330838,100,c4,1423291,23.244578937125297
+essential hypertension,female,371380,100,c4,1423291,26.093047732333023
+essential hypertension,tot_disease_counts,721073,100,c4,1423291,50.662373330541676
+sarcoidoses,male,20592,100,c4,80193,25.67805170027309
+sarcoidoses,female,18364,100,c4,80193,22.89975434264836
+sarcoidoses,tot_disease_counts,41237,100,c4,80193,51.42219395707854
+gastric cancer,male,78163,100,c4,223350,34.99574658607567
+gastric cancer,female,50149,100,c4,223350,22.45310051488695
+gastric cancer,tot_disease_counts,95038,100,c4,223350,42.55115289903738
+type 2 diabetes,male,228192,100,c4,1046841,21.79815272806472
+type 2 diabetes,female,262328,100,c4,1046841,25.059010871756072
+type 2 diabetes,tot_disease_counts,556321,100,c4,1046841,53.142836400179206
+lupus,male,160805,100,c4,824256,19.509108820560602
+lupus,female,313807,100,c4,824256,38.071545733364395
+lupus,tot_disease_counts,349644,100,c4,824256,42.419345446075006
+hepatitis b,male,73505,100,c4,395753,18.573453644065868
+hepatitis b,female,93457,100,c4,395753,23.614982072151065
+hepatitis b,tot_disease_counts,228791,100,c4,395753,57.81156428378307
+colon cancer,male,278686,100,c4,888558,31.363850193234434
+colon cancer,female,252384,100,c4,888558,28.40377330461264
+colon cancer,tot_disease_counts,357488,100,c4,888558,40.23237650215293
+crohn’s disease,male,45595,100,c4,160110,28.477296858409844
+crohn’s disease,female,46354,100,c4,160110,28.951345949659608
+crohn’s disease,tot_disease_counts,68161,100,c4,160110,42.571357191930545
+ulcerative colitis,male,34935,100,c4,130631,26.743269208687064
+ulcerative colitis,female,31251,100,c4,130631,23.923111665684253
+ulcerative colitis,tot_disease_counts,64445,100,c4,130631,49.33361912562868
+ovarian cancer,male,85812,100,c4,809524,10.600303388163908
+ovarian cancer,female,497050,100,c4,809524,61.40027967052243
+ovarian cancer,tot_disease_counts,226662,100,c4,809524,27.999416941313658
+multiple myeloma,male,50780,100,c4,162350,31.278102864182323
+multiple myeloma,female,36537,100,c4,162350,22.50508161379735
+multiple myeloma,tot_disease_counts,75033,100,c4,162350,46.216815522020326
+endocarditis,male,16522,100,c4,66592,24.81078808265257
+endocarditis,female,10542,100,c4,66592,15.830730418068237
+endocarditis,tot_disease_counts,39528,100,c4,66592,59.35848149927919
+chagas disease,male,4853,100,c4,34207,14.18715467594352
+chagas disease,female,5626,100,c4,34207,16.446926067763908
+chagas disease,tot_disease_counts,23728,100,c4,34207,69.36591925629257
+takotsubo cardiomyopathy,male,3766,100,c4,18644,20.19952799828363
+takotsubo cardiomyopathy,female,8055,100,c4,18644,43.20424801544733
+takotsubo cardiomyopathy,tot_disease_counts,6823,100,c4,18644,36.59622398626904
+covid-19,male,504,100,c4,1428,35.294117647058826
+covid-19,female,112,100,c4,1428,7.8431372549019605
+covid-19,tot_disease_counts,812,100,c4,1428,56.86274509803921
+tuberculosis,male,1814293,250,c4,4172345,43.483772315089
+tuberculosis,female,1149383,250,c4,4172345,27.54765006249483
+tuberculosis,tot_disease_counts,1208669,250,c4,4172345,28.96857762241617
+hiv/aids,male,5856757,250,c4,15461819,37.87883560142568
+hiv/aids,female,5605739,250,c4,15461819,36.25536555563094
+hiv/aids,tot_disease_counts,3999323,250,c4,15461819,25.865798842943384
+rheumatoid arthritis,male,252843,250,c4,894505,28.26624781303626
+rheumatoid arthritis,female,332297,250,c4,894505,37.14870235493373
+rheumatoid arthritis,tot_disease_counts,309365,250,c4,894505,34.58504983203001
+bacterial pneumonia,male,1246855,250,c4,2579760,48.33220919775483
+bacterial pneumonia,female,900991,250,c4,2579760,34.92538065556486
+bacterial pneumonia,tot_disease_counts,431914,250,c4,2579760,16.74241014668031
+prostate cancer,male,1698625,250,c4,2500630,67.92788217369224
+prostate cancer,female,326106,250,c4,2500630,13.040953679672723
+prostate cancer,tot_disease_counts,475899,250,c4,2500630,19.03116414663505
+multiple sclerosis,male,404471,250,c4,1135641,35.61609698839686
+multiple sclerosis,female,455014,250,c4,1135641,40.06671122300093
+multiple sclerosis,tot_disease_counts,276156,250,c4,1135641,24.31719178860221
+syphilis,male,184883,250,c4,378078,48.900755928670804
+syphilis,female,123138,250,c4,378078,32.56946979194769
+syphilis,tot_disease_counts,70057,250,c4,378078,18.529774279381503
+essential hypertension,male,697254,250,c4,2191600,31.814838474174117
+essential hypertension,female,773273,250,c4,2191600,35.283491513049825
+essential hypertension,tot_disease_counts,721073,250,c4,2191600,32.90167001277605
+sarcoidoses,male,44494,250,c4,125503,35.45253898313187
+sarcoidoses,female,39772,250,c4,125503,31.690079121614623
+sarcoidoses,tot_disease_counts,41237,250,c4,125503,32.8573818952535
+colon cancer,male,535307,250,c4,1381344,38.75262063613408
+colon cancer,female,488549,250,c4,1381344,35.3676564273635
+colon cancer,tot_disease_counts,357488,250,c4,1381344,25.879722936502418
+gastric cancer,male,150423,250,c4,343989,43.729014590582835
+gastric cancer,female,98528,250,c4,343989,28.64277636784897
+gastric cancer,tot_disease_counts,95038,250,c4,343989,27.62820904156819
+type 2 diabetes,male,482423,250,c4,1588677,30.36633626596218
+type 2 diabetes,female,549933,250,c4,1588677,34.61578407693949
+type 2 diabetes,tot_disease_counts,556321,250,c4,1588677,35.01787965709833
+lupus,male,351554,250,c4,1326952,26.493347159505394
+lupus,female,625754,250,c4,1326952,47.1572445725241
+lupus,tot_disease_counts,349644,250,c4,1326952,26.34940826797051
+hepatitis b,male,161623,250,c4,591800,27.31040892193309
+hepatitis b,female,201386,250,c4,591800,34.029401824940855
+hepatitis b,tot_disease_counts,228791,250,c4,591800,38.660189253126056
+crohn’s disease,male,91335,250,c4,253229,36.06814385398197
+crohn’s disease,female,93733,250,c4,253229,37.01511280303599
+crohn’s disease,tot_disease_counts,68161,250,c4,253229,26.91674334298204
+ulcerative colitis,male,72504,250,c4,201768,35.93434043059355
+ulcerative colitis,female,64819,250,c4,201768,32.12551048729234
+ulcerative colitis,tot_disease_counts,64445,250,c4,201768,31.94014908211411
+ovarian cancer,male,189136,250,c4,1339957,14.115079812262632
+ovarian cancer,female,924159,250,c4,1339957,68.96930274628215
+ovarian cancer,tot_disease_counts,226662,250,c4,1339957,16.91561744145521
+multiple myeloma,male,102622,250,c4,249883,41.06801983328198
+multiple myeloma,female,72228,250,c4,249883,28.904727412429015
+multiple myeloma,tot_disease_counts,75033,250,c4,249883,30.02725275428901
+endocarditis,male,36910,250,c4,100425,36.75379636544685
+endocarditis,female,23987,250,c4,100425,23.885486681603187
+endocarditis,tot_disease_counts,39528,250,c4,100425,39.360716952949964
+chagas disease,male,10839,250,c4,47114,23.005900581568113
+chagas disease,female,12547,250,c4,47114,26.631149976652374
+chagas disease,tot_disease_counts,23728,250,c4,47114,50.36294944177951
+takotsubo cardiomyopathy,male,8886,250,c4,32959,26.960769440820414
+takotsubo cardiomyopathy,female,17250,250,c4,32959,52.337752965806004
+takotsubo cardiomyopathy,tot_disease_counts,6823,250,c4,32959,20.701477593373586
+covid-19,male,1078,250,c4,2141,50.35030359645025
+covid-19,female,251,250,c4,2141,11.723493694535264
+covid-19,tot_disease_counts,812,250,c4,2141,37.926202709014476
+lupus,male,1479778,total,c4,3754729,39.41104670936305
+lupus,female,1925307,total,c4,3754729,51.27685646553986
+lupus,tot_disease_counts,349644,total,c4,3754729,9.312096825097099
+hiv/aids,male,19494969,total,c4,40877294,47.691437207169344
+hiv/aids,female,17383002,total,c4,40877294,42.524835425750055
+hiv/aids,tot_disease_counts,3999323,total,c4,40877294,9.78372736708061
+prostate cancer,male,4131062,total,c4,5728301,72.11670615772461
+prostate cancer,female,1121340,total,c4,5728301,19.57543781306185
+prostate cancer,tot_disease_counts,475899,total,c4,5728301,8.30785602921355
+covid-19,male,4560,total,c4,6866,66.41421497232741
+covid-19,female,1494,total,c4,6866,21.759394115933585
+covid-19,tot_disease_counts,812,total,c4,6866,11.826390911739004
+takotsubo cardiomyopathy,male,29775,total,c4,83252,35.76490654879162
+takotsubo cardiomyopathy,female,46654,total,c4,83252,56.03949454667756
+takotsubo cardiomyopathy,tot_disease_counts,6823,total,c4,83252,8.195598904530822
+multiple sclerosis,male,1332154,total,c4,2916071,45.68318123941427
+multiple sclerosis,female,1307761,total,c4,2916071,44.84667897318001
+multiple sclerosis,tot_disease_counts,276156,total,c4,2916071,9.470139787405724
+colon cancer,male,1514432,total,c4,3226781,46.93321300701845
+colon cancer,female,1354861,total,c4,3226781,41.98800600350628
+colon cancer,tot_disease_counts,357488,total,c4,3226781,11.07878098947527
+tuberculosis,male,7855347,total,c4,13545451,57.99250981012002
+tuberculosis,female,4481435,total,c4,13545451,33.08442812276978
+tuberculosis,tot_disease_counts,1208669,total,c4,13545451,8.923062067110205
+bacterial pneumonia,male,4650946,total,c4,8307487,55.98499281431316
+bacterial pneumonia,female,3224627,total,c4,8307487,38.815913885871865
+bacterial pneumonia,tot_disease_counts,431914,total,c4,8307487,5.199093299814974
+endocarditis,male,157135,total,c4,298621,52.62021090278313
+endocarditis,female,101958,total,c4,298621,34.142943731351785
+endocarditis,tot_disease_counts,39528,total,c4,298621,13.236845365865094
+syphilis,male,669192,total,c4,1168825,57.25339550403182
+syphilis,female,429576,total,c4,1168825,36.75280730648301
+syphilis,tot_disease_counts,70057,total,c4,1168825,5.993797189485166
+type 2 diabetes,male,1756895,total,c4,4191419,41.91647267906167
+type 2 diabetes,female,1878203,total,c4,4191419,44.810671517211716
+type 2 diabetes,tot_disease_counts,556321,total,c4,4191419,13.272855803726614
+multiple myeloma,male,321885,total,c4,618705,52.0256018619536
+multiple myeloma,female,221787,total,c4,618705,35.84697068877736
+multiple myeloma,tot_disease_counts,75033,total,c4,618705,12.127427449269037
+essential hypertension,male,2630327,total,c4,6100386,43.117386342438
+essential hypertension,female,2748986,total,c4,6100386,45.06249276685115
+essential hypertension,tot_disease_counts,721073,total,c4,6100386,11.82012089071085
+sarcoidoses,male,181428,total,c4,368677,49.21055558117268
+sarcoidoses,female,146012,total,c4,368677,39.604314888099886
+sarcoidoses,tot_disease_counts,41237,total,c4,368677,11.185129530727439
+rheumatoid arthritis,male,1050785,total,c4,2463715,42.65042831658694
+rheumatoid arthritis,female,1103565,total,c4,2463715,44.792721560732474
+rheumatoid arthritis,tot_disease_counts,309365,total,c4,2463715,12.556850122680585
+hepatitis b,male,682254,total,c4,1725893,39.53049233063695
+hepatitis b,female,814848,total,c4,1725893,47.21312387268504
+hepatitis b,tot_disease_counts,228791,total,c4,1725893,13.256383796678008
+ulcerative colitis,male,241918,total,c4,526883,45.914937471886546
+ulcerative colitis,female,220520,total,c4,526883,41.85369427368125
+ulcerative colitis,tot_disease_counts,64445,total,c4,526883,12.231368254432198
+crohn’s disease,male,292353,total,c4,647954,45.11940662454433
+crohn’s disease,female,287440,total,c4,647954,44.36117378702809
+crohn’s disease,tot_disease_counts,68161,total,c4,647954,10.519419588427574
+gastric cancer,male,482398,total,c4,892708,54.037602441111765
+gastric cancer,female,315272,total,c4,892708,35.316363245316495
+gastric cancer,tot_disease_counts,95038,total,c4,892708,10.64603431357174
+chagas disease,male,55001,total,c4,133216,41.287082632716796
+chagas disease,female,54487,total,c4,133216,40.90124309392265
+chagas disease,tot_disease_counts,23728,total,c4,133216,17.811674273360556
+ovarian cancer,male,679706,total,c4,3076560,22.093051980133655
+ovarian cancer,female,2170192,total,c4,3076560,70.53956366851288
+ovarian cancer,tot_disease_counts,226662,total,c4,3076560,7.36738435135346
+hiv/aids,male,54457,10,books,343570,15.850336176033997
+hiv/aids,female,32459,10,books,343570,9.447565270541665
+hiv/aids,tot_disease_counts,256654,10,books,343570,74.70209855342434
+bacterial pneumonia,male,24871,10,books,92680,26.83534743202417
+bacterial pneumonia,female,15102,10,books,92680,16.29477772982305
+bacterial pneumonia,tot_disease_counts,52707,10,books,92680,56.86987483815278
+lupus,male,12138,10,books,50277,24.14225192433916
+lupus,female,5415,10,books,50277,10.770332358732622
+lupus,tot_disease_counts,32724,10,books,50277,65.08741571692822
+tuberculosis,male,37608,10,books,162475,23.14694568395138
+tuberculosis,female,15487,10,books,162475,9.531927988921373
+tuberculosis,tot_disease_counts,109380,10,books,162475,67.32112632712725
+rheumatoid arthritis,male,1286,10,books,22231,5.784715037560164
+rheumatoid arthritis,female,2024,10,books,22231,9.104403760514597
+rheumatoid arthritis,tot_disease_counts,18921,10,books,22231,85.11088120192524
+syphilis,male,10602,10,books,44656,23.74149050519527
+syphilis,female,4344,10,books,44656,9.727696166248656
+syphilis,tot_disease_counts,29710,10,books,44656,66.53081332855606
+type 2 diabetes,male,1583,10,books,30741,5.149474642984939
+type 2 diabetes,female,2089,10,books,30741,6.795484857356625
+type 2 diabetes,tot_disease_counts,27069,10,books,30741,88.05504049965843
+endocarditis,male,240,10,books,5411,4.435409351321383
+endocarditis,female,146,10,books,5411,2.6982073553871744
+endocarditis,tot_disease_counts,5025,10,books,5411,92.86638329329145
+essential hypertension,male,3102,10,books,51216,6.056701030927835
+essential hypertension,female,2519,10,books,51216,4.918384879725086
+essential hypertension,tot_disease_counts,45595,10,books,51216,89.02491408934708
+chagas disease,male,90,10,books,1146,7.853403141361256
+chagas disease,female,19,10,books,1146,1.6579406631762654
+chagas disease,tot_disease_counts,1037,10,books,1146,90.48865619546248
+gastric cancer,male,1937,10,books,9693,19.983493242546167
+gastric cancer,female,1073,10,books,9693,11.069844217476529
+gastric cancer,tot_disease_counts,6683,10,books,9693,68.9466625399773
+multiple sclerosis,male,1868,10,books,16992,10.993408662900189
+multiple sclerosis,female,2374,10,books,16992,13.971280602636535
+multiple sclerosis,tot_disease_counts,12750,10,books,16992,75.03531073446328
+ulcerative colitis,male,314,10,books,7255,4.328049620951068
+ulcerative colitis,female,251,10,books,7255,3.459682977257064
+ulcerative colitis,tot_disease_counts,6690,10,books,7255,92.21226740179188
+colon cancer,male,2928,10,books,26326,11.122084631163109
+colon cancer,female,2421,10,books,26326,9.196231862037529
+colon cancer,tot_disease_counts,20977,10,books,26326,79.68168350679936
+hepatitis b,male,674,10,books,13235,5.092557612391387
+hepatitis b,female,527,10,books,13235,3.9818662636947484
+hepatitis b,tot_disease_counts,12034,10,books,13235,90.92557612391387
+prostate cancer,male,7963,10,books,32108,24.80067272953781
+prostate cancer,female,888,10,books,32108,2.7656658776628875
+prostate cancer,tot_disease_counts,23257,10,books,32108,72.4336613927993
+ovarian cancer,male,649,10,books,11963,5.425060603527544
+ovarian cancer,female,3672,10,books,11963,30.694641812254453
+ovarian cancer,tot_disease_counts,7642,10,books,11963,63.880297584218006
+multiple myeloma,male,286,10,books,3608,7.926829268292683
+multiple myeloma,female,200,10,books,3608,5.543237250554324
+multiple myeloma,tot_disease_counts,3122,10,books,3608,86.529933481153
+takotsubo cardiomyopathy,male,19,10,books,579,3.281519861830743
+takotsubo cardiomyopathy,female,74,10,books,579,12.780656303972366
+takotsubo cardiomyopathy,tot_disease_counts,486,10,books,579,83.93782383419689
+sarcoidoses,male,119,10,books,4547,2.617110182537937
+sarcoidoses,female,96,10,books,4547,2.1112821640642183
+sarcoidoses,tot_disease_counts,4332,10,books,4547,95.27160765339785
+crohn’s disease,male,106,10,books,2540,4.173228346456693
+crohn’s disease,female,74,10,books,2540,2.9133858267716537
+crohn’s disease,tot_disease_counts,2360,10,books,2540,92.91338582677166
+covid-19,male,0,10,books,30,0
+covid-19,female,0,10,books,30,0
+covid-19,tot_disease_counts,30,10,books,30,100
+hiv/aids,male,266904,50,books,685620,38.928852717248624
+hiv/aids,female,162062,50,books,685620,23.63729179428838
+hiv/aids,tot_disease_counts,256654,50,books,685620,37.433855488462996
+bacterial pneumonia,male,115560,50,books,241463,47.85826399903919
+bacterial pneumonia,female,73196,50,books,241463,30.31354700306051
+bacterial pneumonia,tot_disease_counts,52707,50,books,241463,21.8281889979003
+lupus,male,58882,50,books,117880,49.95079742110621
+lupus,female,26274,50,books,117880,22.288768238887005
+lupus,tot_disease_counts,32724,50,books,117880,27.760434340006785
+tuberculosis,male,173401,50,books,354223,48.95249602651437
+tuberculosis,female,71442,50,books,354223,20.168650821657543
+tuberculosis,tot_disease_counts,109380,50,books,354223,30.878853151828086
+rheumatoid arthritis,male,6374,50,books,33954,18.77245685338988
+rheumatoid arthritis,female,8659,50,books,33954,25.502149967603227
+rheumatoid arthritis,tot_disease_counts,18921,50,books,33954,55.725393179006886
+type 2 diabetes,male,7321,50,books,42821,17.096751593844143
+type 2 diabetes,female,8431,50,books,42821,19.688937670769015
+type 2 diabetes,tot_disease_counts,27069,50,books,42821,63.214310735386846
+syphilis,male,49310,50,books,101248,48.702196586599236
+syphilis,female,22228,50,books,101248,21.954013906447535
+syphilis,tot_disease_counts,29710,50,books,101248,29.34378950695322
+endocarditis,male,1268,50,books,7060,17.960339943342778
+endocarditis,female,767,50,books,7060,10.864022662889518
+endocarditis,tot_disease_counts,5025,50,books,7060,71.17563739376772
+ovarian cancer,male,3901,50,books,25594,15.24185355942799
+ovarian cancer,female,14051,50,books,25594,54.89958584043136
+ovarian cancer,tot_disease_counts,7642,50,books,25594,29.85856060014066
+essential hypertension,male,14984,50,books,73163,20.480297418093844
+essential hypertension,female,12584,50,books,73163,17.19995079480065
+essential hypertension,tot_disease_counts,45595,50,books,73163,62.3197517871055
+chagas disease,male,470,50,books,1646,28.554070473876063
+chagas disease,female,139,50,books,1646,8.444714459295263
+chagas disease,tot_disease_counts,1037,50,books,1646,63.00121506682868
+gastric cancer,male,7882,50,books,19160,41.13778705636743
+gastric cancer,female,4595,50,books,19160,23.982254697286013
+gastric cancer,tot_disease_counts,6683,50,books,19160,34.879958246346554
+prostate cancer,male,29120,50,books,58351,49.90488594882693
+prostate cancer,female,5974,50,books,58351,10.238042192935854
+prostate cancer,tot_disease_counts,23257,50,books,58351,39.85707185823722
+multiple sclerosis,male,8761,50,books,31357,27.939535032050262
+multiple sclerosis,female,9846,50,books,31357,31.39968747010237
+multiple sclerosis,tot_disease_counts,12750,50,books,31357,40.66077749784737
+ulcerative colitis,male,1561,50,books,9468,16.48711449091677
+ulcerative colitis,female,1217,50,books,9468,12.853823405154206
+ulcerative colitis,tot_disease_counts,6690,50,books,9468,70.65906210392903
+colon cancer,male,11904,50,books,43078,27.633594874413852
+colon cancer,female,10197,50,books,43078,23.671015367472954
+colon cancer,tot_disease_counts,20977,50,books,43078,48.69538975811319
+hepatitis b,male,3475,50,books,18376,18.910535481062254
+hepatitis b,female,2867,50,books,18376,15.601872006965609
+hepatitis b,tot_disease_counts,12034,50,books,18376,65.48759251197214
+takotsubo cardiomyopathy,male,169,50,books,1028,16.439688715953306
+takotsubo cardiomyopathy,female,373,50,books,1028,36.284046692607
+takotsubo cardiomyopathy,tot_disease_counts,486,50,books,1028,47.276264591439684
+multiple myeloma,male,1222,50,books,5263,23.218696560896827
+multiple myeloma,female,919,50,books,5263,17.46152384571537
+multiple myeloma,tot_disease_counts,3122,50,books,5263,59.3197795933878
+sarcoidoses,male,614,50,books,5497,11.16972894305985
+sarcoidoses,female,551,50,books,5497,10.023649263234491
+sarcoidoses,tot_disease_counts,4332,50,books,5497,78.80662179370566
+crohn’s disease,male,516,50,books,3185,16.20094191522763
+crohn’s disease,female,309,50,books,3185,9.701726844583987
+crohn’s disease,tot_disease_counts,2360,50,books,3185,74.09733124018838
+covid-19,male,1,50,books,33,3.0303030303030303
+covid-19,female,2,50,books,33,6.0606060606060606
+covid-19,tot_disease_counts,30,50,books,33,90.9090909090909
+hiv/aids,male,540255,100,books,1124712,48.03496361735271
+hiv/aids,female,327803,100,books,1124712,29.145505693902084
+hiv/aids,tot_disease_counts,256654,100,books,1124712,22.819530688745207
+bacterial pneumonia,male,222784,100,books,419141,53.15251908069122
+bacterial pneumonia,female,143650,100,books,419141,34.27247632658222
+bacterial pneumonia,tot_disease_counts,52707,100,books,419141,12.575004592726552
+lupus,male,116142,100,books,201917,57.51967392542481
+lupus,female,53051,100,books,201917,26.273666902737265
+lupus,tot_disease_counts,32724,100,books,201917,16.206659171837934
+tuberculosis,male,338461,100,books,587543,57.60616669758639
+tuberculosis,female,139702,100,books,587543,23.777323532064887
+tuberculosis,tot_disease_counts,109380,100,books,587543,18.616509770348724
+syphilis,male,97501,100,books,172878,56.3987320538183
+syphilis,female,45667,100,books,172878,26.41573826629184
+syphilis,tot_disease_counts,29710,100,books,172878,17.185529679889864
+rheumatoid arthritis,male,13097,100,books,48640,26.92639802631579
+rheumatoid arthritis,female,16622,100,books,48640,34.17351973684211
+rheumatoid arthritis,tot_disease_counts,18921,100,books,48640,38.9000822368421
+type 2 diabetes,male,14638,100,books,58289,25.11280001372472
+type 2 diabetes,female,16582,100,books,58289,28.44790612293915
+type 2 diabetes,tot_disease_counts,27069,100,books,58289,46.43929386333613
+endocarditis,male,2595,100,books,9193,28.227999564886325
+endocarditis,female,1573,100,books,9193,17.11084520831067
+endocarditis,tot_disease_counts,5025,100,books,9193,54.661155226803004
+ovarian cancer,male,8147,100,books,41099,19.822866736416945
+ovarian cancer,female,25310,100,books,41099,61.58300688581231
+ovarian cancer,tot_disease_counts,7642,100,books,41099,18.59412637777075
+essential hypertension,male,29583,100,books,100407,29.463085243060743
+essential hypertension,female,25229,100,books,100407,25.126734191839212
+essential hypertension,tot_disease_counts,45595,100,books,100407,45.41018056510004
+ulcerative colitis,male,3188,100,books,12361,25.790793625111235
+ulcerative colitis,female,2483,100,books,12361,20.0873715718793
+ulcerative colitis,tot_disease_counts,6690,100,books,12361,54.12183480300946
+chagas disease,male,1000,100,books,2362,42.337002540220155
+chagas disease,female,325,100,books,2362,13.75952582557155
+chagas disease,tot_disease_counts,1037,100,books,2362,43.903471634208294
+gastric cancer,male,14772,100,books,29876,49.444370062926765
+gastric cancer,female,8421,100,books,29876,28.186504217432052
+gastric cancer,tot_disease_counts,6683,100,books,29876,22.369125719641183
+prostate cancer,male,52114,100,books,88506,58.88188371409848
+prostate cancer,female,13135,100,books,88506,14.840801753553432
+prostate cancer,tot_disease_counts,23257,100,books,88506,26.27731453234809
+multiple sclerosis,male,17444,100,books,48328,36.095017381228274
+multiple sclerosis,female,18134,100,books,48328,37.52276113226287
+multiple sclerosis,tot_disease_counts,12750,100,books,48328,26.382221486508854
+crohn’s disease,male,970,100,books,3979,24.377984418195524
+crohn’s disease,female,649,100,books,3979,16.31063081176175
+crohn’s disease,tot_disease_counts,2360,100,books,3979,59.31138477004272
+colon cancer,male,22072,100,books,62250,35.4570281124498
+colon cancer,female,19201,100,books,62250,30.844979919678718
+colon cancer,tot_disease_counts,20977,100,books,62250,33.69799196787149
+hepatitis b,male,7069,100,books,25040,28.230830670926515
+hepatitis b,female,5937,100,books,25040,23.71006389776358
+hepatitis b,tot_disease_counts,12034,100,books,25040,48.05910543130991
+takotsubo cardiomyopathy,male,399,100,books,1603,24.890829694323145
+takotsubo cardiomyopathy,female,718,100,books,1603,44.79101684341859
+takotsubo cardiomyopathy,tot_disease_counts,486,100,books,1603,30.31815346225827
+sarcoidoses,male,1243,100,books,6755,18.40118430792006
+sarcoidoses,female,1180,100,books,6755,17.468541820873426
+sarcoidoses,tot_disease_counts,4332,100,books,6755,64.13027387120651
+multiple myeloma,male,2332,100,books,7272,32.068206820682065
+multiple myeloma,female,1818,100,books,7272,25
+multiple myeloma,tot_disease_counts,3122,100,books,7272,42.931793179317935
+covid-19,male,3,100,books,36,8.333333333333332
+covid-19,female,3,100,books,36,8.333333333333332
+covid-19,tot_disease_counts,30,100,books,36,83.33333333333334
+hiv/aids,male,1378108,250,books,2473865,55.70667760771101
+hiv/aids,female,839103,250,books,2473865,33.91870615413533
+hiv/aids,tot_disease_counts,256654,250,books,2473865,10.374616238153658
+bacterial pneumonia,male,532031,250,books,934585,56.92697828447921
+bacterial pneumonia,female,349847,250,books,934585,37.43340627123269
+bacterial pneumonia,tot_disease_counts,52707,250,books,934585,5.639615444288106
+lupus,male,286539,250,books,455081,62.96439534939934
+lupus,female,135818,250,books,455081,29.84479686033915
+lupus,tot_disease_counts,32724,250,books,455081,7.1908077902615135
+tuberculosis,male,830446,250,books,1280955,64.83022432482015
+tuberculosis,female,341129,250,books,1280955,26.63083402617578
+tuberculosis,tot_disease_counts,109380,250,books,1280955,8.538941649004062
+syphilis,male,240834,250,books,388532,61.98562795342468
+syphilis,female,117988,250,books,388532,30.367640245848477
+syphilis,tot_disease_counts,29710,250,books,388532,7.646731800726839
+rheumatoid arthritis,male,33429,250,books,91622,36.48577852480845
+rheumatoid arthritis,female,39272,250,books,91622,42.86306782213879
+rheumatoid arthritis,tot_disease_counts,18921,250,books,91622,20.65115365305276
+type 2 diabetes,male,36613,250,books,104621,34.995842134944226
+type 2 diabetes,female,40939,250,books,104621,39.13076724558167
+type 2 diabetes,tot_disease_counts,27069,250,books,104621,25.8733906194741
+endocarditis,male,7083,250,books,16106,43.977399726809885
+endocarditis,female,3998,250,books,16106,24.82304731156091
+endocarditis,tot_disease_counts,5025,250,books,16106,31.199552961629205
+ovarian cancer,male,21317,250,books,85067,25.05907108514465
+ovarian cancer,female,56108,250,books,85067,65.95742179693653
+ovarian cancer,tot_disease_counts,7642,250,books,85067,8.983507117918817
+essential hypertension,male,73930,250,books,183302,40.332347710335945
+essential hypertension,female,63777,250,books,183302,34.793401053998316
+essential hypertension,tot_disease_counts,45595,250,books,183302,24.87425123566573
+ulcerative colitis,male,8012,250,books,21221,37.755053955986995
+ulcerative colitis,female,6519,250,books,21221,30.71957023702936
+ulcerative colitis,tot_disease_counts,6690,250,books,21221,31.525375806983646
+chagas disease,male,2617,250,books,4651,56.267469361427644
+chagas disease,female,997,250,books,4651,21.43625026875941
+chagas disease,tot_disease_counts,1037,250,books,4651,22.296280369812944
+gastric cancer,male,33351,250,books,59633,55.92708735096339
+gastric cancer,female,19599,250,books,59633,32.86603055355256
+gastric cancer,tot_disease_counts,6683,250,books,59633,11.206882095484044
+prostate cancer,male,114692,250,books,174519,65.71891885697259
+prostate cancer,female,36570,250,books,174519,20.954738452546714
+prostate cancer,tot_disease_counts,23257,250,books,174519,13.326342690480692
+multiple sclerosis,male,43578,250,books,98226,44.36503573391974
+multiple sclerosis,female,41898,250,books,98226,42.654694276464475
+multiple sclerosis,tot_disease_counts,12750,250,books,98226,12.980269989615783
+crohn’s disease,male,2312,250,books,6332,36.51295009475679
+crohn’s disease,female,1660,250,books,6332,26.21604548325963
+crohn’s disease,tot_disease_counts,2360,250,books,6332,37.27100442198358
+colon cancer,male,52040,250,books,119285,43.626608542566125
+colon cancer,female,46268,250,books,119285,38.7877771723184
+colon cancer,tot_disease_counts,20977,250,books,119285,17.58561428511548
+hepatitis b,male,18224,250,books,44985,40.51128153829054
+hepatitis b,female,14727,250,books,44985,32.737579193064356
+hepatitis b,tot_disease_counts,12034,250,books,44985,26.7511392686451
+takotsubo cardiomyopathy,male,1168,250,books,3491,33.45746204525924
+takotsubo cardiomyopathy,female,1837,250,books,3491,52.62102549412776
+takotsubo cardiomyopathy,tot_disease_counts,486,250,books,3491,13.921512460613005
+sarcoidoses,male,3372,250,books,10650,31.661971830985912
+sarcoidoses,female,2946,250,books,10650,27.661971830985916
+sarcoidoses,tot_disease_counts,4332,250,books,10650,40.67605633802817
+multiple myeloma,male,5557,250,books,13360,41.59431137724551
+multiple myeloma,female,4681,250,books,13360,35.037425149700596
+multiple myeloma,tot_disease_counts,3122,250,books,13360,23.368263473053894
+covid-19,male,15,250,books,53,28.30188679245283
+covid-19,female,8,250,books,53,15.09433962264151
+covid-19,tot_disease_counts,30,250,books,53,56.60377358490566
+lupus,male,219009077,total,books,347699446,62.98804312733935
+lupus,female,128657645,total,books,347699446,37.00254529597381
+lupus,tot_disease_counts,32724,total,books,347699446,0.009411576686837746
+hiv/aids,male,427855772,total,books,698026634,61.29504966711629
+hiv/aids,female,269914208,total,books,698026634,38.668181821841486
+hiv/aids,tot_disease_counts,256654,total,books,698026634,0.036768511042230514
+prostate cancer,male,16462036,total,books,29386342,56.019343952370804
+prostate cancer,female,12901049,total,books,29386342,43.90151383932032
+prostate cancer,tot_disease_counts,23257,total,books,29386342,0.07914220830888036
+covid-19,male,23015,total,books,41220,55.83454633672974
+covid-19,female,18175,total,books,41220,44.09267345948569
+covid-19,tot_disease_counts,30,total,books,41220,0.0727802037845706
+takotsubo cardiomyopathy,male,331839,total,books,725223,45.75682238428732
+takotsubo cardiomyopathy,female,392898,total,books,725223,54.17616374549621
+takotsubo cardiomyopathy,tot_disease_counts,486,total,books,725223,0.06701387021647134
+multiple sclerosis,male,11646804,total,books,21642968,53.81334020361718
+multiple sclerosis,female,9983414,total,books,21642968,46.12774920704037
+multiple sclerosis,tot_disease_counts,12750,total,books,21642968,0.058910589342459865
+colon cancer,male,13040403,total,books,25530019,51.078704641778764
+colon cancer,female,12468639,total,books,25530019,48.839129340248434
+colon cancer,tot_disease_counts,20977,total,books,25530019,0.08216601797280292
+tuberculosis,male,366410773,total,books,475567737,77.04702074859212
+tuberculosis,female,109047584,total,books,475567737,22.929979373264338
+tuberculosis,tot_disease_counts,109380,total,books,475567737,0.022999878143541937
+bacterial pneumonia,male,117909962,total,books,194309378,60.68156010462861
+bacterial pneumonia,female,76346709,total,books,194309378,39.29131459625176
+bacterial pneumonia,tot_disease_counts,52707,total,books,194309378,0.027125299119633843
+endocarditis,male,3928628,total,books,7247073,54.20985824207924
+endocarditis,female,3313420,total,books,7247073,45.720803419532274
+endocarditis,tot_disease_counts,5025,total,books,7247073,0.06933833838847767
+syphilis,male,72393226,total,books,109464725,66.13383991966361
+syphilis,female,37041789,total,books,109464725,33.83901891682458
+syphilis,tot_disease_counts,29710,total,books,109464725,0.027141163511807113
+type 2 diabetes,male,10272499,total,books,20976861,48.9706205327861
+type 2 diabetes,female,10677293,total,books,20976861,50.900337281159466
+type 2 diabetes,tot_disease_counts,27069,total,books,20976861,0.12904218605443396
+multiple myeloma,male,2252735,total,books,4636277,48.58930991396761
+multiple myeloma,female,2380420,total,books,4636277,51.34335157282449
+multiple myeloma,tot_disease_counts,3122,total,books,4636277,0.06733851320790367
+essential hypertension,male,29539111,total,books,59446292,49.690418033138215
+essential hypertension,female,29861586,total,books,59446292,50.23288248155158
+essential hypertension,tot_disease_counts,45595,total,books,59446292,0.07669948531020236
+sarcoidoses,male,4186860,total,books,8763485,47.77619862417748
+sarcoidoses,female,4572293,total,books,8763485,52.17436898676725
+sarcoidoses,tot_disease_counts,4332,total,books,8763485,0.0494323890552674
+rheumatoid arthritis,male,13567357,total,books,26932077,50.37620009774961
+rheumatoid arthritis,female,13345799,total,books,26932077,49.55354538753175
+rheumatoid arthritis,tot_disease_counts,18921,total,books,26932077,0.0702545147186383
+hepatitis b,male,6770258,total,books,13669806,49.527096434287365
+hepatitis b,female,6887514,total,books,13669806,50.38487012910059
+hepatitis b,tot_disease_counts,12034,total,books,13669806,0.08803343661204849
+ulcerative colitis,male,3432050,total,books,7363724,46.60753173258531
+ulcerative colitis,female,3924984,total,books,7363724,53.30161749679917
+ulcerative colitis,tot_disease_counts,6690,total,books,7363724,0.09085077061552009
+crohn’s disease,male,1628306,total,books,3303576,49.28919449711464
+crohn’s disease,female,1672910,total,books,3303576,50.63936776390191
+crohn’s disease,tot_disease_counts,2360,total,books,3303576,0.07143773898345308
+gastric cancer,male,7215370,total,books,12423160,58.079989310288205
+gastric cancer,female,5201107,total,books,12423160,41.866216003013726
+gastric cancer,tot_disease_counts,6683,total,books,12423160,0.05379468669807038
+chagas disease,male,864270,total,books,1390319,62.16343155779357
+chagas disease,female,525012,total,books,1390319,37.76198124315355
+chagas disease,tot_disease_counts,1037,total,books,1390319,0.07458719905287924
+ovarian cancer,male,6291158,total,books,14756858,42.632096886749196
+ovarian cancer,female,8458058,total,books,14756858,57.31611702165868
+ovarian cancer,tot_disease_counts,7642,total,books,14756858,0.05178609159212619
