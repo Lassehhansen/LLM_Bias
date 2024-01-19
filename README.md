@@ -77,34 +77,6 @@ LLM_Bias/
 | Wikipedia (English) | All English Wikipedia articles                               | 24B (20.3 GB)      |
 | StackExchange       | A network of Q and A websites                                | 20B (74.5 GB)      |
 
-
-## Datasets
-
-Note the datasets analyzed are all English datasets. 
-
-- Arxiv (88 GB)
-    - Total data loaded and filtered (Keyword Present - Medical AND Racial OR Gender): 77788
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 4.6 GB
-    - Filtered Size (Ambgious Keywords Filtering):
-    - Meta Data Keys: timestamp, yymm, arxiv_id, language, url
-- GitHub (213 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 2.8 GB
-    - Filtered Size (Ambgious Keywords Filtering): 
-- Stackexchange (74.5 GB)
-    - Total data loaded and filtered: 9212
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 70.1 MB
-    - Filtered Size (Ambgious Keywords Filtering):
-    - Meta Data Keys: language, url, timestamp, question_score
-- Wikipedia (112 GB) -> When filtered for English only (20.3GB)
-    - Meta Data Keys: title, url, language, timestamp
-- C4 (807 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 19.4 GB
-    - Total data loaded and filtered: 2340188
-- Books (100.4 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 52.3 GB
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 40.5 GB (When removing latex formatting)
-    - Total data loaded and filtered: 76297
-
 ## Downloading the Training Data:
 
 To download only the files pertaining to RedPyjama from the dataset, follow the steps below. Detailed documentation for the download can be found [here](https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T).
