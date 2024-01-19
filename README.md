@@ -1,15 +1,21 @@
 # World According to LLMs
 
-This project aims to understand the prevalence of disease mentions for 19 different diseases and compare them with GPT-4/Llama 2/Llama 1 Estimates. The goal is to understand biases among disease prevalence according to training data, model outputs, and the real world.
+This project aims to understand the prevalence of disease mentions for 22 different diseases and compare them with GPT-4/Llama 2/Llama 1 Estimates. The goal is to understand biases among disease prevalence according to training data, model outputs, and the real world.
 
-## Research Questions:
+## Introduction
 
-- How do skews in race-disease associations in pre-training data relate to race and gender biases in model outputs?
-- What metrics can we use to predict healthcare-related biases in outputs?
-- How well is “the world as it is” (true disease distributions) reflected in these open-source corpora?
-- Measuring co-occurrence between disease terms and race/ethnicity and gender keywords in pre-training data.
-- Can these results inform us about bias in the final model outputs? I.e., do co-occurrence ratios in pre-training data correlate with fine-tuned LLM bias?
-- How well do the pre-training datasets reflect true disease-demographic relationships? I.e., how well does the distribution of disease-demographic associations in the training data match ‘true’ distributions?
+The rise of large language models (LLMs) like GPT-4, fueled by vast textual data and technological advancements, has significantly impacted natural language processing and healthcare. These models, trained on data sources like Common Crawl and Wikipedia, demonstrate advanced text generation and understanding. However, learning from a broad range of web sources renders these models prone to embedding societal biases. Prior work has demonstrated the existence of such biases, including the impact of race on LLM triage decisions and estimates of disease prevalence. The nature and origin of such biases in broad web text data itself, however, remains largely unexplored.
+
+Our research investigates these biases by analyzing web data across various platforms, including Arxiv, Wikipedia, and Common Crawl. We aim to examine how diseases are textually represented in relation to race and gender, uncovering biases in LLM training data.
+
+## Methods
+Our analysis involved a detailed co-occurrence study across six critical text corpora: Arxiv, Books, C4, GitHub, StackExchange, and Wikipedia (English), accessed via the RedPajama-Data-1T dataset. This dataset is an open-source implementation of the Llama-1 pre-training environment and influences over 160 open-source LLMs, including those from MosaicML and StabilityAI.
+
+## Data Processing
+Text data in JSON Lines format was extracted from these corpora using standard retrieval methods. A specialized filtering pipeline was employed to isolate texts pertinent to our research, focusing on documents containing disease-related terms alongside demographic identifiers.
+
+## Co-Occurrence Analysis
+We computed co-occurrence counts for race and gender-related keywords against various diseases within defined token windows. The analysis spanned multiple window sizes to capture immediate and broader contextual associations. This methodology created a co-occurrence matrix, delineating the relationship between diseases and demographic categories. Our primary focus was on the ratio of specific racial or gender mentions relative to total occurrences for each disease, offering a quantifiable perspective on demographic representation in disease-related discourse within these corpora. All code is available at GitHub Repository.
 
 ## Repository Structure (Desired):
 
@@ -59,18 +65,6 @@ LLM_Bias/
 │
 └── main.py
 ```
-
-## Extracting Relevant Text from Training Data:
-
-### Step 1:
-Define keyword dictionaries that relate to each disease, race, and gender.
-
-### Step 2:
-Filter all documents from pre-training data that mention disease AND (gender OR race).
-
-### Step 3:
-Deal with ambiguous keywords, e.g., ensuring all mentions of ‘white’ and ‘black’ relate to ethnicity and not actual colors (”the black car was for sale”), and that ‘aids’ relate to the disease and not the unrelated noun (hearing or walking aids) and the verb (she ‘aids’ him). This is done using a biomedical NER tagger that is configured to only extract keyword matches that are classified as pertaining to the disease or the race (personal background). In this step, all irrelevant occurrences of the keywords are flagged, so they don’t count in the subsequent co-occurrence analysis.
-
 ## Datasets
 
 Note the datasets analyzed are all English datasets. 
@@ -89,16 +83,7 @@ Note the datasets analyzed are all English datasets.
     - Filtered Size (Ambgious Keywords Filtering):
     - Meta Data Keys: language, url, timestamp, question_score
 - Wikipedia (112 GB) -> When filtered for English only (20.3GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 1.6 GB
-    - Filtered Size (Ambgious Keywords Filtering):
     - Meta Data Keys: title, url, language, timestamp
-- Commoncrawl
-    - 2019-30 Folder: (238 GB)
-    - 2020-05 Folder: (285 GB)
-    - 2021-04 Folder: (274 GB)
-    - 2022-05 Folder: (251 GB)
-    - 2023-06 Folder: (289 GB)
-    - Filtered Size (Keyword Present - Medical AND Racial OR Gender): XX GB
 - C4 (807 GB)
     - Filtered Size (Keyword Present - Medical AND Racial OR Gender): 19.4 GB
     - Total data loaded and filtered: 2340188
