@@ -316,14 +316,14 @@ p_point = ggplot(together_plot_long, aes(x = estimate, y = value, color = estima
 ```
 
 ```{r}
-png(filename = "visualization_manuscript/coding_inequity_plot.png", width = 2800, height = 2000, units = "px", res = 300)
+png(filename = "figures_manuscript/coding_inequity_plot.png", width = 2800, height = 2000, units = "px", res = 300)
 
 p_point
 
 dev.off()
 
 p_point
-ggsave("visualization_manuscript/coding_inequity_plot.eps",  width = 2500, height = 2000, units = "px", dpi = 300)
+ggsave("figures_manuscript/coding_inequity_plot.eps",  width = 2500, height = 2000, units = "px", dpi = 300)
 
 getwd()
 ```
