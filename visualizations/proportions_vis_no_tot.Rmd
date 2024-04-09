@@ -8,12 +8,18 @@ output:
     toc: true
 ---
 
+```{r}
+library(tidyverse)
+```
+
 ## Loading data
 
 ```{r}
 df_gender_tot = read_csv("count_vis_data/df_gender_tot.csv")
 df_racial_tot = read_csv("count_vis_data/df_racial_tot.csv")
 ```
+
+
 
 ## Packages
 
@@ -29,14 +35,17 @@ df_racial_tot = df_racial_tot %>% mutate(medical_key = ifelse(medical_key == "tu
 df_gender_tot = df_gender_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
 
 df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
 df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
-
 df_racial_tot3_perc = df_racial_tot2 %>%
     filter(window == 50 & keyword != "tot_disease_counts") %>% 
     group_by(medical_key, keyword) %>%
@@ -106,7 +115,7 @@ df_gender_tot3_perc$perc_of_total = (df_gender_tot3_perc$total_count/sum_count)*
 df_gender_tot3_perc <- df_gender_tot3_perc %>%
   mutate(facet_label = paste0(round(total_count / 1000, 1), 
                               " K (", 
-                              round(perc_of_total, 2), "%)"))
+                              round(perc_of_total, 3), "%)"))
 
 
 ### adding total percentages
@@ -118,65 +127,129 @@ df_racial_tot3_perc$perc_of_total = (df_racial_tot3_perc$total_count/sum_count)*
 df_racial_tot3_perc <- df_racial_tot3_perc %>%
   mutate(facet_label = paste0(round(total_count / 1000, 1), 
                               " K (", 
-                              round(perc_of_total, 2), "%)"))
+                              round(perc_of_total, 3), "%)"))
+
+df_racial_tot3_perc$medical_key = factor(df_racial_tot3_perc$medical_key ,
+                                         levels = 
+                                           c("bacterial pneumonia",     
+                                             "colon cancer",
+                                             "covid-19",
+                                             "endocarditis",
+                                             "essential hypertension",
+                                             "hepatitis b",
+                                             "hiv/aids",
+                                             "lupus",
+                                             "multiple myeloma",
+                                             "multiple sclerosis",
+                                             "prostate cancer",
+                                             "rheumatoid arthritis",
+                                             "sarcoidosis",
+                                             "syphilis",
+                                             "takotsubo cardiomyopathy", 
+                                             "tuberculosis",
+                                             "type 2 diabetes"))
+
+df_gender_tot3_perc$medical_key = factor(df_gender_tot3_perc$medical_key ,
+                                         levels = 
+                                           c("bacterial pneumonia",     
+                                             "colon cancer",
+                                             "covid-19",
+                                             "endocarditis",
+                                             "essential hypertension",
+                                             "hepatitis b",
+                                             "hiv/aids",
+                                             "lupus",
+                                             "multiple myeloma",
+                                             "multiple sclerosis",
+                                             "prostate cancer",
+                                             "rheumatoid arthritis",
+                                             "sarcoidosis",
+                                             "syphilis",
+                                             "takotsubo cardiomyopathy", 
+                                             "tuberculosis",
+                                             "type 2 diabetes"))
 ```
 
 
 ## Visualizing
 
 ```{r}
-# Now create the plot
+
 p1_stacked_bar = ggplot(data = df_gender_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
   geom_bar(stat = "identity", position = "stack", color = "black") +
-  facet_grid(reorder(facet_label, -total_count) ~ ., scales = "free_y",  switch = "y") +
-  labs(title = "",
+  #facet_grid(medical_key ~ ., scales = "free_y",  switch = "y") +
+  #facet_grid(reorder(facet_label, -total_count) ~ ., scales = "free_y",  switch = "y") +
+  labs(title = "A. Gender",
        x = "",
-       y = "",
+       y = "Proportion (%)",
        fill = "") +
   scale_fill_manual(values = rev(c("#344e41", "#9b2226")),
                     labels = c("Female", "Male")) +
   coord_flip() +
   theme_classic() +
-  theme(legend.position = "right",
+  theme(legend.position = "bottom",
         strip.text.y.left = element_text(angle = 0),
         panel.spacing.x = unit(0, "lines"),
         panel.spacing.y = unit(0.1, "cm"),
-        legend.margin = margin(t = -0.2, unit = "lines"),
-        plot.margin = unit(c(-0.5, 0.2, -0.5, 0.2), 'lines'),
-        legend.text = element_text(size = 12, color = "black"),
-        axis.text.y = element_text(size = 12, color = "black", face = "bold"),
+        legend.margin = margin(t = -0.4, unit = "lines"),
+        plot.margin = unit(c(0.5, 1, 0.2, 0.2), 'lines'),
+        legend.text = element_text(size = 11, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
         strip.text = element_text(size = 12, color = "black"),
         axis.text.x = element_text(size = 10, color = "black"),
         #strip.text = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
         strip.background = element_rect(fill = "white", color = "black", size = 1)) +
-  scale_y_continuous(expand = c(0,0))
+  scale_y_continuous(expand = c(0,0)) +
+  guides(fill = guide_legend(nrow = 2))  # Adjust ncol to fit your desired number of columns
+
 
 
 p2_stacked_bar = ggplot(data = df_racial_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
   geom_bar(stat = "identity", position = "stack", color = "black") +
-  facet_grid(reorder(facet_label, -total_count) ~ ., scales = "free_y",  switch = "y") +
+  #facet_grid(reorder(facet_label, -total_count) ~ ., scales = "free_y",  switch = "y") +
   #facet_grid(facet_label ~ ., scales = "free_y",  switch = "y") +
-  labs(title = "",
+  labs(
        x = "",
-       y = "",
+       y = "Proportion (%)",
+       title = "B. Ethnicity",
        fill = "") +
   scale_fill_manual(values=rev(c("#bc6c25", "#344e41", "#540b0e", "#9b2226", "#03045e", "#0077b6")),
                     labels = c("White", "Black", "Asian", "Hispanic", "Native", "Pac. Islander")) +
   coord_flip() +
   theme_classic() +
-  theme(legend.position = "right",
+  theme(legend.position = "bottom",
         strip.text.y.left = element_text(angle = 0),
         panel.spacing.x = unit(0, "lines"),
         panel.spacing.y = unit(0.1, "cm"),
-        legend.margin = margin(t = -0.2, unit = "lines"),
-        plot.margin = unit(c(-0.5, 0.2, -0.5, 0.2), 'lines'),
-        legend.text = element_text(size = 12, color = "black"),
-        axis.text.y = element_text(size = 12, color = "black", face = "bold"),
+        legend.margin = margin(t = -0.4, unit = "lines"),
+        plot.margin = unit(c(0.5, 1, 0.2, 0.2), 'lines'),
+        legend.text = element_text(size = 11, color = "black"),
+        axis.text.y = element_blank(),
+        #axis.text.y = element_text(size = 12, color = "black", face = "bold"),
         strip.text = element_text(size = 12, color = "black"),
         axis.text.x = element_text(size = 10, color = "black"),
         #strip.text = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
         strip.background = element_rect(fill = "white", color = "black", size = 1)) +
-  scale_y_continuous(expand = c(0,0))
+  scale_y_continuous(expand = c(0,0)) +
+  guides(fill = guide_legend(nrow = 2))  # Adjust ncol to fit your desired number of columns
+
+library(ggpubr)
+ggarrange(p1_stacked_bar, p2_stacked_bar)
+```
+
+```{r}
+png(filename = "figures_manuscript/no_tot_both.png", width = 3000, height = 2000, units = "px", res = 300)
+
+ggarrange(p1_stacked_bar, p2_stacked_bar)
+
+
+dev.off()
+
+ggarrange(p1_stacked_bar, p2_stacked_bar)
+
+ggsave("figures_manuscript/no_tot_both.eps",  width = 2500, height = 2000, units = "px", dpi = 300)
+
+getwd()
 ```
 
 
@@ -185,11 +258,15 @@ p2_stacked_bar = ggplot(data = df_racial_tot3_perc, aes(x = medical_key, y = dat
 ```{r}
 
 df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
 df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
 
@@ -267,11 +344,16 @@ df_gender_tot3_perc = df_gender_tot3_perc %>%
          source_perc = (source_count/sum_count_sources)*100)
 
 # Create a custom label for faceting
+# df_gender_tot3_perc <- df_gender_tot3_perc %>%
+#   mutate(facet_label = paste0(source,
+#                               "\n",
+#                               round(source_count / 1000, 1), 
+#                               " K (", 
+#                               round(source_perc, 2), "%)"))
+
 df_gender_tot3_perc <- df_gender_tot3_perc %>%
   mutate(facet_label = paste0(source,
-                              "\n",
-                              round(source_count / 1000, 1), 
-                              " K (", 
+                              " (",
                               round(source_perc, 2), "%)"))
 
 
@@ -288,12 +370,57 @@ df_racial_tot3_perc = df_racial_tot3_perc %>%
          source_perc = (source_count/sum_count_sources)*100)
 
 # Create a custom label for faceting
+# df_racial_tot3_perc <- df_racial_tot3_perc %>%
+#   mutate(facet_label = paste0(source,
+#                               "\n",
+#                               round(source_count / 1000, 1), 
+#                               " K (", 
+#                               round(source_perc, 2), "%)"))
+
 df_racial_tot3_perc <- df_racial_tot3_perc %>%
   mutate(facet_label = paste0(source,
-                              "\n",
-                              round(source_count / 1000, 1), 
-                              " K (", 
+                              " (",
                               round(source_perc, 2), "%)"))
+
+df_racial_tot3_perc$medical_key = factor(df_racial_tot3_perc$medical_key ,
+                                         levels = 
+                                           c("bacterial pneumonia",     
+                                             "colon cancer",
+                                             "covid-19",
+                                             "endocarditis",
+                                             "essential hypertension",
+                                             "hepatitis b",
+                                             "hiv/aids",
+                                             "lupus",
+                                             "multiple myeloma",
+                                             "multiple sclerosis",
+                                             "prostate cancer",
+                                             "rheumatoid arthritis",
+                                             "sarcoidosis",
+                                             "syphilis",
+                                             "takotsubo cardiomyopathy", 
+                                             "tuberculosis",
+                                             "type 2 diabetes"))
+
+df_gender_tot3_perc$medical_key = factor(df_gender_tot3_perc$medical_key ,
+                                         levels = 
+                                           c("bacterial pneumonia",     
+                                             "colon cancer",
+                                             "covid-19",
+                                             "endocarditis",
+                                             "essential hypertension",
+                                             "hepatitis b",
+                                             "hiv/aids",
+                                             "lupus",
+                                             "multiple myeloma",
+                                             "multiple sclerosis",
+                                             "prostate cancer",
+                                             "rheumatoid arthritis",
+                                             "sarcoidosis",
+                                             "syphilis",
+                                             "takotsubo cardiomyopathy", 
+                                             "tuberculosis",
+                                             "type 2 diabetes"))
 ```
 
 ### Visualizing
@@ -302,37 +429,39 @@ df_racial_tot3_perc <- df_racial_tot3_perc %>%
 # Create the updated stacked bar chart with facet labels
 p1_stacked_bar_source = ggplot(data = df_gender_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
   geom_bar(stat = "identity", position = "stack", color = "black") +
-  labs(title = "",
+  labs(title = "A. Gender",
        x = "",
-       y = "",
+       y = "Proportion (%)",
        fill = "") +
 scale_fill_manual(values = rev(c("#344e41", "#9b2226")),
-                    labels = c("Female", "Male")) +  facet_grid(. ~ reorder(facet_label, -total_count)) +
-    
+                    labels = c("Female", "Male")) +  
+  facet_grid(. ~ reorder(facet_label, -total_count)) +
   #facet_grid(. ~ facet_label, scales = "free") +
   coord_flip() +
   theme_classic() +
   theme(legend.position = "bottom",
-        #strip.text.y.left = element_text(angle = 0),
-        panel.spacing.x = unit(1.5, "lines"),
-        panel.spacing.y = unit(0.2, "cm"),
-        legend.margin = margin(t = -0.2, unit = "lines"),  
-        plot.margin = unit(c(0.2, 1, 3 , 0.2), 'lines'),
-        legend.text = element_text(size = 12, color = "black"),
+        strip.text.y.left = element_text(angle = 0),
+        panel.spacing.x = unit(1, "lines"),
+        panel.spacing.y = unit(0.1, "cm"),
+        legend.margin = margin(t = 0, unit = "lines"),
+        plot.margin = unit(c(0.5, 1, 0.2, 0.2), 'lines'),
+        legend.text = element_text(size = 10, color = "black"),
         axis.text.y = element_text(size = 12, color = "black"),
         strip.text = element_text(size = 12, color = "black"),
         axis.text.x = element_text(size = 10, color = "black"),
-        
-        strip.text.y.left = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
-        strip.background = element_rect(fill = "white", color = "black", size = 1.5)) +
-  scale_y_continuous(expand = c(0,0))
+        #strip.text = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
+        strip.background = element_rect(fill = "white", color = "black", size = 1)) +
+    scale_y_continuous(expand = c(0,0),
+                     breaks = c(0, 50, 100),
+                     labels = c(0, 50, 100))  # Adjust ncol to fit your desired number of columns
+
 
 
 p2_stacked_bar_source = ggplot(data = df_racial_tot3_perc, aes(x = medical_key, y = data_perc, fill = keyword)) +
   geom_bar(stat = "identity", position = "stack", color = "black") +
-  labs(title = "",
+  labs(title = "B. Ethnicity",
        x = "",
-       y = "",
+       y = "Proportion (%)",
        fill = "") +
   scale_fill_manual(values=rev(c("#bc6c25", "#344e41", "#540b0e", "#9b2226", "#03045e", "#0077b6")),
                     labels = c("White", "Black", "Asian", "Hispanic", "Native", "Pac. Islander")) +
@@ -342,21 +471,38 @@ p2_stacked_bar_source = ggplot(data = df_racial_tot3_perc, aes(x = medical_key, 
   coord_flip() +
   theme_classic() +
   theme(legend.position = "bottom",
-        #strip.text.y.left = element_text(angle = 0),
-        panel.spacing.x = unit(1.5, "lines"),
-        panel.spacing.y = unit(0.2, "cm"),
-        legend.margin = margin(t = -0.2, unit = "lines"),  
-        plot.margin = unit(c(0.2, 1, 3 , 0.2), 'lines'),
-        legend.text = element_text(size = 12, color = "black"),
+        strip.text.y.left = element_text(angle = 0),
+        panel.spacing.x = unit(1, "lines"),
+        panel.spacing.y = unit(0.1, "cm"),
+        legend.margin = margin(t = 0, unit = "lines"),
+        plot.margin = unit(c(0.5, 1, 0.2, 0.2), 'lines'),
+        legend.text = element_text(size = 10, color = "black"),
         axis.text.y = element_text(size = 12, color = "black"),
         strip.text = element_text(size = 12, color = "black"),
         axis.text.x = element_text(size = 10, color = "black"),
-        
-        strip.text.y.left = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
-        strip.background = element_rect(fill = "white", color = "black", size = 1.5)) +
-  scale_y_continuous(expand = c(0,0))
+        #strip.text = element_text(angle = 0, size = 10, face = "bold", margin = margin(t = 5, b = 5, l = 5, r = 5)),
+        strip.background = element_rect(fill = "white", color = "black", size = 1)) +
+    scale_y_continuous(expand = c(0,0),
+                     breaks = c(0, 50, 100),
+                     labels = c(0, 50, 100))  # Adjust ncol to fit your desired number of columns
+
+ggarrange(p1_stacked_bar_source, p2_stacked_bar_source,
+          nrow = 2)
 ```
 
+```{r}
+png(filename = "figures_manuscript/source_no_tot_both.png", width = 3500, height = 2500, units = "px", res = 300)
 
+ggarrange(p1_stacked_bar_source, p2_stacked_bar_source,
+          nrow = 2)
+
+dev.off()
+
+ggarrange(p1_stacked_bar_source, p2_stacked_bar_source,
+          nrow = 2)
+ggsave("figures_manuscript/source_no_tot_both.eps",  width = 3500, height = 2500, units = "px", res = 300)
+
+getwd()
+```
 
 
