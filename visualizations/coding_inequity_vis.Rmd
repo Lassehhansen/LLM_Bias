@@ -8,11 +8,18 @@ output:
     toc: true
 ---
 
+
+```{r}
+library(tidyverse)
+```
+
 ## Loading data
 
 ```{r}
 df_gender_tot = read_csv("count_vis_data/df_gender_tot.csv")
 df_racial_tot = read_csv("count_vis_data/df_racial_tot.csv")
+
+unique(df_gender_tot$medical_key)
 ```
 
 ## Packages
@@ -26,16 +33,21 @@ library(tidyverse)
 ```{r}
 final_true_dist_2_ <- read_csv("data_coding_inequity/final_true_dist (2).csv")
 final_true_dist_2_$...1 = NULL
+
+
+final_true_dist_2_ <- read_delim("data_coding_inequity/final_true_dist_mar_17.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+final_true_dist_2_$...1 = NULL
 ```
 
 ### Cleaning it to fit my data
 
 ```{r}
 
-#removing diseases we have not serached for 
-final_true_dist_2_ = final_true_dist_2_ %>% filter(Condition != "Urinary tract infection" &
-                                                   Condition != "Preeclampsia" &
-                                                  Condition !=  "Chlamydia" ) 
+
+final_true_dist_2_ = final_true_dist_2_ %>% filter(!Condition %in%  c("Urinary tract infection", "Preeclampsia", "Chlamydia",
+                                                                      "Ovarian **", "Gastric cancer**", "Chagas", "Crohn’s disease","Ulcerative colitis"))
+
 
 # adding our disease names
 
@@ -44,17 +56,14 @@ final_true_dist_2_$medical_key =
   "hepatitis b",
   "endocarditis", 
   "covid-19",
-  # Dont have Urinary tract infection
   "bacterial pneumonia",
   "takotsubo cardiomyopathy",
   "essential hypertension",
-  "type 2 diabetes", #leo used both t1 and t2
-  ## Dont have preeclampsia
+  "type 2 diabetes", 
   "lupus", 
-  "sarcoidoses",
+  "sarcoidosis",
   "colon cancer",  
   "syphilis",  
-  ## Don't have chlamydia
   "hiv/aids", 
   "tuberculosis", 
    "multiple sclerosis", 
@@ -65,22 +74,64 @@ final_true_dist_2_$medical_key =
 
 ```
 
+### Loading gpt 4 data
+
+```{r}
+gpt_4_results <- read_csv("data_coding_inequity/gpt_4_results.csv")
+
+## removing diseases not searched for
+
+gpt_4_results_1 = gpt_4_results %>% filter(Condition != "Urinary tract infection" &
+                                                   Condition != "Preeclampsia") 
+
+gpt_4_results_1$medical_key = 
+  c(
+  "essential hypertension",
+    "type 2 diabetes",
+  "bacterial pneumonia",
+  "covid-19",
+  "colon cancer",  
+  "prostate cancer",   
+   "multiple myeloma",
+  "rheumatoid arthritis", 
+   "multiple sclerosis", 
+  "hiv/aids", 
+  "syphilis",  
+  "endocarditis", 
+  "tuberculosis", 
+  "lupus", 
+  "sarcoidosis",
+  "takotsubo cardiomyopathy",
+  "hepatitis b"
+  )
+
+gpt_4_results_1$Condition = NULL
+```
+
+
 ## Calculating prevelance for window == 50
 
 ```{r}
 
 df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastic cancer")) %>% 
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
 df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastic cancer")) %>% 
+
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
 
 df_racial_tot3_perc = df_racial_tot2 %>%
     filter(window == 50 & keyword != "tot_disease_counts") %>% 
-    mutate(keyword = ifelse(keyword %in% c("pacific islander", "native american/alaskan native"), "other", keyword)) %>% 
+    filter(! keyword %in% c("pacific islander", "native american/alaskan native")) %>% 
+
+    #mutate(keyword = ifelse(keyword %in% c("pacific islander", "native american/alaskan native"), "other", keyword)) %>% 
     group_by(medical_key, keyword) %>%
     summarize(
       count = sum(count)
@@ -94,7 +145,7 @@ df_racial_tot3_perc = df_racial_tot2 %>%
 
 df_gender_tot3_perc = df_gender_tot2 %>%
     filter(window == 50 & keyword != "tot_disease_counts") %>% 
-    mutate(keyword = ifelse(keyword %in% c("pacific islander", "native american/alaskan native"), "other", keyword)) %>% 
+    #mutate(keyword = ifelse(keyword %in% c("pacific islander", "native american/alaskan native"), "other", keyword)) %>% 
     group_by(medical_key, keyword) %>%
     summarize(
       count = sum(count)
@@ -116,22 +167,79 @@ df_gender_racial_tot_perc_wide = df_gender_racial_tot_perc %>%
 ## Getting column names to match
 
 ```{r}
-colnames(df_gender_racial_tot_perc_wide) <- c("medical_key", "Asian", "Black", "Hispanic/Latino", "Other", "White", "Female", "Male")
+colnames(df_gender_racial_tot_perc_wide) <- c("medical_key", "Asian", "Black", "Hispanic/Latino", "White", "Female", "Male")
 
 final_true_dist_2_$Condition = NULL
 
 colnames(final_true_dist_2_) <- c("Male", "Female", "Black","White",  "Hispanic/Latino", "Asian", "Other", "medical_key")
+
+final_true_dist_2_$Other = NULL
+
+colnames(gpt_4_results_1) <- c("Black", "White", "Hispanic/Latino", "Asian","Other",  "Female", "Male", "medical_key")
+medical_keys_gpt4 = unique(gpt_4_results_1$medical_key)
 ```
 
 ## Removing diseases not in coding inequity
 
 ```{r}
-df_gender_racial_tot_perc_wide = df_gender_racial_tot_perc_wide %>% filter(medical_key != "chagas disease" &
-                                                   medical_key != "crohn’s disease" &
-                                                  medical_key !=  "gastric cancer" &
-                                                  medical_key !=  "ovarian cancer" &
-                                                  medical_key !=  "ulcerative colitis") 
+# df_gender_racial_tot_perc_wide = df_gender_racial_tot_perc_wide %>% filter(medical_key != "chagas disease" &
+#                                                    medical_key != "crohn’s disease" &
+#                                                   medical_key !=  "gastric cancer" &
+#                                                   medical_key !=  "ovarian cancer" &
+#                                                   medical_key !=  "ulcerative colitis") 
 ```
+
+## Making final true dist numeric
+
+```{r}
+final_true_dist_2_ <- final_true_dist_2_ %>%
+  mutate(
+    Male = str_replace(Male, ",", "."),
+    Female = str_replace(Female, ",", "."),
+    Black = str_replace(Black, ",", "."),
+    White = str_replace(White, ",", "."),
+    `Hispanic/Latino` = str_replace(`Hispanic/Latino`, ",", "."),
+    Asian = str_replace(Asian, ",", "."),
+
+    Male = as.numeric(Male) * 100,
+    Female = as.numeric(Female) * 100,
+    Black = as.numeric(Black) * 100,
+    White = as.numeric(White) * 100,
+    `Hispanic/Latino` = as.numeric(`Hispanic/Latino`) * 100,
+    Asian = as.numeric(Asian) * 100
+  ) %>%
+  rowwise() %>%
+  mutate(
+    total = Black + White + `Hispanic/Latino` + Asian,
+    Black = (Black / total) * 100,
+    White = (White / total) * 100,
+    `Hispanic/Latino` = (`Hispanic/Latino` / total) * 100,
+    Asian = (Asian / total) * 100
+  ) %>%
+  select(-total) 
+
+
+gpt_4_results_1 <- gpt_4_results_1 %>%
+  mutate(
+    Male = as.numeric(Male) * 100,
+    Female = as.numeric(Female) * 100,
+    Black = as.numeric(Black) * 100,
+    White = as.numeric(White) * 100,
+    `Hispanic/Latino` = as.numeric(`Hispanic/Latino`) * 100,
+    Asian = as.numeric(Asian) * 100
+  ) %>%
+  rowwise() %>%
+  mutate(
+    total = Black + White + `Hispanic/Latino` + Asian,
+    Black = (Black / total) * 100,
+    White = (White / total) * 100,
+    `Hispanic/Latino` = (`Hispanic/Latino` / total) * 100,
+    Asian = (Asian / total) * 100
+  ) %>%
+  select(-total) 
+
+```
+
 
 ## Last preprocssing
 
@@ -139,10 +247,11 @@ df_gender_racial_tot_perc_wide = df_gender_racial_tot_perc_wide %>% filter(medic
 
 df_gender_racial_tot_perc_wide$estimate = "Training Data"
 final_true_dist_2_$estimate = "Real World Estimate"
+gpt_4_results_1$estimate = "GPT 4 Estimate"
 
-together_plot = rbind(df_gender_racial_tot_perc_wide, final_true_dist_2_)
+together_plot = rbind(df_gender_racial_tot_perc_wide, final_true_dist_2_, gpt_4_results_1)
 
-together_plot_long = together_plot %>% pivot_longer(2:8)
+together_plot_long = together_plot %>% pivot_longer(2:7)
 
 together_plot_long = together_plot_long %>% mutate(name = ifelse(name == "Hispanic/Latino", "Hispanic", name))
 
@@ -152,39 +261,151 @@ together_plot_long$name = factor(together_plot_long$name,
                                                                         "Black", 
                                                                         "Asian",
                                                                         "Hispanic",
-                                                                        "Other",
+                                                                        #"Other",
                                                                         "Female",
                                                                         "Male"))
+
+together_plot_long$estimate = as.factor(together_plot_long$estimate)
+
+together_plot_long$medical_key = ifelse(together_plot_long$medical_key == "ovarian cancer", "ovarian cancer**",
+                                  ifelse(together_plot_long$medical_key == "gastric cancer", "gastric cancer**", together_plot_long$medical_key
+                                        
+                                        ))
+
+together_plot_long = together_plot_long %>% filter(medical_key %in% medical_keys_gpt4)
+
 ```
 
-## Visualizing
+### Main figure
 
 ```{r}
-p_inequity = ggplot(together_plot_long, aes(x = value, y = estimate, fill = estimate)) +
-  geom_bar(stat = 'identity', width = 0.9, color = "black") +  # increased bar width
-  scale_fill_manual(values = c("#bc6c25","#344e41")) +
+p_point = ggplot(together_plot_long, aes(x = estimate, y = value, color = estimate)) +
+  geom_point(size = 2) +  # Adjust size as needed
+  geom_segment(aes(x=estimate, xend=estimate, y=0, yend=value)) +
+  scale_shape_manual(values = shape_types, guide = "none") +
+  scale_color_manual(values = c("#bc6c25","#344e41", "#669bbc")) +
   labs(title = "",
-       x = "Percentage",
+       x = "",
+       y = "Proportion %",
+       color = "") +
+  theme_classic() +
+  theme(
+        strip.text.y.left  = element_text(angle = 0, size = 11, color = "black"),
+        strip.text = element_text(angle = 0, size = 11, face = "bold"),
+        strip.background = element_rect(fill = "white", color = "black", size = 1),
+        panel.border = element_rect(fill = NA, color = "black", size = 1),  # Make sure the size is consistent
+        legend.position = "bottom",
+        legend.text = element_text(colour = "black", size = 12),
+        axis.title.x = element_text(colour = "black", size = 12),
+        axis.text.x = element_text(size=12, colour="black"),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),  # Remove y-axis ticks (after flip, it's x-axis)
+        axis.ticks.x = element_line(color = "black", size = 0.5)
+        ) +
+  coord_flip() +
+  facet_grid(medical_key ~ name, switch = "y", space = "free") +  # Add space = "free" to adjust panel spacing
+  theme(
+      panel.spacing.x = unit(0.5, "lines"),  # Adjust panel spacing if needed
+      panel.spacing.y = unit(0, "lines"),
+      plot.margin = unit(c(0, 1, 0, 0), 'lines')) +  # You can adjust the margins as needed
+  scale_y_continuous(limits = c(-4, 110), expand = c(0,0),
+                    breaks = c(0, 50, 100),
+                    labels = c(0, 50, 100)) +
+  geom_hline(yintercept = 50, linetype = "dashed", color = "black") 
+
+```
+
+```{r}
+png(filename = "visualization_manuscript/coding_inequity_plot.png", width = 2800, height = 2000, units = "px", res = 300)
+
+p_point
+
+dev.off()
+
+p_point
+ggsave("visualization_manuscript/coding_inequity_plot.eps",  width = 2500, height = 2000, units = "px", dpi = 300)
+
+getwd()
+```
+
+
+### Bar plot
+
+```{r}
+p_inequity2 = ggplot(together_plot_long, aes(x = value, y = estimate, fill = estimate)) +
+  geom_bar(stat = 'identity', width = 0.9, color = "black") +  # increased bar width
+  scale_fill_manual(values = c("#bc6c25","#344e41", "#669bbc")) +
+  labs(title = "",
+       x = "Proportion %",
        y = "",
        fill = "") +
   theme_minimal() +
   theme(
-        strip.text.y.left  = element_text(angle = 0, size = 11),
+        strip.text.y.left  = element_text(angle = 0, size = 12, color = "black"),
         strip.text = element_text(angle = 0, size = 11, face = "bold"),
         strip.background = element_rect(fill = "white", color = "black", size = 0.5),
         panel.border = element_rect(fill = NA, color = "black", size = 0.5),
-        legend.position = "none",
-        axis.title.x = element_text(colour = "black", size = 10),
-        axis.text.x = element_text(size=9, colour="black"),
-        axis.text.y = element_text(size=10, , colour="black", hjust = 0)) +
-  facet_grid(medical_key ~ name, scales = "free", switch = "y") +
+        legend.position = "bottom",
+        legend.text = element_text(colour = "black", size = 11),
+        axis.title.x = element_text(colour = "black", size = 11),
+        axis.text.x = element_text(size=11, colour="black"),
+        axis.text.y = element_blank()) +
+  facet_grid(medical_key ~ name, switch = "y") +
   theme(
       panel.spacing.x = unit(0.5, "lines"),  # Reduced panel spacing
       panel.spacing.y = unit(0, "lines"),  # Reduced panel spacing
       plot.margin = unit(c(0, 0.5, 0.1 , 0), 'lines')) + 
   scale_x_continuous(limits = c(0, 100), expand = c(0,0),
+                     breaks = c(0, 50, 95),
+                     labels = c(0, 50, 100)) +
+  geom_vline(xintercept = 50, linetype = "dashed", color = "black") 
+```
+
+## Visualizing
+
+```{r}
+# Define the shape type for each estimate
+shape_types <- c('GPT 4 Estimate' = 16, 'Real World Estimate' = 17, 'Training Data' = 15)  # shapes: circle, triangle, square
+
+p_inequity_point_line <- ggplot(together_plot_long, aes(x = value, y = medical_key, color = estimate, shape = estimate)) +
+  geom_line(aes(group = medical_key), size = 0.8, color = "black") +
+  #geom_line(aes(group = medical_key), arrow = arrow(length=unit(0.30,"cm"), ends="both", type = "closed"), size = 1, color = "black") +
+  geom_point(size = 2.5) +  # You can adjust the size as needed
+  scale_shape_manual(values = shape_types, guide = "none") +
+  scale_color_manual(values = c("#bc6c25","#344e41", "#669bbc")) +
+  #cale_fill_manual(values = c("#bc6c25","#344e41", "#669bbc")) +
+  labs(title = "",
+       x = "Proportion %",
+       y = "",
+       color = "",
+       shape = "") +  # If you don't want to show the shape legend, remove this line.
+  theme_minimal() +
+  theme(
+    strip.text.y.left  = element_text(angle = 0, size = 12, color = "black"),
+    strip.text = element_text(angle = 0, size = 11, face = "bold"),
+    strip.background = element_rect(fill = "white", color = "black", size = 0.5),
+    panel.border = element_rect(fill = NA, color = "black", size = 0.5),
+    legend.position = "bottom",
+    legend.text = element_text(colour = "black", size = 12),
+    axis.title.x = element_text(colour = "black", size = 11),
+    axis.text.x = element_text(size=11, colour="black"),
+    axis.text.y = element_text(size=12, colour="black")
+    ) +
+  facet_grid(. ~ name, switch = "y") +
+  theme(
+    panel.spacing.x = unit(0.5, "lines"),
+    panel.spacing.y = unit(0, "lines"),
+    plot.margin = unit(c(0, 0.5, 0.1 , 0), 'lines')) +
+  scale_x_continuous(limits = c(0, 100), expand = c(0,0),
                      breaks = c(0, 50, 90),
-                     labels = c(0, 50, 100))
+                     labels = c(0, 50, 100)) +
+  geom_vline(xintercept = 50, linetype = "dashed", color = "black") 
+
+# Print the plot
+print(p_inequity_point_line)
+
+
+
 
 ```
 
