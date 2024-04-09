@@ -96,7 +96,7 @@ LLM_Bias/
 | Corpus              | Contents                                                     | Size               | Total Texts        | Filtered Texts |
 | --------------------| -------------------------------------------------------------| ------------------ | ------------------ |------------------ |
 | C4                  | A cleaned version of CommonCrawl’s web-crawled corpus        | 175B (807 GB)      |       
-| GitHub              | Raw GitHub data, filtered by license                         | 175B (807 GB)      | 28793312           |      |
+| GitHub              | Raw GitHub data, filtered by license                         | 59B (213 GB)      | 28793312            |      |
 | Books               | The PG19 subset of the Gutenberg Project and Books3 datasets | 26B (100.4 GB)     | 205744             |      |
 | arXiv               | Scientific articles from arXiv. Boilerplate removed          | 28B (88 GB)        | 1558306            |119303             |
 | Wikipedia (English) | All English Wikipedia articles                               | 24B (20.3 GB)      | 6630651            |170408
