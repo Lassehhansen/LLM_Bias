@@ -1,0 +1,228 @@
+---
+title: "Generating Descriptive Counts"
+subtitle: "LLM Bias"
+author: "Lasse Hyldig Hansen"
+date: "2024-19-01"
+output: 
+  html_document:
+    toc: true
+---
+
+## Loading data
+
+
+### total counts over all windows
+
+```{r}
+df_gender_tot = read_csv("count_vis_data/df_gender_tot.csv")
+df_racial_tot = read_csv("count_vis_data/df_racial_tot.csv")
+
+df_gender_no_tot = df_gender_tot %>% filter(gender_key != "tot_disease_counts") %>% 
+                    filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) 
+df_racial_no_tot = df_racial_tot %>% filter(racial_key != "tot_disease_counts") %>% 
+  filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) 
+df_tot_only = df_racial_tot %>% filter(racial_key == "tot_disease_counts") %>% 
+  filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) 
+
+gender_count = sum(df_gender_no_tot$count)
+racial_count = sum(df_racial_no_tot$count)
+tot_count = sum(df_tot_only$count)
+
+all = gender_count +racial_count +tot_count
+```
+
+### total counts for context window 50
+
+```{r}
+df_gender_tot = read_csv("count_vis_data/df_gender_tot.csv")
+df_racial_tot = read_csv("count_vis_data/df_racial_tot.csv")
+
+df_gender_no_tot = df_gender_tot %>% filter(gender_key != "tot_disease_counts") %>% 
+                    filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                    filter(window == 50)
+df_racial_no_tot = df_racial_tot %>% filter(racial_key != "tot_disease_counts") %>% 
+  filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                    filter(window == 50)
+df_tot_only = df_racial_tot %>% filter(racial_key == "tot_disease_counts") %>% 
+  filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                    filter(window == 50)
+
+gender_count = sum(df_gender_no_tot$count)
+racial_count = sum(df_racial_no_tot$count)
+tot_count = sum(df_tot_only$count)
+
+all = gender_count +racial_count +tot_count
+```
+
+
+### Counting overall disease prevelance 
+
+```{r}
+df_racial_tot = df_racial_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+df_gender_tot = df_gender_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+
+df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                 mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                 mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+race_counts = df_racial_tot2 %>%
+    filter(window == 50 & keyword != "tot_disease_counts") %>% 
+    group_by(keyword) %>%
+    summarize(
+      count = sum(count)
+    )
+
+race_counts$total = sum(race_counts$count)
+race_counts$prop = race_counts$count/race_counts$total
+race_counts$perc = race_counts$prop*100
+race_counts$perc_round = round(race_counts$perc, digits = 2)
+
+gender_counts = df_gender_tot2 %>%
+    filter(window == 50 & keyword != "tot_disease_counts") %>% 
+    group_by(keyword) %>%
+    summarize(
+      count = sum(count)
+    )
+
+gender_counts$total = sum(gender_counts$count)
+gender_counts$prop = gender_counts$count/gender_counts$total
+gender_counts$perc = gender_counts$prop*100
+gender_counts$perc_round = round(gender_counts$perc, digits = 2)
+```
+
+
+### Calculating disease mentions with gender and with race
+
+```{r}
+df_racial_tot = df_racial_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+df_gender_tot = df_gender_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+
+df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                 mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                 mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+
+race_counts = df_racial_tot2 %>%
+    filter(window == 50) %>% 
+    mutate(keyword = ifelse(keyword != "tot_disease_counts", "race", "tot_disease_counts")) %>% 
+    group_by(keyword) %>%
+    summarize(
+      count = sum(count)
+    )
+
+race_counts$total = sum(race_counts$count)
+race_counts$prop = race_counts$count/race_counts$total
+race_counts$perc = race_counts$prop*100
+
+gender_counts = df_gender_tot2 %>%
+    filter(window == 50) %>% 
+    mutate(keyword = ifelse(keyword != "tot_disease_counts", "gender", "tot_disease_counts")) %>% 
+    group_by(keyword) %>%
+    summarize(
+      count = sum(count)
+    )
+
+gender_counts$total = sum(gender_counts$count)
+gender_counts$prop = gender_counts$count/gender_counts$total
+gender_counts$perc = gender_counts$prop*100
+
+```
+
+### Per source
+
+```{r}
+df_racial_tot = df_racial_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+df_gender_tot = df_gender_tot %>% mutate(medical_key = ifelse(medical_key == "tuberculoses", "tuberculosis", medical_key))
+
+df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                 mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
+                 mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
+                   percentage = ifelse(is.nan(percentage), 0, percentage)
+                 )
+
+race_counts = df_racial_tot2 %>%
+    filter(window == 50) %>% 
+    mutate(keyword = ifelse(keyword != "tot_disease_counts", "race", "tot_disease_counts")) %>% 
+    group_by(keyword, source) %>%
+    summarize(
+      count = sum(count)
+    )
+
+race_counts$total = sum(race_counts$count)
+race_counts$prop = race_counts$count/race_counts$total
+race_counts$perc = race_counts$prop*100
+
+gender_counts = df_gender_tot2 %>%
+    filter(window == 50) %>% 
+    mutate(keyword = ifelse(keyword != "tot_disease_counts", "gender", "tot_disease_counts")) %>% 
+    group_by(source, keyword) %>%
+    summarize(
+      count = sum(count)
+    ) %>% 
+    ungroup() %>% 
+    group_by(source) %>%
+  mutate(
+      total_count = sum(count),
+      data_perc = (count/total_count) * 100
+    )
+gender_counts$total = sum(gender_counts$count)
+gender_counts$prop = gender_counts$count/gender_counts$total
+gender_counts$perc = gender_counts$prop*100
+
+```
+
+
+### Table
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+# Create the data in a data frame
+data <- data.frame(
+  Category = c("Overall Proportion of Disease co-occurrences (50 word window)", 
+               "Population Proportion (2020 United States Census)‡"),
+  White = c("37.66%", "57.84%*"),
+  Black = c("45.70%", "12.05%*"),
+  Asian = c("5.58%", "5.92%*"),
+  Hispanic = c("7.89%", "18.73%†"),
+  `Native American` = c("2.31%", "0.68%*"),
+  `Pacific Islander` = c("0.86%", "0.19%*"),
+  Female = c("43.64%", "50.9%"),
+  Male = c("56.36%", "49.1%")
+)
+
+# Use kable from knitr to create a basic table
+table = kable(data, "latex", booktabs = TRUE, escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "scale_down")) %>%
+  add_header_above(c(" " = 1, "Ethnicity" = 6, "Gender" = 2)) %>%
+  column_spec(1, bold = TRUE, border_right = TRUE) %>%
+  row_spec(0, bold = TRUE, color = "black", background = "#FFF8DC") %>%
+  pack_rows("Disease Co-occurrence", 1, 1, background = "#FFF8DC") %>%
+  pack_rows("Population Proportion", 2, 2, background = "#FFF8DC")
+
+```
+
