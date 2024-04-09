@@ -26,14 +26,17 @@ library(tidyverse)
 ```{r}
 
 df_racial_tot2 = df_racial_tot %>% rename("keyword" = "racial_key") %>% 
+                 filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
 df_gender_tot2 = df_gender_tot %>% rename("keyword" = "gender_key") %>% 
+                   filter(!medical_key %in%  c("crohn’s disease", "ovarian cancer", "chagas disease", "gastric cancer", "ulcerative colitis")) %>% 
                  mutate(
+                   medical_key = ifelse(medical_key == "sarcoidoses", "sarcoidosis", medical_key),
                    percentage = ifelse(is.nan(percentage), 0, percentage)
                  )
-
 df_racial_tot3_perc = df_racial_tot2 %>%
     filter(keyword != "tot_disease_counts") %>% 
     group_by(medical_key, keyword, window) %>%
@@ -105,13 +108,13 @@ p_windows_gender_race = ggplot(df_gender_racial_tot_perc, aes(x = window, y = da
   geom_line(aes(group = keyword)) + # Add lines for each medical_key
   labs(title = "",
        x = "Context Window Size (N. Words)",
-       y = "",
+       y = "Proportion %",
        color = "") +
   #scale_color_manual(values=rev(c("#bc6c25", "#344e41", "#540b0e", "#9b2226", "#03045e", "#6a0dad"))) +
   scale_color_manual(values=rev(c("#344e41", "#9b2226", "#bc6c25", "#540b0e", "#03045e", "#0077b6", "#9ab973", "#89CFF0")), labels = c("White", "Black", "Asian", "Hispanic", "Native", "Pac. Islander", "Female", "Male")) +
   theme_light() +
-  theme(legend.position = "top",
-        strip.text = element_text(size = 14, color = "black"),
+  theme(legend.position = "bottom",
+        strip.text = element_text(size = 12, color = "black"),
         axis.title = element_text(size = 11),
         axis.text = element_text(size = 12),
         text = element_text(size = 12, family = "Helvetica"),
@@ -119,20 +122,34 @@ p_windows_gender_race = ggplot(df_gender_racial_tot_perc, aes(x = window, y = da
         axis.title.x = element_text(size = 12, color = "black"),
         axis.text.y = element_text(size = 11, color = "black"),
         panel.border = element_rect(fill = NA, color = "black", size = 0.5),
-        legend.text = element_text(size = 14, color = "black"),
-        axis.title.y = element_text(size = 12)) +
+        legend.text = element_text(size = 12, color = "black"),
+        axis.title.y = element_text(size = 11)) +
     theme(
       strip.text.x = element_text(angle = 0, size = 12),  # Adjusted margin
-        panel.spacing.x = unit(0.2, "lines"),
+        panel.spacing.x = unit(0.1, "lines"),
         panel.spacing.y = unit(0.05, "cm"),
         legend.margin = margin(b = -0.5, unit = "lines"),  
         plot.margin = unit(c(0, 1, 0.4 , 0.2), 'lines'),
         strip.background = element_rect(fill = "white", color = "black", size = 0.5)) + 
   facet_wrap(~ medical_key, nrow = 5, scales = "free") +
-  scale_x_discrete(labels = c("20", "100", "200", "500", "Tot. Doc")) +
+  scale_x_discrete(labels = c("20", "100", "200", "500", "Tot.")) +
   scale_y_continuous(limits = c(0, 100), expand = c(0,0),
-                     breaks = c(0, 25, 50, 75, 100),
-                     labels = c(0, 25, 50, 75, 100))
+                     breaks = c(0, 50, 100),
+                     labels = c(0, 50, 100))
+```
+
+
+```{r}
+png(filename = "figures_manuscript/p_windows_gender_race.png", width = 3000, height = 2000, units = "px", res = 300)
+
+p_windows_gender_race
+
+dev.off()
+
+p_windows_gender_race
+ggsave("figures_manuscript/p_windows_gender_race.eps",  width = 2500, height = 2000, units = "px", dpi = 300)
+
+getwd()
 ```
 
 
